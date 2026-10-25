@@ -1,0 +1,182 @@
+[
+ {
+  "timestamp": "1451606400000",
+  "date": "2016_01_01",
+  "client": "mobile",
+  "percent": 21.81
+ },
+ {
+  "timestamp": "1451606400000",
+  "date": "2016_01_01",
+  "client": "desktop",
+  "percent": 24.04
+ },
+ {
+  "timestamp": "1452816000000",
+  "date": "2016_01_15",
+  "client": "mobile",
+  "percent": 22.38
+ },
+ {
+  "timestamp": "1452816000000",
+  "date": "2016_01_15",
+  "client": "desktop",
+  "percent": 24.45
+ },
+ {
+  "timestamp": "1454284800000",
+  "date": "2016_02_01",
+  "client": "mobile",
+  "percent": 23.37
+ },
+ {
+  "timestamp": "1454284800000",
+  "date": "2016_02_01",
+  "client": "desktop",
+  "percent": 25.64
+ },
+ {
+  "timestamp": "1761955200000",
+  "date": "2025_11_01",
+  "client": "mobile",
+  "percent": 98.96
+ },
+ {
+  "timestamp": "1761955200000",
+  "date": "2025_11_01",
+  "client": "desktop",
+  "percent": 99.07
+ },
+ {
+  "timestamp": "1764547200000",
+  "date": "2025_12_01",
+  "client": "mobile",
+  "percent": 98.99
+ },
+ {
+  "timestamp": "1764547200000",
+  "date": "2025_12_01",
+  "client": "desktop",
+  "percent": 99.08
+ },
+ {
+  "timestamp": "1767225600000",
+  "date": "2026_01_01",
+  "client": "mobile",
+  "percent": 99.01
+ },
+ {
+  "timestamp": "1767225600000",
+  "date": "2026_01_01",
+  "client": "desktop",
+  "percent": 99.07
+ },
+ {
+  "timestamp": "1769904000000",
+  "date": "2026_02_01",
+  "client": "mobile",
+  "percent": 99.07
+ },
+ {
+  "timestamp": "1769904000000",
+  "date": "2026_02_01",
+  "client": "desktop",
+  "percent": 99.15
+ },
+ {
+  "timestamp": "1772323200000",
+  "date": "2026_03_01",
+  "client": "mobile",
+  "percent": 99.07
+ },
+ {
+  "timestamp": "1772323200000",
+  "date": "2026_03_01",
+  "client": "desktop",
+  "percent": 99.16
+ },
+ {
+  "timestamp": "1775001600000",
+  "date": "2026_04_01",
+  "client": "mobile",
+  "percent": 99.16
+ },
+ {
+  "timestamp": "1775001600000",
+  "date": "2026_04_01",
+  "client": "desktop",
+  "percent": 99.22
+ },
+ {
+  "timestamp": "1777593600000",
+  "date": "2026_05_01",
+  "client": "mobile",
+  "percent": 99.18
+ },
+ {
+  "timestamp": "1777593600000",
+  "date": "2026_05_01",
+  "client": "desktop",
+  "percent": 99.42
+ },
+ {
+  "timestamp": "1780272000000",
+  "date": "2026_06_01",
+  "client": "mobile",
+  "percent": 99.21
+ },
+ {
+  "timestamp": "1780272000000",
+  "date": "2026_06_01",
+  "client": "desktop",
+  "percent": 99.29
+ },
+ {
+  "timestamp": "1782864000000",
+  "date": "2026_07_01",
+  "client": "mobile",
+  "percent": 99.3
+ },
+ {
+  "timestamp": "1782864000000",
+  "date": "2026_07_01",
+  "client": "desktop",
+  "percent": 99.35
+ },
+ {
+  "timestamp": "1785542400000",
+  "date": "2026_08_01",
+  "client": "mobile",
+  "percent": 99.28
+ },
+ {
+  "timestamp": "1785542400000",
+  "date": "2026_08_01",
+  "client": "desktop",
+  "percent": 99.36
+ },
+ {
+  "timestamp": "1788220800000",
+  "date": "2026_09_01",
+  "client": "mobile",
+  "percent": 99.33
+ },
+ {
+  "timestamp": "1788220800000",
+  "date": "2026_09_01",
+  "client": "desktop",
+  "percent": 99.43
+ },
+ {
+  "timestamp": "1790812800000",
+  "date": "2026_10_01",
+  "client": "mobile",
+  "percent": 99.41
+ },
+ {
+  "timestamp": "1790812800000",
+  "date": "2026_10_01",
+  "client": "desktop",
+  "percent": 99.47
+ }
+]

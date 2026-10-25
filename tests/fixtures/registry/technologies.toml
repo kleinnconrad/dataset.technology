@@ -1,0 +1,92 @@
+# Registry fixture for the tests: a small set of entries that covers every identifier type.
+
+# Python (programming language)
+[[technology]]
+id = "python"
+name = "Python"
+category = "programming_language"
+added = 2026-10-01
+wikidata = "Q28865"
+stackoverflow_tags = ["python"]
+github_repos = ["python/cpython"]
+packages = ["docker:library/python"]
+endoflife = "python"
+hn_terms = ["python"]
+github_language = "Python"
+
+# Rust (programming language)
+[[technology]]
+id = "rust"
+name = "Rust"
+category = "programming_language"
+added = 2026-10-01
+wikidata = "Q575650"
+stackoverflow_tags = ["rust"]
+github_repos = ["rust-lang/rust"]
+hn_terms = ["rust", "rustlang"]
+github_language = "Rust"
+
+# React (software)
+[[technology]]
+id = "react"
+name = "React"
+category = "web_framework"
+added = 2026-10-01
+wikidata = "Q19399674"
+stackoverflow_tags = ["reactjs"]
+github_repos = ["facebook/react"]
+packages = ["npm:react"]
+endoflife = "react"
+hn_terms = ["react"]
+
+# PyTorch
+[[technology]]
+id = "pytorch"
+name = "PyTorch"
+category = "ai_framework"
+added = 2026-10-01
+wikidata = "Q47509047"
+stackoverflow_tags = ["pytorch"]
+github_repos = ["pytorch/pytorch"]
+packages = ["pypi:torch"]
+hn_terms = ["pytorch"]
+
+# Large language model
+[[technology]]
+id = "large_language_model"
+name = "Large language model"
+category = "ai_concept"
+added = 2026-10-01
+wikidata = "Q115305900"
+stackoverflow_tags = ["large-language-model"]
+hn_terms = ["llm", "large language model"]
+
+# PostgreSQL
+[[technology]]
+id = "postgresql"
+name = "PostgreSQL"
+category = "database"
+added = 2026-10-01
+wikidata = "Q192490"
+stackoverflow_tags = ["postgresql"]
+packages = ["docker:library/postgres"]
+endoflife = "postgresql"
+hn_terms = ["postgresql", "postgres"]
+
+# Polars (software)
+[[technology]]
+id = "polars"
+name = "Polars"
+category = "data_library"
+added = 2026-10-01
+packages = ["pypi:polars", "crates:polars"]
+
+# Gopher (protocol): a removed entry that no collector reads any more
+[[technology]]
+id = "gopher"
+name = "Gopher"
+category = "network_protocol"
+added = 2026-10-01
+removed = 2026-10-15
+removed_reason = "test entry for removed technologies"
+wikidata = "Q271373"

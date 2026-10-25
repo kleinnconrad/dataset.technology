@@ -1,0 +1,41 @@
+{
+ "id": 81598961,
+ "name": "cpython",
+ "full_name": "python/cpython",
+ "private": false,
+ "owner": {
+  "login": "python",
+  "id": 1525981,
+  "type": "Organization"
+ },
+ "html_url": "https://github.com/python/cpython",
+ "fork": false,
+ "url": "https://api.github.com/repos/python/cpython",
+ "created_at": "2017-02-10T19:23:51Z",
+ "updated_at": "2026-10-25T07:01:14Z",
+ "pushed_at": "2026-10-25T07:43:36Z",
+ "homepage": "https://www.python.org",
+ "size": 899484,
+ "stargazers_count": 77762,
+ "watchers_count": 77762,
+ "language": "Python",
+ "forks_count": 38005,
+ "archived": false,
+ "disabled": false,
+ "open_issues_count": 9307,
+ "license": {
+  "key": "other",
+  "name": "Other",
+  "spdx_id": "NOASSERTION",
+  "url": null,
+  "node_id": "MDc6TGljZW5zZTA="
+ },
+ "topics": [],
+ "visibility": "public",
+ "forks": 38005,
+ "open_issues": 9307,
+ "watchers": 77762,
+ "default_branch": "main",
+ "network_count": 38005,
+ "subscribers_count": 1650
+}

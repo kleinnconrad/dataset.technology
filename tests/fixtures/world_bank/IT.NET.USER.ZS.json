@@ -1,0 +1,796 @@
+[
+ {
+  "page": 1,
+  "pages": 1,
+  "per_page": 20000,
+  "total": 49,
+  "sourceid": "2",
+  "lastupdated": "2026-10-08"
+ },
+ [
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2024",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2023",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2022",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2021",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2020",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "EU",
+    "value": "European Union"
+   },
+   "countryiso3code": "EUU",
+   "date": "2019",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2025",
+   "value": 94.2,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2024",
+   "value": 93,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2023",
+   "value": 91.9,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2022",
+   "value": 91,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2021",
+   "value": 90,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2020",
+   "value": 88.4,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "XD",
+    "value": "High income"
+   },
+   "countryiso3code": "",
+   "date": "2019",
+   "value": 87.5,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2025",
+   "value": 73.6,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2024",
+   "value": 71.2,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2023",
+   "value": 69.2,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2022",
+   "value": 67,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2021",
+   "value": 63.8,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2020",
+   "value": 60.1,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2019",
+   "value": 53.9,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2025",
+   "value": 91.6,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2024",
+   "value": 92,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2023",
+   "value": 90.6,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2022",
+   "value": 75.61131603,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2021",
+   "value": 73.05323517,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2020",
+   "value": 70.05275998,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "CN",
+    "value": "China"
+   },
+   "countryiso3code": "CHN",
+   "date": "2019",
+   "value": 64.080881297515,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2024",
+   "value": 93.49999579,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2023",
+   "value": 92.4763763,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2022",
+   "value": 91.62984383,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2021",
+   "value": 91.43060973,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2020",
+   "value": 89.81294133,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2019",
+   "value": 88.1345169091916,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2025",
+   "value": 70,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2024",
+   "value": 64.9434967,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2023",
+   "value": 60.25230026,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2022",
+   "value": 55.9,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2021",
+   "value": 49.2580986,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2020",
+   "value": 43.40544313,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "IN",
+    "value": "India"
+   },
+   "countryiso3code": "IND",
+   "date": "2019",
+   "value": 29.52350044,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2024",
+   "value": 94.69380188,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2023",
+   "value": 93.52559662,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2022",
+   "value": 92.72850037,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2021",
+   "value": 91.2684021,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2020",
+   "value": 90.34470367,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  },
+  {
+   "indicator": {
+    "id": "IT.NET.USER.ZS",
+    "value": "Individuals using the Internet (% of population)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2019",
+   "value": 89.4302848575712,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 0
+  }
+ ]
+]

@@ -1,0 +1,3510 @@
+# Registry of the technologies tracked by the tech dataset.
+#
+# Every [[technology]] entry has a stable id (the join key technology_id of the datasets),
+# a display name, a category (TechnologyCategory in src/schema.py) and the date on which it
+# was added. The other keys are the identifiers of the technology at the sources:
+#   wikidata            Wikidata id; the English Wikipedia article is resolved at run time
+#   stackoverflow_tags  Stack Overflow master tags
+#   github_repos        main GitHub repositories (owner/name)
+#   packages            npm:, pypi:, crates: packages and docker: images (adoption proxies)
+#   endoflife           product slug at endoflife.date
+#   hn_terms            lower-case terms counted in Hacker News titles and comments
+#   github_language     language name in GitHub Linguist
+# The comment line above each entry holds the English Wikipedia title at the time of the
+# verification.
+#
+# Rules (CLAUDE.md, section 9): ids are never changed or reused; a technology that is no
+# longer tracked keeps its entry with removed = <date> and removed_reason = "..."; every new
+# or changed identifier is verified against the live source before it is committed; each
+# identifier belongs to one entry only.
+#
+# All identifiers of the initial entries were verified on 2026-10-25.
+
+# =============================================================================
+# AI and machine learning
+# =============================================================================
+
+# --- AI concepts ---
+
+# AI agent
+[[technology]]
+id = "ai_agent"
+name = "AI agent"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q132451509"
+hn_terms = ["ai agent", "ai agents", "agentic"]
+
+# AI safety
+[[technology]]
+id = "ai_safety"
+name = "AI safety"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q116291231"
+hn_terms = ["ai safety"]
+
+# Artificial general intelligence
+[[technology]]
+id = "artificial_general_intelligence"
+name = "Artificial general intelligence"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q2264109"
+hn_terms = ["artificial general intelligence", "agi"]
+
+# Computer vision
+[[technology]]
+id = "computer_vision"
+name = "Computer vision"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q844240"
+stackoverflow_tags = ["computer-vision"]
+hn_terms = ["computer vision"]
+
+# Deep learning
+[[technology]]
+id = "deep_learning"
+name = "Deep learning"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q197536"
+stackoverflow_tags = ["deep-learning"]
+hn_terms = ["deep learning"]
+
+# Diffusion model
+[[technology]]
+id = "diffusion_model"
+name = "Diffusion model"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q114617315"
+hn_terms = ["diffusion model", "diffusion models"]
+
+# Federated learning
+[[technology]]
+id = "federated_learning"
+name = "Federated learning"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q50818671"
+stackoverflow_tags = ["federated-learning"]
+hn_terms = ["federated learning"]
+
+# Fine-tuning (deep learning)
+[[technology]]
+id = "fine_tuning"
+name = "Fine-tuning"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q117286419"
+stackoverflow_tags = ["fine-tuning"]
+hn_terms = ["fine-tuning", "fine tuning", "finetuning"]
+
+# Generative AI
+[[technology]]
+id = "generative_ai"
+name = "Generative AI"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q117246174"
+hn_terms = ["generative ai", "genai", "gen ai"]
+
+# Large language model
+[[technology]]
+id = "large_language_model"
+name = "Large language model"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q115305900"
+stackoverflow_tags = ["large-language-model"]
+hn_terms = ["large language model", "llm", "llms"]
+
+# Machine learning
+[[technology]]
+id = "machine_learning"
+name = "Machine learning"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q2539"
+stackoverflow_tags = ["machine-learning"]
+hn_terms = ["machine learning"]
+
+# Mixture of experts
+[[technology]]
+id = "mixture_of_experts"
+name = "Mixture of experts"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q30688561"
+hn_terms = ["mixture of experts", "mixture-of-experts"]
+
+# Model Context Protocol
+[[technology]]
+id = "model_context_protocol"
+name = "Model Context Protocol"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q133436854"
+stackoverflow_tags = ["model-context-protocol"]
+github_repos = ["modelcontextprotocol/modelcontextprotocol", "modelcontextprotocol/python-sdk", "modelcontextprotocol/typescript-sdk"]
+packages = ["pypi:mcp", "npm:@modelcontextprotocol/sdk"]
+hn_terms = ["model context protocol", "mcp server", "mcp servers"]
+
+# Natural language processing
+[[technology]]
+id = "natural_language_processing"
+name = "Natural language processing"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q30642"
+stackoverflow_tags = ["nlp"]
+hn_terms = ["natural language processing", "nlp"]
+
+# Prompt engineering
+[[technology]]
+id = "prompt_engineering"
+name = "Prompt engineering"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q108941486"
+hn_terms = ["prompt engineering", "prompt engineer", "prompt engineers"]
+
+# Reinforcement learning
+[[technology]]
+id = "reinforcement_learning"
+name = "Reinforcement learning"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q830687"
+stackoverflow_tags = ["reinforcement-learning"]
+hn_terms = ["reinforcement learning"]
+
+# Retrieval-augmented generation
+[[technology]]
+id = "retrieval_augmented_generation"
+name = "Retrieval-augmented generation"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q121362277"
+stackoverflow_tags = ["rag", "retrieval-augmented-generation"]
+hn_terms = ["rag", "retrieval augmented generation", "retrieval-augmented generation"]
+
+# Reinforcement learning from human feedback
+[[technology]]
+id = "rlhf"
+name = "Reinforcement learning from human feedback"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q115570683"
+hn_terms = ["rlhf", "reinforcement learning from human feedback"]
+
+# Small language model
+[[technology]]
+id = "small_language_model"
+name = "Small language model"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q123759530"
+hn_terms = ["small language model", "small language models"]
+
+# Speech recognition
+[[technology]]
+id = "speech_recognition"
+name = "Speech recognition"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q189436"
+stackoverflow_tags = ["speech-recognition", "speech-to-text"]
+hn_terms = ["speech recognition", "speech-to-text", "speech to text"]
+
+# Transformer (deep learning)
+[[technology]]
+id = "transformer_architecture"
+name = "Transformer architecture"
+category = "ai_concept"
+added = 2026-10-25
+wikidata = "Q85810444"
+stackoverflow_tags = ["transformer-model"]
+hn_terms = ["transformer architecture", "transformer model", "transformer models"]
+
+# --- AI model families ---
+
+# Claude (AI)
+[[technology]]
+id = "claude"
+name = "Claude"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q118876059"
+stackoverflow_tags = ["claude"]
+packages = ["pypi:anthropic", "npm:@anthropic-ai/sdk"]
+hn_terms = ["claude"]
+
+# DALL-E
+[[technology]]
+id = "dall_e"
+name = "DALL-E"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q105078662"
+hn_terms = ["dall-e", "dalle"]
+
+# DeepSeek (AI)
+[[technology]]
+id = "deepseek"
+name = "DeepSeek"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q132324293"
+stackoverflow_tags = ["deepseek"]
+github_repos = ["deepseek-ai/DeepSeek-R1", "deepseek-ai/DeepSeek-V3"]
+hn_terms = ["deepseek"]
+
+# Gemini (language model)
+[[technology]]
+id = "gemini"
+name = "Gemini"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q123688361"
+stackoverflow_tags = ["google-gemini"]
+packages = ["pypi:google-genai", "npm:@google/genai"]
+hn_terms = ["gemini"]
+
+# Gemma (language model)
+[[technology]]
+id = "gemma"
+name = "Gemma"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q124629757"
+github_repos = ["google-deepmind/gemma"]
+packages = ["pypi:gemma"]
+hn_terms = ["gemma"]
+
+# Generative pre-trained transformer
+[[technology]]
+id = "gpt"
+name = "GPT"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q116777014"
+stackoverflow_tags = ["openai-api", "chatgpt-api", "gpt-3", "gpt-4", "gpt-2"]
+packages = ["pypi:openai", "npm:openai"]
+endoflife = "openai-api-models"
+hn_terms = ["gpt"]
+
+# Grok (chatbot)
+[[technology]]
+id = "grok"
+name = "Grok"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q123361035"
+packages = ["pypi:xai-sdk"]
+hn_terms = ["xai grok", "grok 3", "grok 4"]
+
+# Llama (language model)
+[[technology]]
+id = "llama"
+name = "Llama"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q116894231"
+stackoverflow_tags = ["llama", "llama3"]
+github_repos = ["meta-llama/llama", "meta-llama/llama-models"]
+hn_terms = ["llama"]
+
+# Mistral AI
+[[technology]]
+id = "mistral"
+name = "Mistral"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q119718658"
+stackoverflow_tags = ["mistral-7b", "mistral-ai"]
+packages = ["pypi:mistralai", "npm:@mistralai/mistralai"]
+hn_terms = ["mistral", "mixtral"]
+
+# Qwen
+[[technology]]
+id = "qwen"
+name = "Qwen"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q130234299"
+github_repos = ["QwenLM/Qwen", "QwenLM/Qwen3"]
+hn_terms = ["qwen"]
+
+# Sora (text-to-video model)
+[[technology]]
+id = "sora"
+name = "Sora"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q124544998"
+hn_terms = ["sora"]
+
+# Stable Diffusion
+[[technology]]
+id = "stable_diffusion"
+name = "Stable Diffusion"
+category = "ai_model_family"
+added = 2026-10-25
+wikidata = "Q113660857"
+stackoverflow_tags = ["stable-diffusion"]
+github_repos = ["CompVis/stable-diffusion", "Stability-AI/generative-models"]
+hn_terms = ["stable diffusion", "sdxl"]
+
+# --- AI frameworks and tools ---
+
+# CUDA
+[[technology]]
+id = "cuda"
+name = "CUDA"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q477690"
+stackoverflow_tags = ["cuda"]
+packages = ["docker:nvidia/cuda", "pypi:cuda-python"]
+hn_terms = ["cuda"]
+
+# Hugging Face
+[[technology]]
+id = "hugging_face_transformers"
+name = "Hugging Face Transformers"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q108943604"
+stackoverflow_tags = ["huggingface-transformers"]
+github_repos = ["huggingface/transformers"]
+packages = ["pypi:transformers", "npm:@huggingface/transformers"]
+hn_terms = ["hugging face", "huggingface"]
+
+# JAX (software)
+[[technology]]
+id = "jax"
+name = "JAX"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q107382149"
+stackoverflow_tags = ["jax"]
+github_repos = ["jax-ml/jax"]
+packages = ["pypi:jax"]
+hn_terms = ["jax"]
+
+# Keras
+[[technology]]
+id = "keras"
+name = "Keras"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q28470421"
+stackoverflow_tags = ["keras"]
+github_repos = ["keras-team/keras"]
+packages = ["pypi:keras"]
+hn_terms = ["keras"]
+
+# LangChain
+[[technology]]
+id = "langchain"
+name = "LangChain"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q117340550"
+stackoverflow_tags = ["langchain", "langchain-js"]
+github_repos = ["langchain-ai/langchain", "langchain-ai/langchainjs"]
+packages = ["pypi:langchain", "npm:langchain"]
+hn_terms = ["langchain"]
+
+# Llama.cpp
+[[technology]]
+id = "llama_cpp"
+name = "llama.cpp"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q125998452"
+stackoverflow_tags = ["llamacpp", "llama-cpp-python"]
+github_repos = ["ggml-org/llama.cpp"]
+hn_terms = ["llama.cpp", "llamacpp"]
+
+# LlamaIndex
+[[technology]]
+id = "llamaindex"
+name = "LlamaIndex"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q125446413"
+stackoverflow_tags = ["llama-index"]
+github_repos = ["run-llama/llama_index"]
+packages = ["pypi:llama-index", "npm:llamaindex"]
+hn_terms = ["llamaindex", "llama index"]
+
+# (no English Wikipedia article)
+[[technology]]
+id = "mlflow"
+name = "MLflow"
+category = "ai_framework"
+added = 2026-10-25
+stackoverflow_tags = ["mlflow"]
+github_repos = ["mlflow/mlflow"]
+packages = ["pypi:mlflow"]
+hn_terms = ["mlflow"]
+
+# Ollama
+[[technology]]
+id = "ollama"
+name = "Ollama"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q124636097"
+stackoverflow_tags = ["ollama"]
+github_repos = ["ollama/ollama"]
+packages = ["docker:ollama/ollama", "pypi:ollama", "npm:ollama"]
+hn_terms = ["ollama"]
+
+# Open Neural Network Exchange
+[[technology]]
+id = "onnx"
+name = "ONNX"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q55080116"
+stackoverflow_tags = ["onnx", "onnxruntime"]
+github_repos = ["onnx/onnx", "microsoft/onnxruntime"]
+packages = ["pypi:onnx", "pypi:onnxruntime"]
+hn_terms = ["onnx", "onnxruntime"]
+
+# OpenCV
+[[technology]]
+id = "opencv"
+name = "OpenCV"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q165277"
+stackoverflow_tags = ["opencv"]
+github_repos = ["opencv/opencv"]
+packages = ["pypi:opencv-python"]
+hn_terms = ["opencv"]
+
+# PyTorch
+[[technology]]
+id = "pytorch"
+name = "PyTorch"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q47509047"
+stackoverflow_tags = ["pytorch"]
+github_repos = ["pytorch/pytorch"]
+packages = ["pypi:torch", "docker:pytorch/pytorch"]
+hn_terms = ["pytorch"]
+
+# (no English Wikipedia article)
+[[technology]]
+id = "ray"
+name = "Ray"
+category = "ai_framework"
+added = 2026-10-25
+stackoverflow_tags = ["ray"]
+github_repos = ["ray-project/ray"]
+packages = ["pypi:ray", "docker:rayproject/ray"]
+
+# Scikit-learn
+[[technology]]
+id = "scikit_learn"
+name = "scikit-learn"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q1026367"
+stackoverflow_tags = ["scikit-learn"]
+github_repos = ["scikit-learn/scikit-learn"]
+packages = ["pypi:scikit-learn"]
+hn_terms = ["scikit-learn", "sklearn"]
+
+# TensorFlow
+[[technology]]
+id = "tensorflow"
+name = "TensorFlow"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q21447895"
+stackoverflow_tags = ["tensorflow"]
+github_repos = ["tensorflow/tensorflow"]
+packages = ["pypi:tensorflow", "npm:@tensorflow/tfjs", "docker:tensorflow/tensorflow"]
+hn_terms = ["tensorflow"]
+
+# VLLM
+[[technology]]
+id = "vllm"
+name = "vLLM"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q137793309"
+stackoverflow_tags = ["vllm"]
+github_repos = ["vllm-project/vllm"]
+packages = ["pypi:vllm", "docker:vllm/vllm-openai"]
+hn_terms = ["vllm"]
+
+# XGBoost
+[[technology]]
+id = "xgboost"
+name = "XGBoost"
+category = "ai_framework"
+added = 2026-10-25
+wikidata = "Q23793561"
+stackoverflow_tags = ["xgboost"]
+github_repos = ["dmlc/xgboost"]
+packages = ["pypi:xgboost"]
+hn_terms = ["xgboost"]
+
+# --- AI applications ---
+
+# ChatGPT
+[[technology]]
+id = "chatgpt"
+name = "ChatGPT"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q115564437"
+hn_terms = ["chatgpt", "chat gpt"]
+
+# (no English Wikipedia article)
+[[technology]]
+id = "claude_code"
+name = "Claude Code"
+category = "ai_application"
+added = 2026-10-25
+stackoverflow_tags = ["claude-code"]
+github_repos = ["anthropics/claude-code"]
+packages = ["npm:@anthropic-ai/claude-code"]
+hn_terms = ["claude code"]
+
+# Cursor (company)
+[[technology]]
+id = "cursor"
+name = "Cursor"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q135683783"
+stackoverflow_tags = ["cursor-ide"]
+hn_terms = ["cursor ide", "cursor ai", "cursor agent"]
+
+# GitHub Copilot
+[[technology]]
+id = "github_copilot"
+name = "GitHub Copilot"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q107435063"
+stackoverflow_tags = ["github-copilot"]
+hn_terms = ["github copilot"]
+
+# Microsoft Copilot
+[[technology]]
+id = "microsoft_copilot"
+name = "Microsoft Copilot"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q116793893"
+stackoverflow_tags = ["microsoft-copilot"]
+hn_terms = ["microsoft copilot", "bing chat", "365 copilot"]
+
+# Midjourney
+[[technology]]
+id = "midjourney"
+name = "Midjourney"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q113070628"
+hn_terms = ["midjourney"]
+
+# Gemini Notebook
+[[technology]]
+id = "notebooklm"
+name = "Gemini Notebook"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q124559107"
+hn_terms = ["notebooklm", "gemini notebook"]
+
+# Perplexity AI
+[[technology]]
+id = "perplexity"
+name = "Perplexity"
+category = "ai_application"
+added = 2026-10-25
+wikidata = "Q124333951"
+packages = ["pypi:perplexityai"]
+hn_terms = ["perplexity"]
+
+# =============================================================================
+# Software development
+# =============================================================================
+
+# --- Programming languages ---
+
+# Bash (Unix shell)
+[[technology]]
+id = "bash"
+name = "Bash"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q189248"
+stackoverflow_tags = ["bash"]
+packages = ["docker:library/bash"]
+hn_terms = ["bash"]
+github_language = "Shell"
+
+# C (programming language)
+[[technology]]
+id = "c"
+name = "C"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q15777"
+stackoverflow_tags = ["c"]
+hn_terms = ["c programming", "c language"]
+github_language = "C"
+
+# Clojure
+[[technology]]
+id = "clojure"
+name = "Clojure"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q51798"
+stackoverflow_tags = ["clojure"]
+github_repos = ["clojure/clojure"]
+packages = ["docker:library/clojure"]
+hn_terms = ["clojure"]
+github_language = "Clojure"
+
+# COBOL
+[[technology]]
+id = "cobol"
+name = "COBOL"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q131140"
+stackoverflow_tags = ["cobol"]
+hn_terms = ["cobol"]
+github_language = "COBOL"
+
+# C++
+[[technology]]
+id = "cpp"
+name = "C++"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q2407"
+stackoverflow_tags = ["c++"]
+github_repos = ["cplusplus/draft"]
+hn_terms = ["c++"]
+github_language = "C++"
+
+# C Sharp (programming language)
+[[technology]]
+id = "csharp"
+name = "C#"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q2370"
+stackoverflow_tags = ["c#"]
+github_repos = ["dotnet/roslyn", "dotnet/csharplang"]
+hn_terms = ["c#"]
+github_language = "C#"
+
+# Dart (programming language)
+[[technology]]
+id = "dart"
+name = "Dart"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q406009"
+stackoverflow_tags = ["dart"]
+github_repos = ["dart-lang/sdk"]
+packages = ["docker:library/dart"]
+hn_terms = ["dart language", "dart programming", "dartlang"]
+github_language = "Dart"
+
+# Elixir (programming language)
+[[technology]]
+id = "elixir"
+name = "Elixir"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q5362035"
+stackoverflow_tags = ["elixir"]
+github_repos = ["elixir-lang/elixir"]
+packages = ["docker:library/elixir"]
+endoflife = "elixir"
+hn_terms = ["elixir"]
+github_language = "Elixir"
+
+# Erlang (programming language)
+[[technology]]
+id = "erlang"
+name = "Erlang"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q334879"
+stackoverflow_tags = ["erlang"]
+github_repos = ["erlang/otp"]
+packages = ["docker:library/erlang"]
+endoflife = "erlang"
+hn_terms = ["erlang"]
+github_language = "Erlang"
+
+# Fortran
+[[technology]]
+id = "fortran"
+name = "Fortran"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q83303"
+stackoverflow_tags = ["fortran"]
+hn_terms = ["fortran"]
+github_language = "Fortran"
+
+# F Sharp (programming language)
+[[technology]]
+id = "fsharp"
+name = "F#"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q648619"
+stackoverflow_tags = ["f#"]
+github_repos = ["dotnet/fsharp"]
+hn_terms = ["f#", "fsharp"]
+github_language = "F#"
+
+# Gleam (programming language)
+[[technology]]
+id = "gleam"
+name = "Gleam"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q66370905"
+stackoverflow_tags = ["gleam"]
+github_repos = ["gleam-lang/gleam"]
+hn_terms = ["gleam"]
+github_language = "Gleam"
+
+# Go (programming language)
+[[technology]]
+id = "go"
+name = "Go"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q37227"
+stackoverflow_tags = ["go"]
+github_repos = ["golang/go"]
+packages = ["docker:library/golang"]
+endoflife = "go"
+hn_terms = ["golang"]
+github_language = "Go"
+
+# Haskell
+[[technology]]
+id = "haskell"
+name = "Haskell"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q34010"
+stackoverflow_tags = ["haskell"]
+packages = ["docker:library/haskell"]
+endoflife = "ghc"
+hn_terms = ["haskell"]
+github_language = "Haskell"
+
+# Java (programming language)
+[[technology]]
+id = "java"
+name = "Java"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q251"
+stackoverflow_tags = ["java"]
+github_repos = ["openjdk/jdk"]
+packages = ["docker:library/eclipse-temurin"]
+endoflife = "oracle-jdk"
+hn_terms = ["java"]
+github_language = "Java"
+
+# JavaScript
+[[technology]]
+id = "javascript"
+name = "JavaScript"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q2005"
+stackoverflow_tags = ["javascript"]
+github_repos = ["tc39/ecma262"]
+hn_terms = ["javascript"]
+github_language = "JavaScript"
+
+# Julia (programming language)
+[[technology]]
+id = "julia"
+name = "Julia"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q2613697"
+stackoverflow_tags = ["julia"]
+github_repos = ["JuliaLang/julia"]
+packages = ["docker:library/julia"]
+endoflife = "julia"
+hn_terms = ["julia language", "julia programming", "julialang"]
+github_language = "Julia"
+
+# Kotlin
+[[technology]]
+id = "kotlin"
+name = "Kotlin"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q3816639"
+stackoverflow_tags = ["kotlin"]
+github_repos = ["JetBrains/kotlin"]
+endoflife = "kotlin"
+hn_terms = ["kotlin"]
+github_language = "Kotlin"
+
+# Lua
+[[technology]]
+id = "lua"
+name = "Lua"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q207316"
+stackoverflow_tags = ["lua"]
+github_repos = ["lua/lua"]
+endoflife = "lua"
+hn_terms = ["lua"]
+github_language = "Lua"
+
+# MATLAB
+[[technology]]
+id = "matlab"
+name = "MATLAB"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q169478"
+stackoverflow_tags = ["matlab"]
+hn_terms = ["matlab"]
+github_language = "MATLAB"
+
+# Mojo (programming language)
+[[technology]]
+id = "mojo"
+name = "Mojo"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q118152673"
+stackoverflow_tags = ["mojolang"]
+github_repos = ["modular/modular"]
+packages = ["pypi:mojo"]
+hn_terms = ["mojo language", "mojo programming"]
+github_language = "Mojo"
+
+# Objective-C
+[[technology]]
+id = "objective_c"
+name = "Objective-C"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q188531"
+stackoverflow_tags = ["objective-c"]
+hn_terms = ["objective-c", "objc"]
+github_language = "Objective-C"
+
+# OCaml
+[[technology]]
+id = "ocaml"
+name = "OCaml"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q212587"
+stackoverflow_tags = ["ocaml"]
+github_repos = ["ocaml/ocaml"]
+packages = ["docker:ocaml/opam"]
+hn_terms = ["ocaml"]
+github_language = "OCaml"
+
+# Perl
+[[technology]]
+id = "perl"
+name = "Perl"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q42478"
+stackoverflow_tags = ["perl"]
+github_repos = ["Perl/perl5"]
+packages = ["docker:library/perl"]
+endoflife = "perl"
+hn_terms = ["perl"]
+github_language = "Perl"
+
+# PHP
+[[technology]]
+id = "php"
+name = "PHP"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q59"
+stackoverflow_tags = ["php"]
+github_repos = ["php/php-src"]
+packages = ["docker:library/php"]
+endoflife = "php"
+hn_terms = ["php"]
+github_language = "PHP"
+
+# Python (programming language)
+[[technology]]
+id = "python"
+name = "Python"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q28865"
+stackoverflow_tags = ["python"]
+github_repos = ["python/cpython"]
+packages = ["docker:library/python"]
+endoflife = "python"
+hn_terms = ["python"]
+github_language = "Python"
+
+# R (programming language)
+[[technology]]
+id = "r"
+name = "R"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q206904"
+stackoverflow_tags = ["r"]
+packages = ["docker:library/r-base"]
+hn_terms = ["r language", "rstats"]
+github_language = "R"
+
+# Ruby (programming language)
+[[technology]]
+id = "ruby"
+name = "Ruby"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q161053"
+stackoverflow_tags = ["ruby"]
+github_repos = ["ruby/ruby"]
+packages = ["docker:library/ruby"]
+endoflife = "ruby"
+hn_terms = ["ruby"]
+github_language = "Ruby"
+
+# Rust (programming language)
+[[technology]]
+id = "rust"
+name = "Rust"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q575650"
+stackoverflow_tags = ["rust"]
+github_repos = ["rust-lang/rust"]
+packages = ["docker:library/rust"]
+endoflife = "rust"
+hn_terms = ["rust"]
+github_language = "Rust"
+
+# Scala (programming language)
+[[technology]]
+id = "scala"
+name = "Scala"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q460584"
+stackoverflow_tags = ["scala"]
+github_repos = ["scala/scala3", "scala/scala"]
+endoflife = "scala"
+hn_terms = ["scala"]
+github_language = "Scala"
+
+# Solidity
+[[technology]]
+id = "solidity"
+name = "Solidity"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q24909565"
+stackoverflow_tags = ["solidity"]
+github_repos = ["argotorg/solidity"]
+packages = ["npm:solc"]
+hn_terms = ["solidity"]
+github_language = "Solidity"
+
+# SQL
+[[technology]]
+id = "sql"
+name = "SQL"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q47607"
+stackoverflow_tags = ["sql"]
+hn_terms = ["sql"]
+github_language = "SQL"
+
+# Swift (programming language)
+[[technology]]
+id = "swift"
+name = "Swift"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q17118377"
+stackoverflow_tags = ["swift"]
+github_repos = ["swiftlang/swift"]
+packages = ["docker:library/swift"]
+hn_terms = ["swift programming", "swift language"]
+github_language = "Swift"
+
+# TypeScript
+[[technology]]
+id = "typescript"
+name = "TypeScript"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q978185"
+stackoverflow_tags = ["typescript"]
+github_repos = ["microsoft/TypeScript"]
+packages = ["npm:typescript"]
+hn_terms = ["typescript"]
+github_language = "TypeScript"
+
+# Zig (programming language)
+[[technology]]
+id = "zig"
+name = "Zig"
+category = "programming_language"
+added = 2026-10-25
+wikidata = "Q51885456"
+stackoverflow_tags = ["zig"]
+hn_terms = ["zig", "ziglang"]
+github_language = "Zig"
+
+# --- Web and application frameworks ---
+
+# Angular (web framework)
+[[technology]]
+id = "angular"
+name = "Angular"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q28925578"
+stackoverflow_tags = ["angular"]
+github_repos = ["angular/angular"]
+packages = ["npm:@angular/core"]
+endoflife = "angular"
+hn_terms = ["angular"]
+
+# ASP.NET Core
+[[technology]]
+id = "aspnet_core"
+name = "ASP.NET Core"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q17513350"
+stackoverflow_tags = ["asp.net-core"]
+github_repos = ["dotnet/aspnetcore"]
+hn_terms = ["asp.net core", "aspnetcore"]
+
+# Blazor
+[[technology]]
+id = "blazor"
+name = "Blazor"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q60749742"
+stackoverflow_tags = ["blazor"]
+hn_terms = ["blazor"]
+
+# Django (web framework)
+[[technology]]
+id = "django"
+name = "Django"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q842014"
+stackoverflow_tags = ["django"]
+github_repos = ["django/django"]
+packages = ["pypi:django"]
+endoflife = "django"
+hn_terms = ["django"]
+
+# Electron (software framework)
+[[technology]]
+id = "electron"
+name = "Electron"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q21614124"
+stackoverflow_tags = ["electron"]
+github_repos = ["electron/electron"]
+packages = ["npm:electron"]
+endoflife = "electron"
+hn_terms = ["electron app", "electron apps", "electronjs"]
+
+# Express.js
+[[technology]]
+id = "expressjs"
+name = "Express.js"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q16878131"
+stackoverflow_tags = ["express"]
+github_repos = ["expressjs/express"]
+packages = ["npm:express"]
+endoflife = "express"
+hn_terms = ["express.js", "expressjs"]
+
+# FastAPI
+[[technology]]
+id = "fastapi"
+name = "FastAPI"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q101119404"
+stackoverflow_tags = ["fastapi"]
+github_repos = ["fastapi/fastapi"]
+packages = ["pypi:fastapi"]
+hn_terms = ["fastapi"]
+
+# Flask (web framework)
+[[technology]]
+id = "flask"
+name = "Flask"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q289281"
+stackoverflow_tags = ["flask"]
+github_repos = ["pallets/flask"]
+packages = ["pypi:flask"]
+hn_terms = ["flask"]
+
+# Flutter (software)
+[[technology]]
+id = "flutter"
+name = "Flutter"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q39072787"
+stackoverflow_tags = ["flutter"]
+github_repos = ["flutter/flutter"]
+hn_terms = ["flutter"]
+
+# Htmx
+[[technology]]
+id = "htmx"
+name = "htmx"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q109462071"
+stackoverflow_tags = ["htmx"]
+github_repos = ["bigskysoftware/htmx"]
+packages = ["npm:htmx.org"]
+hn_terms = ["htmx"]
+
+# JQuery
+[[technology]]
+id = "jquery"
+name = "jQuery"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q230036"
+stackoverflow_tags = ["jquery"]
+github_repos = ["jquery/jquery"]
+packages = ["npm:jquery"]
+endoflife = "jquery"
+hn_terms = ["jquery"]
+
+# Laravel
+[[technology]]
+id = "laravel"
+name = "Laravel"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q13634357"
+stackoverflow_tags = ["laravel"]
+github_repos = ["laravel/framework", "laravel/laravel"]
+endoflife = "laravel"
+hn_terms = ["laravel"]
+
+# Next.js
+[[technology]]
+id = "nextjs"
+name = "Next.js"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q56062435"
+stackoverflow_tags = ["next.js"]
+github_repos = ["vercel/next.js"]
+packages = ["npm:next"]
+endoflife = "nextjs"
+hn_terms = ["next.js", "nextjs"]
+
+# Nuxt
+[[technology]]
+id = "nuxt"
+name = "Nuxt"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q55641291"
+stackoverflow_tags = ["nuxt.js"]
+github_repos = ["nuxt/nuxt"]
+packages = ["npm:nuxt"]
+endoflife = "nuxt"
+hn_terms = ["nuxt", "nuxtjs"]
+
+# React (software)
+[[technology]]
+id = "react"
+name = "React"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q19399674"
+stackoverflow_tags = ["reactjs"]
+github_repos = ["react/react"]
+packages = ["npm:react"]
+endoflife = "react"
+hn_terms = ["reactjs", "react.js"]
+
+# React Native
+[[technology]]
+id = "react_native"
+name = "React Native"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q55774523"
+stackoverflow_tags = ["react-native"]
+github_repos = ["react/react-native"]
+packages = ["npm:react-native"]
+endoflife = "react-native"
+hn_terms = ["react native"]
+
+# Ruby on Rails
+[[technology]]
+id = "ruby_on_rails"
+name = "Ruby on Rails"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q190478"
+stackoverflow_tags = ["ruby-on-rails"]
+github_repos = ["rails/rails"]
+endoflife = "rails"
+hn_terms = ["ruby on rails"]
+
+# Spring Framework
+[[technology]]
+id = "spring"
+name = "Spring Framework"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q720314"
+stackoverflow_tags = ["spring", "spring-boot"]
+github_repos = ["spring-projects/spring-framework", "spring-projects/spring-boot"]
+endoflife = "spring-framework"
+hn_terms = ["spring boot", "spring framework", "springboot"]
+
+# Svelte
+[[technology]]
+id = "svelte"
+name = "Svelte"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q16863097"
+stackoverflow_tags = ["svelte"]
+github_repos = ["sveltejs/svelte"]
+packages = ["npm:svelte"]
+endoflife = "svelte"
+hn_terms = ["svelte"]
+
+# Tailwind CSS
+[[technology]]
+id = "tailwind_css"
+name = "Tailwind CSS"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q102173844"
+stackoverflow_tags = ["tailwind-css"]
+github_repos = ["tailwindlabs/tailwindcss"]
+packages = ["npm:tailwindcss"]
+endoflife = "tailwind-css"
+hn_terms = ["tailwind css", "tailwindcss"]
+
+# Vue.js
+[[technology]]
+id = "vuejs"
+name = "Vue.js"
+category = "web_framework"
+added = 2026-10-25
+wikidata = "Q24589705"
+stackoverflow_tags = ["vue.js"]
+github_repos = ["vuejs/core", "vuejs/vue"]
+packages = ["npm:vue"]
+endoflife = "vue"
+hn_terms = ["vue", "vuejs"]
+
+# --- Runtimes ---
+
+# Bun (software)
+[[technology]]
+id = "bun"
+name = "Bun"
+category = "runtime"
+added = 2026-10-25
+wikidata = "Q113048518"
+stackoverflow_tags = ["bun"]
+github_repos = ["oven-sh/bun"]
+packages = ["npm:bun", "docker:oven/bun"]
+endoflife = "bun"
+hn_terms = ["bun.js", "bunjs", "bun runtime"]
+
+# Deno (software)
+[[technology]]
+id = "deno"
+name = "Deno"
+category = "runtime"
+added = 2026-10-25
+wikidata = "Q65070939"
+stackoverflow_tags = ["deno"]
+github_repos = ["denoland/deno"]
+packages = ["npm:deno", "docker:denoland/deno"]
+endoflife = "deno"
+hn_terms = ["deno"]
+
+# .NET
+[[technology]]
+id = "dotnet"
+name = ".NET"
+category = "runtime"
+added = 2026-10-25
+wikidata = "Q21622213"
+stackoverflow_tags = [".net", ".net-core"]
+github_repos = ["dotnet/runtime"]
+endoflife = "dotnet"
+hn_terms = [".net", "dotnet"]
+
+# Java virtual machine
+[[technology]]
+id = "jvm"
+name = "Java virtual machine"
+category = "runtime"
+added = 2026-10-25
+wikidata = "Q193321"
+stackoverflow_tags = ["jvm"]
+hn_terms = ["jvm"]
+
+# Node.js
+[[technology]]
+id = "nodejs"
+name = "Node.js"
+category = "runtime"
+added = 2026-10-25
+wikidata = "Q756100"
+stackoverflow_tags = ["node.js"]
+github_repos = ["nodejs/node"]
+packages = ["docker:library/node"]
+endoflife = "nodejs"
+hn_terms = ["node.js", "nodejs"]
+
+# WebAssembly
+[[technology]]
+id = "webassembly"
+name = "WebAssembly"
+category = "runtime"
+added = 2026-10-25
+wikidata = "Q20155677"
+stackoverflow_tags = ["webassembly"]
+github_repos = ["WebAssembly/spec"]
+hn_terms = ["webassembly", "wasm"]
+
+# --- Developer tools ---
+
+# Git
+[[technology]]
+id = "git"
+name = "Git"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q186055"
+stackoverflow_tags = ["git"]
+github_repos = ["git/git"]
+hn_terms = ["git"]
+
+# GitHub
+[[technology]]
+id = "github"
+name = "GitHub"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q364"
+stackoverflow_tags = ["github"]
+hn_terms = ["github"]
+
+# GitLab
+[[technology]]
+id = "gitlab"
+name = "GitLab"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q16639197"
+stackoverflow_tags = ["gitlab"]
+packages = ["docker:gitlab/gitlab-ce"]
+endoflife = "gitlab"
+hn_terms = ["gitlab"]
+
+# IntelliJ IDEA
+[[technology]]
+id = "intellij_idea"
+name = "IntelliJ IDEA"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q1206660"
+stackoverflow_tags = ["intellij-idea"]
+github_repos = ["JetBrains/intellij-community"]
+hn_terms = ["intellij"]
+
+# Project Jupyter
+[[technology]]
+id = "jupyter"
+name = "Project Jupyter"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q55630549"
+stackoverflow_tags = ["jupyter-notebook", "jupyter", "jupyter-lab"]
+github_repos = ["jupyter/notebook", "jupyterlab/jupyterlab"]
+packages = ["pypi:jupyterlab", "pypi:notebook"]
+hn_terms = ["jupyter"]
+
+# Neovim
+[[technology]]
+id = "neovim"
+name = "Neovim"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q28975246"
+stackoverflow_tags = ["neovim"]
+github_repos = ["neovim/neovim"]
+hn_terms = ["neovim", "nvim"]
+
+# Visual Studio Code
+[[technology]]
+id = "visual_studio_code"
+name = "Visual Studio Code"
+category = "developer_tool"
+added = 2026-10-25
+wikidata = "Q19841877"
+stackoverflow_tags = ["vs-code"]
+github_repos = ["microsoft/vscode"]
+hn_terms = ["vscode", "vs code", "visual studio code"]
+
+# --- Software practices ---
+
+# Agile software development
+[[technology]]
+id = "agile_software_development"
+name = "Agile software development"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q30232"
+stackoverflow_tags = ["agile"]
+hn_terms = ["agile"]
+
+# Continuous integration
+[[technology]]
+id = "continuous_integration"
+name = "Continuous integration"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q965769"
+stackoverflow_tags = ["continuous-integration"]
+hn_terms = ["continuous integration"]
+
+# DevOps
+[[technology]]
+id = "devops"
+name = "DevOps"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q3025536"
+stackoverflow_tags = ["devops"]
+hn_terms = ["devops"]
+
+# Low-code development platform
+[[technology]]
+id = "low_code"
+name = "Low-code development"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q30589910"
+hn_terms = ["low-code"]
+
+# Microservices
+[[technology]]
+id = "microservices"
+name = "Microservices"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q18344624"
+stackoverflow_tags = ["microservices"]
+hn_terms = ["microservices", "microservice"]
+
+# Open-source software
+[[technology]]
+id = "open_source_software"
+name = "Open-source software"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q1130645"
+stackoverflow_tags = ["open-source"]
+hn_terms = ["open source"]
+
+# Platform engineering
+[[technology]]
+id = "platform_engineering"
+name = "Platform engineering"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q130239811"
+hn_terms = ["platform engineering"]
+
+# Serverless computing
+[[technology]]
+id = "serverless_computing"
+name = "Serverless computing"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q3958022"
+stackoverflow_tags = ["serverless"]
+hn_terms = ["serverless"]
+
+# Site reliability engineering
+[[technology]]
+id = "site_reliability_engineering"
+name = "Site reliability engineering"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q56351687"
+stackoverflow_tags = ["sre"]
+hn_terms = ["site reliability engineering", "sre"]
+
+# Test-driven development
+[[technology]]
+id = "test_driven_development"
+name = "Test-driven development"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q950250"
+stackoverflow_tags = ["tdd"]
+hn_terms = ["test-driven development", "tdd"]
+
+# Vibe coding
+[[technology]]
+id = "vibe_coding"
+name = "Vibe coding"
+category = "software_practice"
+added = 2026-10-25
+wikidata = "Q133150082"
+hn_terms = ["vibe coding", "vibe coded", "vibe code"]
+
+# =============================================================================
+# Data
+# =============================================================================
+
+# --- Databases ---
+
+# Apache Cassandra
+[[technology]]
+id = "apache_cassandra"
+name = "Apache Cassandra"
+category = "database"
+added = 2026-10-25
+wikidata = "Q616639"
+stackoverflow_tags = ["cassandra"]
+github_repos = ["apache/cassandra"]
+packages = ["docker:library/cassandra", "pypi:cassandra-driver"]
+endoflife = "apache-cassandra"
+hn_terms = ["apache cassandra", "cassandra cluster", "cassandra db"]
+
+# ClickHouse
+[[technology]]
+id = "clickhouse"
+name = "ClickHouse"
+category = "database"
+added = 2026-10-25
+wikidata = "Q27825826"
+stackoverflow_tags = ["clickhouse"]
+github_repos = ["ClickHouse/ClickHouse"]
+packages = ["docker:clickhouse/clickhouse-server", "pypi:clickhouse-connect", "npm:@clickhouse/client"]
+endoflife = "clickhouse"
+hn_terms = ["clickhouse"]
+
+# DuckDB
+[[technology]]
+id = "duckdb"
+name = "DuckDB"
+category = "database"
+added = 2026-10-25
+wikidata = "Q111343643"
+stackoverflow_tags = ["duckdb"]
+github_repos = ["duckdb/duckdb"]
+packages = ["pypi:duckdb", "npm:@duckdb/node-api", "npm:duckdb", "crates:duckdb"]
+endoflife = "duckdb"
+hn_terms = ["duckdb"]
+
+# Elasticsearch
+[[technology]]
+id = "elasticsearch"
+name = "Elasticsearch"
+category = "database"
+added = 2026-10-25
+wikidata = "Q3050461"
+stackoverflow_tags = ["elasticsearch"]
+github_repos = ["elastic/elasticsearch"]
+packages = ["docker:library/elasticsearch", "pypi:elasticsearch", "npm:@elastic/elasticsearch"]
+endoflife = "elasticsearch"
+hn_terms = ["elasticsearch"]
+
+# MariaDB
+[[technology]]
+id = "mariadb"
+name = "MariaDB"
+category = "database"
+added = 2026-10-25
+wikidata = "Q787177"
+stackoverflow_tags = ["mariadb"]
+github_repos = ["MariaDB/server"]
+packages = ["docker:library/mariadb", "pypi:mariadb", "npm:mariadb"]
+endoflife = "mariadb"
+hn_terms = ["mariadb"]
+
+# Microsoft SQL Server
+[[technology]]
+id = "microsoft_sql_server"
+name = "Microsoft SQL Server"
+category = "database"
+added = 2026-10-25
+wikidata = "Q215819"
+stackoverflow_tags = ["sql-server"]
+packages = ["pypi:mssql-python"]
+endoflife = "mssqlserver"
+hn_terms = ["sql server", "mssql"]
+
+# MongoDB
+[[technology]]
+id = "mongodb"
+name = "MongoDB"
+category = "database"
+added = 2026-10-25
+wikidata = "Q1165204"
+stackoverflow_tags = ["mongodb"]
+github_repos = ["mongodb/mongo"]
+packages = ["docker:library/mongo", "pypi:pymongo", "npm:mongodb"]
+endoflife = "mongodb"
+hn_terms = ["mongodb", "mongo"]
+
+# MySQL
+[[technology]]
+id = "mysql"
+name = "MySQL"
+category = "database"
+added = 2026-10-25
+wikidata = "Q850"
+stackoverflow_tags = ["mysql"]
+github_repos = ["mysql/mysql-server"]
+packages = ["docker:library/mysql", "pypi:mysql-connector-python"]
+endoflife = "mysql"
+hn_terms = ["mysql"]
+
+# Neo4j
+[[technology]]
+id = "neo4j"
+name = "Neo4j"
+category = "database"
+added = 2026-10-25
+wikidata = "Q1628290"
+stackoverflow_tags = ["neo4j"]
+github_repos = ["neo4j/neo4j"]
+packages = ["docker:library/neo4j", "pypi:neo4j", "npm:neo4j-driver"]
+endoflife = "neo4j"
+hn_terms = ["neo4j"]
+
+# OpenSearch (software)
+[[technology]]
+id = "opensearch"
+name = "OpenSearch"
+category = "database"
+added = 2026-10-25
+wikidata = "Q106497646"
+github_repos = ["opensearch-project/OpenSearch"]
+packages = ["docker:opensearchproject/opensearch", "pypi:opensearch-py", "npm:@opensearch-project/opensearch"]
+endoflife = "opensearch"
+hn_terms = ["opensearch"]
+
+# Oracle Database
+[[technology]]
+id = "oracle_database"
+name = "Oracle Database"
+category = "database"
+added = 2026-10-25
+wikidata = "Q185524"
+stackoverflow_tags = ["oracle-database"]
+packages = ["pypi:oracledb", "pypi:cx-oracle", "npm:oracledb"]
+endoflife = "oracle-database"
+hn_terms = ["oracle database", "oracle db"]
+
+# PostgreSQL
+[[technology]]
+id = "postgresql"
+name = "PostgreSQL"
+category = "database"
+added = 2026-10-25
+wikidata = "Q192490"
+stackoverflow_tags = ["postgresql"]
+packages = ["docker:library/postgres"]
+endoflife = "postgresql"
+hn_terms = ["postgresql", "postgres"]
+
+# Redis
+[[technology]]
+id = "redis"
+name = "Redis"
+category = "database"
+added = 2026-10-25
+wikidata = "Q2136322"
+stackoverflow_tags = ["redis"]
+github_repos = ["redis/redis"]
+packages = ["docker:library/redis", "pypi:redis", "npm:redis"]
+endoflife = "redis"
+hn_terms = ["redis"]
+
+# SQLite
+[[technology]]
+id = "sqlite"
+name = "SQLite"
+category = "database"
+added = 2026-10-25
+wikidata = "Q319417"
+stackoverflow_tags = ["sqlite"]
+endoflife = "sqlite"
+hn_terms = ["sqlite", "sqlite3"]
+
+# Valkey
+[[technology]]
+id = "valkey"
+name = "Valkey"
+category = "database"
+added = 2026-10-25
+wikidata = "Q125195483"
+stackoverflow_tags = ["valkey"]
+github_repos = ["valkey-io/valkey"]
+packages = ["docker:valkey/valkey", "pypi:valkey", "npm:@valkey/valkey-glide"]
+endoflife = "valkey"
+hn_terms = ["valkey"]
+
+# Vector database
+[[technology]]
+id = "vector_database"
+name = "Vector database"
+category = "database"
+added = 2026-10-25
+wikidata = "Q118396004"
+stackoverflow_tags = ["vector-database"]
+hn_terms = ["vector database", "vector databases", "vector db"]
+
+# --- Data platforms ---
+
+# Apache Airflow
+[[technology]]
+id = "apache_airflow"
+name = "Apache Airflow"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q28915062"
+stackoverflow_tags = ["airflow"]
+github_repos = ["apache/airflow"]
+packages = ["pypi:apache-airflow", "docker:apache/airflow"]
+endoflife = "apache-airflow"
+hn_terms = ["apache airflow", "airflow dag", "airflow dags"]
+
+# Apache Arrow
+[[technology]]
+id = "apache_arrow"
+name = "Apache Arrow"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q28915121"
+stackoverflow_tags = ["apache-arrow", "pyarrow"]
+github_repos = ["apache/arrow", "apache/arrow-rs"]
+packages = ["pypi:pyarrow", "npm:apache-arrow", "crates:arrow"]
+hn_terms = ["apache arrow", "pyarrow"]
+
+# Apache Flink
+[[technology]]
+id = "apache_flink"
+name = "Apache Flink"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q20714460"
+stackoverflow_tags = ["apache-flink"]
+github_repos = ["apache/flink"]
+packages = ["pypi:apache-flink", "docker:library/flink", "docker:apache/flink"]
+endoflife = "apache-flink"
+hn_terms = ["flink"]
+
+# Apache Hadoop
+[[technology]]
+id = "apache_hadoop"
+name = "Apache Hadoop"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q29120"
+stackoverflow_tags = ["hadoop"]
+github_repos = ["apache/hadoop"]
+packages = ["docker:apache/hadoop"]
+endoflife = "apache-hadoop"
+hn_terms = ["hadoop"]
+
+# Apache Iceberg
+[[technology]]
+id = "apache_iceberg"
+name = "Apache Iceberg"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q89693825"
+stackoverflow_tags = ["apache-iceberg"]
+github_repos = ["apache/iceberg"]
+packages = ["pypi:pyiceberg", "crates:iceberg"]
+hn_terms = ["apache iceberg", "iceberg tables", "iceberg table"]
+
+# Apache Kafka
+[[technology]]
+id = "apache_kafka"
+name = "Apache Kafka"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q16235208"
+stackoverflow_tags = ["apache-kafka"]
+github_repos = ["apache/kafka"]
+packages = ["docker:apache/kafka"]
+endoflife = "apache-kafka"
+hn_terms = ["kafka"]
+
+# Apache Parquet
+[[technology]]
+id = "apache_parquet"
+name = "Apache Parquet"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q28915683"
+stackoverflow_tags = ["parquet"]
+github_repos = ["apache/parquet-format", "apache/parquet-java"]
+packages = ["crates:parquet"]
+hn_terms = ["parquet"]
+
+# Apache Spark
+[[technology]]
+id = "apache_spark"
+name = "Apache Spark"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q7573619"
+stackoverflow_tags = ["apache-spark", "pyspark"]
+github_repos = ["apache/spark"]
+packages = ["pypi:pyspark", "docker:apache/spark", "docker:library/spark"]
+endoflife = "apache-spark"
+hn_terms = ["apache spark", "pyspark", "spark sql"]
+
+# Databricks
+[[technology]]
+id = "databricks"
+name = "Databricks"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q18350420"
+stackoverflow_tags = ["databricks"]
+packages = ["pypi:databricks-sdk", "pypi:databricks-sql-connector", "npm:@databricks/sql"]
+hn_terms = ["databricks"]
+
+# Data build tool
+[[technology]]
+id = "dbt"
+name = "dbt"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q107610347"
+stackoverflow_tags = ["dbt"]
+github_repos = ["dbt-labs/dbt"]
+packages = ["pypi:dbt-core"]
+endoflife = "dbt-core"
+hn_terms = ["dbt"]
+
+# (no English Wikipedia article)
+[[technology]]
+id = "delta_lake"
+name = "Delta Lake"
+category = "data_platform"
+added = 2026-10-25
+stackoverflow_tags = ["delta-lake"]
+github_repos = ["delta-io/delta", "delta-io/delta-rs"]
+packages = ["pypi:deltalake", "pypi:delta-spark", "crates:deltalake"]
+hn_terms = ["delta lake"]
+
+# Snowflake Inc.
+[[technology]]
+id = "snowflake"
+name = "Snowflake"
+category = "data_platform"
+added = 2026-10-25
+wikidata = "Q22078063"
+stackoverflow_tags = ["snowflake-cloud-data-platform"]
+packages = ["pypi:snowflake-connector-python", "npm:snowflake-sdk"]
+
+# --- Data libraries ---
+
+# NumPy
+[[technology]]
+id = "numpy"
+name = "NumPy"
+category = "data_library"
+added = 2026-10-25
+wikidata = "Q197520"
+stackoverflow_tags = ["numpy"]
+github_repos = ["numpy/numpy"]
+packages = ["pypi:numpy"]
+endoflife = "numpy"
+hn_terms = ["numpy"]
+
+# Pandas (software)
+[[technology]]
+id = "pandas"
+name = "pandas"
+category = "data_library"
+added = 2026-10-25
+wikidata = "Q15967387"
+stackoverflow_tags = ["pandas"]
+github_repos = ["pandas-dev/pandas"]
+packages = ["pypi:pandas"]
+hn_terms = ["pandas"]
+
+# Polars (software)
+[[technology]]
+id = "polars"
+name = "Polars"
+category = "data_library"
+added = 2026-10-25
+wikidata = "Q120549730"
+stackoverflow_tags = ["python-polars", "rust-polars", "polars"]
+github_repos = ["pola-rs/polars"]
+packages = ["pypi:polars", "crates:polars", "npm:nodejs-polars"]
+hn_terms = ["polars"]
+
+# =============================================================================
+# IT infrastructure
+# =============================================================================
+
+# --- Operating systems ---
+
+# Alpine Linux
+[[technology]]
+id = "alpine_linux"
+name = "Alpine Linux"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q4033826"
+stackoverflow_tags = ["alpine-linux"]
+packages = ["docker:library/alpine"]
+endoflife = "alpine-linux"
+hn_terms = ["alpine linux"]
+
+# Android (operating system)
+[[technology]]
+id = "android"
+name = "Android"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q94"
+stackoverflow_tags = ["android"]
+endoflife = "android"
+hn_terms = ["android"]
+
+# ChromeOS
+[[technology]]
+id = "chromeos"
+name = "ChromeOS"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q79531"
+stackoverflow_tags = ["google-chrome-os"]
+hn_terms = ["chromeos", "chrome os"]
+
+# Debian
+[[technology]]
+id = "debian"
+name = "Debian"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q7715973"
+stackoverflow_tags = ["debian"]
+packages = ["docker:library/debian"]
+endoflife = "debian"
+hn_terms = ["debian"]
+
+# Fedora Linux
+[[technology]]
+id = "fedora"
+name = "Fedora Linux"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q48267"
+stackoverflow_tags = ["fedora"]
+packages = ["docker:library/fedora"]
+endoflife = "fedora"
+hn_terms = ["fedora"]
+
+# FreeBSD
+[[technology]]
+id = "freebsd"
+name = "FreeBSD"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q34236"
+stackoverflow_tags = ["freebsd"]
+github_repos = ["freebsd/freebsd-src"]
+endoflife = "freebsd"
+hn_terms = ["freebsd"]
+
+# HarmonyOS
+[[technology]]
+id = "harmonyos"
+name = "HarmonyOS"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q63986220"
+stackoverflow_tags = ["harmonyos"]
+hn_terms = ["harmonyos"]
+
+# IOS
+[[technology]]
+id = "ios"
+name = "iOS"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q48493"
+stackoverflow_tags = ["ios"]
+endoflife = "ios"
+hn_terms = ["ios"]
+
+# Linux kernel
+[[technology]]
+id = "linux"
+name = "Linux"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q14579"
+stackoverflow_tags = ["linux", "linux-kernel"]
+github_repos = ["torvalds/linux"]
+endoflife = "linux"
+hn_terms = ["linux"]
+
+# MacOS
+[[technology]]
+id = "macos"
+name = "macOS"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q14116"
+stackoverflow_tags = ["macos"]
+endoflife = "macos"
+hn_terms = ["macos", "os x"]
+
+# Red Hat Enterprise Linux
+[[technology]]
+id = "rhel"
+name = "Red Hat Enterprise Linux"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q215273"
+stackoverflow_tags = ["rhel"]
+endoflife = "rhel"
+hn_terms = ["rhel", "red hat enterprise linux"]
+
+# Ubuntu
+[[technology]]
+id = "ubuntu"
+name = "Ubuntu"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q381"
+stackoverflow_tags = ["ubuntu"]
+packages = ["docker:library/ubuntu"]
+endoflife = "ubuntu"
+hn_terms = ["ubuntu"]
+
+# Microsoft Windows
+[[technology]]
+id = "windows"
+name = "Microsoft Windows"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q1406"
+stackoverflow_tags = ["windows"]
+endoflife = "windows"
+hn_terms = ["microsoft windows", "windows pc", "windows os"]
+
+# Windows Server
+[[technology]]
+id = "windows_server"
+name = "Windows Server"
+category = "operating_system"
+added = 2026-10-25
+wikidata = "Q11219"
+stackoverflow_tags = ["windows-server"]
+endoflife = "windows-server"
+hn_terms = ["windows server"]
+
+# --- Cloud platforms ---
+
+# Alibaba Cloud
+[[technology]]
+id = "alibaba_cloud"
+name = "Alibaba Cloud"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q17062154"
+stackoverflow_tags = ["alibaba-cloud"]
+hn_terms = ["alibaba cloud", "aliyun"]
+
+# Amazon Web Services
+[[technology]]
+id = "aws"
+name = "Amazon Web Services"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q456157"
+stackoverflow_tags = ["amazon-web-services"]
+hn_terms = ["aws", "amazon web services"]
+
+# Microsoft Azure
+[[technology]]
+id = "azure"
+name = "Microsoft Azure"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q725967"
+stackoverflow_tags = ["azure"]
+hn_terms = ["azure"]
+
+# Google Cloud Platform
+[[technology]]
+id = "google_cloud"
+name = "Google Cloud Platform"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q17054505"
+stackoverflow_tags = ["google-cloud-platform"]
+hn_terms = ["google cloud", "gcp"]
+
+# IBM Cloud
+[[technology]]
+id = "ibm_cloud"
+name = "IBM Cloud"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q96381605"
+stackoverflow_tags = ["ibm-cloud"]
+hn_terms = ["ibm cloud", "bluemix"]
+
+# Oracle Cloud
+[[technology]]
+id = "oracle_cloud"
+name = "Oracle Cloud"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q43401211"
+stackoverflow_tags = ["oracle-cloud-infrastructure"]
+hn_terms = ["oracle cloud"]
+
+# OVHcloud
+[[technology]]
+id = "ovhcloud"
+name = "OVHcloud"
+category = "cloud_platform"
+added = 2026-10-25
+wikidata = "Q568183"
+stackoverflow_tags = ["ovh"]
+hn_terms = ["ovhcloud", "ovh"]
+
+# --- Container platforms ---
+
+# containerd (no English Wikipedia article)
+[[technology]]
+id = "containerd"
+name = "containerd"
+category = "container_platform"
+added = 2026-10-25
+stackoverflow_tags = ["containerd"]
+github_repos = ["containerd/containerd"]
+endoflife = "containerd"
+hn_terms = ["containerd"]
+
+# Docker (software)
+[[technology]]
+id = "docker"
+name = "Docker"
+category = "container_platform"
+added = 2026-10-25
+wikidata = "Q15206305"
+stackoverflow_tags = ["docker"]
+github_repos = ["moby/moby"]
+packages = ["docker:library/docker"]
+endoflife = "docker-engine"
+hn_terms = ["docker"]
+
+# Helm (package manager)
+[[technology]]
+id = "helm"
+name = "Helm"
+category = "container_platform"
+added = 2026-10-25
+wikidata = "Q125398382"
+stackoverflow_tags = ["kubernetes-helm"]
+github_repos = ["helm/helm"]
+hn_terms = ["helm chart", "helm charts", "kubernetes helm"]
+
+# Kubernetes
+[[technology]]
+id = "kubernetes"
+name = "Kubernetes"
+category = "container_platform"
+added = 2026-10-25
+wikidata = "Q22661306"
+stackoverflow_tags = ["kubernetes"]
+github_repos = ["kubernetes/kubernetes"]
+endoflife = "kubernetes"
+hn_terms = ["kubernetes", "k8s"]
+
+# OpenShift
+[[technology]]
+id = "openshift"
+name = "OpenShift"
+category = "container_platform"
+added = 2026-10-25
+wikidata = "Q2912272"
+stackoverflow_tags = ["openshift"]
+endoflife = "red-hat-openshift"
+hn_terms = ["openshift"]
+
+# Podman
+[[technology]]
+id = "podman"
+name = "Podman"
+category = "container_platform"
+added = 2026-10-25
+wikidata = "Q70876440"
+stackoverflow_tags = ["podman"]
+github_repos = ["podman-container-tools/podman"]
+endoflife = "podman"
+hn_terms = ["podman"]
+
+# --- Infrastructure as code ---
+
+# Ansible (software)
+[[technology]]
+id = "ansible"
+name = "Ansible"
+category = "infrastructure_as_code"
+added = 2026-10-25
+wikidata = "Q2852503"
+stackoverflow_tags = ["ansible"]
+github_repos = ["ansible/ansible"]
+packages = ["pypi:ansible", "pypi:ansible-core"]
+endoflife = "ansible"
+hn_terms = ["ansible"]
+
+# Infrastructure as code
+[[technology]]
+id = "infrastructure_as_code"
+name = "Infrastructure as code"
+category = "infrastructure_as_code"
+added = 2026-10-25
+wikidata = "Q24964334"
+stackoverflow_tags = ["infrastructure-as-code"]
+hn_terms = ["infrastructure as code"]
+
+# OpenTofu
+[[technology]]
+id = "opentofu"
+name = "OpenTofu"
+category = "infrastructure_as_code"
+added = 2026-10-25
+wikidata = "Q122779433"
+stackoverflow_tags = ["opentofu"]
+github_repos = ["opentofu/opentofu"]
+endoflife = "opentofu"
+hn_terms = ["opentofu"]
+
+# Pulumi
+[[technology]]
+id = "pulumi"
+name = "Pulumi"
+category = "infrastructure_as_code"
+added = 2026-10-25
+wikidata = "Q122864080"
+stackoverflow_tags = ["pulumi"]
+github_repos = ["pulumi/pulumi"]
+packages = ["npm:@pulumi/pulumi", "pypi:pulumi"]
+hn_terms = ["pulumi"]
+
+# Puppet (software)
+[[technology]]
+id = "puppet"
+name = "Puppet"
+category = "infrastructure_as_code"
+added = 2026-10-25
+wikidata = "Q2095962"
+stackoverflow_tags = ["puppet"]
+github_repos = ["puppetlabs/puppet"]
+endoflife = "puppet"
+hn_terms = ["puppet labs", "puppetlabs", "puppet enterprise"]
+
+# Terraform (software)
+[[technology]]
+id = "terraform"
+name = "Terraform"
+category = "infrastructure_as_code"
+added = 2026-10-25
+wikidata = "Q28957072"
+stackoverflow_tags = ["terraform"]
+github_repos = ["hashicorp/terraform"]
+packages = ["docker:hashicorp/terraform"]
+endoflife = "terraform"
+hn_terms = ["terraform"]
+
+# --- Observability ---
+
+# Datadog
+[[technology]]
+id = "datadog"
+name = "Datadog"
+category = "observability"
+added = 2026-10-25
+wikidata = "Q16248637"
+stackoverflow_tags = ["datadog"]
+packages = ["docker:datadog/agent"]
+hn_terms = ["datadog"]
+
+# Grafana
+[[technology]]
+id = "grafana"
+name = "Grafana"
+category = "observability"
+added = 2026-10-25
+wikidata = "Q43399271"
+stackoverflow_tags = ["grafana"]
+github_repos = ["grafana/grafana"]
+packages = ["docker:grafana/grafana"]
+endoflife = "grafana"
+hn_terms = ["grafana"]
+
+# OpenTelemetry (no English Wikipedia article)
+[[technology]]
+id = "opentelemetry"
+name = "OpenTelemetry"
+category = "observability"
+added = 2026-10-25
+stackoverflow_tags = ["open-telemetry"]
+github_repos = ["open-telemetry/opentelemetry-specification", "open-telemetry/opentelemetry-collector"]
+packages = ["npm:@opentelemetry/api", "pypi:opentelemetry-api", "docker:otel/opentelemetry-collector"]
+hn_terms = ["opentelemetry", "otel"]
+
+# Prometheus (software)
+[[technology]]
+id = "prometheus"
+name = "Prometheus"
+category = "observability"
+added = 2026-10-25
+wikidata = "Q52534999"
+stackoverflow_tags = ["prometheus"]
+github_repos = ["prometheus/prometheus"]
+packages = ["docker:prom/prometheus"]
+endoflife = "prometheus"
+hn_terms = ["promql", "prometheus metrics", "prometheus monitoring"]
+
+# Splunk
+[[technology]]
+id = "splunk"
+name = "Splunk"
+category = "observability"
+added = 2026-10-25
+wikidata = "Q1835753"
+stackoverflow_tags = ["splunk"]
+packages = ["docker:splunk/splunk"]
+endoflife = "splunk"
+hn_terms = ["splunk"]
+
+# --- CI/CD ---
+
+# Argo CD (no English Wikipedia article)
+[[technology]]
+id = "argo_cd"
+name = "Argo CD"
+category = "ci_cd"
+added = 2026-10-25
+stackoverflow_tags = ["argocd"]
+github_repos = ["argoproj/argo-cd"]
+endoflife = "argo-cd"
+hn_terms = ["argocd", "argo cd"]
+
+# GitHub Actions (no English Wikipedia article)
+[[technology]]
+id = "github_actions"
+name = "GitHub Actions"
+category = "ci_cd"
+added = 2026-10-25
+stackoverflow_tags = ["github-actions"]
+hn_terms = ["github actions"]
+
+# Jenkins (software)
+[[technology]]
+id = "jenkins"
+name = "Jenkins"
+category = "ci_cd"
+added = 2026-10-25
+wikidata = "Q7491312"
+stackoverflow_tags = ["jenkins"]
+github_repos = ["jenkinsci/jenkins"]
+packages = ["docker:jenkins/jenkins"]
+endoflife = "jenkins"
+hn_terms = ["jenkins"]
+
+# --- Web servers and proxies ---
+
+# Apache HTTP Server
+[[technology]]
+id = "apache_http_server"
+name = "Apache HTTP Server"
+category = "web_server"
+added = 2026-10-25
+wikidata = "Q11354"
+stackoverflow_tags = ["apache"]
+github_repos = ["apache/httpd"]
+packages = ["docker:library/httpd"]
+endoflife = "apache-http-server"
+hn_terms = ["apache httpd", "apache http server", "apache web server"]
+
+# Caddy (web server)
+[[technology]]
+id = "caddy"
+name = "Caddy"
+category = "web_server"
+added = 2026-10-25
+wikidata = "Q24008327"
+stackoverflow_tags = ["caddy"]
+github_repos = ["caddyserver/caddy"]
+packages = ["docker:library/caddy"]
+endoflife = "caddy"
+hn_terms = ["caddy"]
+
+# Envoy (no English Wikipedia article)
+[[technology]]
+id = "envoy"
+name = "Envoy"
+category = "web_server"
+added = 2026-10-25
+stackoverflow_tags = ["envoyproxy"]
+github_repos = ["envoyproxy/envoy"]
+packages = ["docker:envoyproxy/envoy"]
+endoflife = "envoy"
+hn_terms = ["envoy proxy", "envoyproxy"]
+
+# HAProxy
+[[technology]]
+id = "haproxy"
+name = "HAProxy"
+category = "web_server"
+added = 2026-10-25
+wikidata = "Q5628948"
+stackoverflow_tags = ["haproxy"]
+github_repos = ["haproxy/haproxy"]
+packages = ["docker:library/haproxy"]
+endoflife = "haproxy"
+hn_terms = ["haproxy"]
+
+# Nginx
+[[technology]]
+id = "nginx"
+name = "nginx"
+category = "web_server"
+added = 2026-10-25
+wikidata = "Q306144"
+stackoverflow_tags = ["nginx"]
+github_repos = ["nginx/nginx"]
+packages = ["docker:library/nginx"]
+endoflife = "nginx"
+hn_terms = ["nginx"]
+
+# --- Virtualization ---
+
+# Hyper-V
+[[technology]]
+id = "hyper_v"
+name = "Hyper-V"
+category = "virtualization"
+added = 2026-10-25
+wikidata = "Q11278"
+stackoverflow_tags = ["hyper-v"]
+hn_terms = ["hyper-v"]
+
+# Kernel-based Virtual Machine
+[[technology]]
+id = "kvm"
+name = "KVM"
+category = "virtualization"
+added = 2026-10-25
+wikidata = "Q377539"
+stackoverflow_tags = ["kvm"]
+hn_terms = ["linux kvm", "qemu kvm", "kvm hypervisor"]
+
+# OpenStack
+[[technology]]
+id = "openstack"
+name = "OpenStack"
+category = "virtualization"
+added = 2026-10-25
+wikidata = "Q1470293"
+stackoverflow_tags = ["openstack"]
+hn_terms = ["openstack"]
+
+# Proxmox Virtual Environment
+[[technology]]
+id = "proxmox"
+name = "Proxmox VE"
+category = "virtualization"
+added = 2026-10-25
+wikidata = "Q344376"
+stackoverflow_tags = ["proxmox"]
+endoflife = "proxmox-ve"
+hn_terms = ["proxmox"]
+
+# VMware ESX
+[[technology]]
+id = "vmware_esxi"
+name = "VMware ESXi"
+category = "virtualization"
+added = 2026-10-25
+wikidata = "Q179116"
+stackoverflow_tags = ["esxi"]
+endoflife = "esxi"
+hn_terms = ["esxi"]
+
+# --- Data centers ---
+
+# Data center
+[[technology]]
+id = "data_center"
+name = "Data center"
+category = "data_center"
+added = 2026-10-25
+wikidata = "Q671224"
+hn_terms = ["data center", "datacenter", "data centre"]
+
+# Hyperscale computing
+[[technology]]
+id = "hyperscale_computing"
+name = "Hyperscale computing"
+category = "data_center"
+added = 2026-10-25
+wikidata = "Q13512512"
+hn_terms = ["hyperscale", "hyperscaler"]
+
+# =============================================================================
+# Networking
+# =============================================================================
+
+# --- Network protocols ---
+
+# Border Gateway Protocol
+[[technology]]
+id = "bgp"
+name = "Border Gateway Protocol"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q11155"
+stackoverflow_tags = ["bgp"]
+hn_terms = ["bgp"]
+
+# DNS over HTTPS
+[[technology]]
+id = "dns_over_https"
+name = "DNS over HTTPS"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q50826096"
+stackoverflow_tags = ["dns-over-https"]
+hn_terms = ["dns over https"]
+
+# Domain Name System Security Extensions
+[[technology]]
+id = "dnssec"
+name = "DNSSEC"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q41609"
+stackoverflow_tags = ["dnssec"]
+hn_terms = ["dnssec"]
+
+# GRPC
+[[technology]]
+id = "grpc"
+name = "gRPC"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q26356541"
+stackoverflow_tags = ["grpc"]
+github_repos = ["grpc/grpc"]
+packages = ["pypi:grpcio", "npm:@grpc/grpc-js"]
+hn_terms = ["grpc"]
+
+# HTTP/3
+[[technology]]
+id = "http3"
+name = "HTTP/3"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q58797190"
+stackoverflow_tags = ["http3"]
+hn_terms = ["http/3", "http3"]
+
+# IPv4
+[[technology]]
+id = "ipv4"
+name = "IPv4"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q11103"
+stackoverflow_tags = ["ipv4"]
+hn_terms = ["ipv4"]
+
+# IPv6
+[[technology]]
+id = "ipv6"
+name = "IPv6"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q2551624"
+stackoverflow_tags = ["ipv6"]
+hn_terms = ["ipv6"]
+
+# MQTT
+[[technology]]
+id = "mqtt"
+name = "MQTT"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q10322548"
+stackoverflow_tags = ["mqtt"]
+hn_terms = ["mqtt"]
+
+# QUIC
+[[technology]]
+id = "quic"
+name = "QUIC"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q7265601"
+stackoverflow_tags = ["quic"]
+hn_terms = ["quic"]
+
+# Resource Public Key Infrastructure
+[[technology]]
+id = "rpki"
+name = "Resource Public Key Infrastructure"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q7315813"
+hn_terms = ["rpki"]
+
+# Transport Layer Security
+[[technology]]
+id = "tls"
+name = "Transport Layer Security"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q206494"
+stackoverflow_tags = ["ssl"]
+hn_terms = ["tls"]
+
+# WebRTC
+[[technology]]
+id = "webrtc"
+name = "WebRTC"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q1089715"
+stackoverflow_tags = ["webrtc"]
+hn_terms = ["webrtc"]
+
+# WireGuard
+[[technology]]
+id = "wireguard"
+name = "WireGuard"
+category = "network_protocol"
+added = 2026-10-25
+wikidata = "Q28975568"
+stackoverflow_tags = ["wireguard"]
+hn_terms = ["wireguard"]
+
+# --- Mobile and wireless networks ---
+
+# Bluetooth Low Energy
+[[technology]]
+id = "bluetooth_le"
+name = "Bluetooth Low Energy"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q1638779"
+stackoverflow_tags = ["bluetooth-lowenergy"]
+hn_terms = ["bluetooth low energy", "bluetooth le", "ble"]
+
+# ESIM
+[[technology]]
+id = "esim"
+name = "eSIM"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q56315412"
+hn_terms = ["esim"]
+
+# 5G
+[[technology]]
+id = "five_g"
+name = "5G"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q1363408"
+stackoverflow_tags = ["5g"]
+hn_terms = ["5g"]
+
+# LoRa
+[[technology]]
+id = "lora"
+name = "LoRa"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q50552023"
+stackoverflow_tags = ["lora", "lorawan"]
+hn_terms = ["lorawan", "lora mesh", "lora radio"]
+
+# LTE (telecommunication)
+[[technology]]
+id = "lte"
+name = "LTE"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q79703"
+stackoverflow_tags = ["lte"]
+hn_terms = ["lte"]
+
+# Open RAN
+[[technology]]
+id = "open_ran"
+name = "Open RAN"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q116923275"
+hn_terms = ["open ran", "o-ran", "openran"]
+
+# 6G
+[[technology]]
+id = "six_g"
+name = "6G"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q59324875"
+hn_terms = ["6g"]
+
+# Starlink
+[[technology]]
+id = "starlink"
+name = "Starlink"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q19867977"
+hn_terms = ["starlink"]
+
+# Wi-Fi 6
+[[technology]]
+id = "wifi_6"
+name = "Wi-Fi 6"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q24534575"
+hn_terms = ["wi-fi 6", "wifi 6", "802.11ax"]
+
+# Wi-Fi 7
+[[technology]]
+id = "wifi_7"
+name = "Wi-Fi 7"
+category = "mobile_wireless"
+added = 2026-10-25
+wikidata = "Q65071978"
+hn_terms = ["wi-fi 7", "wifi 7", "802.11be"]
+
+# --- Network architectures ---
+
+# Content delivery network
+[[technology]]
+id = "content_delivery_network"
+name = "Content delivery network"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q72588"
+stackoverflow_tags = ["cdn"]
+hn_terms = ["cdn", "content delivery network"]
+
+# Edge computing
+[[technology]]
+id = "edge_computing"
+name = "Edge computing"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q5337692"
+hn_terms = ["edge computing"]
+
+# Ethernet
+[[technology]]
+id = "ethernet"
+name = "Ethernet"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q79984"
+stackoverflow_tags = ["ethernet"]
+hn_terms = ["ethernet"]
+
+# Fiber to the x
+[[technology]]
+id = "fiber_to_the_x"
+name = "Fiber to the x"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q586034"
+hn_terms = ["ftth", "fiber to the home", "fibre to the home"]
+
+# Internet of things
+[[technology]]
+id = "internet_of_things"
+name = "Internet of things"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q251212"
+stackoverflow_tags = ["iot"]
+hn_terms = ["iot", "internet of things"]
+
+# Network function virtualization
+[[technology]]
+id = "network_function_virtualization"
+name = "Network function virtualization"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q7000834"
+hn_terms = ["network function virtualization", "nfv"]
+
+# Secure access service edge
+[[technology]]
+id = "sase"
+name = "Secure access service edge"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q85800206"
+hn_terms = ["secure access service edge"]
+
+# SD-WAN
+[[technology]]
+id = "sd_wan"
+name = "SD-WAN"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q25349770"
+hn_terms = ["sd-wan", "sdwan"]
+
+# Software-defined networking
+[[technology]]
+id = "software_defined_networking"
+name = "Software-defined networking"
+category = "network_architecture"
+added = 2026-10-25
+wikidata = "Q1655198"
+stackoverflow_tags = ["sdn"]
+hn_terms = ["software-defined networking", "sdn"]
+
+# =============================================================================
+# Security
+# =============================================================================
+
+# --- Security technologies ---
+
+# Confidential computing
+[[technology]]
+id = "confidential_computing"
+name = "Confidential computing"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q117771715"
+hn_terms = ["confidential computing"]
+
+# End-to-end encryption
+[[technology]]
+id = "end_to_end_encryption"
+name = "End-to-end encryption"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q1340257"
+stackoverflow_tags = ["end-to-end-encryption"]
+hn_terms = ["end-to-end encryption", "end-to-end encrypted", "e2ee"]
+
+# Endpoint detection and response
+[[technology]]
+id = "endpoint_detection_and_response"
+name = "Endpoint detection and response"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q30748179"
+hn_terms = ["edr", "endpoint detection and response"]
+
+# Homomorphic encryption
+[[technology]]
+id = "homomorphic_encryption"
+name = "Homomorphic encryption"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q2154943"
+hn_terms = ["homomorphic encryption", "fully homomorphic", "fhe"]
+
+# Multi-factor authentication
+[[technology]]
+id = "multi_factor_authentication"
+name = "Multi-factor authentication"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q7878662"
+stackoverflow_tags = ["multi-factor-authentication", "two-factor-authentication"]
+hn_terms = ["2fa", "two-factor", "multi-factor"]
+
+# Passkey (credential)
+[[technology]]
+id = "passkey"
+name = "Passkey"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q118213879"
+stackoverflow_tags = ["passkey"]
+hn_terms = ["passkey", "passkeys"]
+
+# Post-quantum cryptography
+[[technology]]
+id = "post_quantum_cryptography"
+name = "Post-quantum cryptography"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q7233576"
+stackoverflow_tags = ["post-quantum-cryptography"]
+hn_terms = ["post-quantum", "pqc"]
+
+# Security information and event management
+[[technology]]
+id = "siem"
+name = "Security information and event management"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q56374834"
+hn_terms = ["siem"]
+
+# (no English Wikipedia article)
+[[technology]]
+id = "software_bill_of_materials"
+name = "Software bill of materials"
+category = "security_technology"
+added = 2026-10-25
+stackoverflow_tags = ["sbom"]
+hn_terms = ["sbom", "sboms", "software bill of materials"]
+
+# Zero trust architecture
+[[technology]]
+id = "zero_trust"
+name = "Zero trust architecture"
+category = "security_technology"
+added = 2026-10-25
+wikidata = "Q104852562"
+hn_terms = ["zero trust architecture", "zero trust network", "ztna"]
+
+# --- Security threats ---
+
+# Deepfake
+[[technology]]
+id = "deepfake"
+name = "Deepfake"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q49473179"
+hn_terms = ["deepfake", "deepfakes"]
+
+# Denial-of-service attack
+[[technology]]
+id = "denial_of_service"
+name = "Denial-of-service attack"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q131406"
+stackoverflow_tags = ["ddos", "denial-of-service"]
+hn_terms = ["ddos", "denial of service", "denial-of-service"]
+
+# Phishing
+[[technology]]
+id = "phishing"
+name = "Phishing"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q135005"
+stackoverflow_tags = ["phishing"]
+hn_terms = ["phishing"]
+
+# Prompt injection
+[[technology]]
+id = "prompt_injection"
+name = "Prompt injection"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q116737628"
+hn_terms = ["prompt injection"]
+
+# Ransomware
+[[technology]]
+id = "ransomware"
+name = "Ransomware"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q926331"
+hn_terms = ["ransomware"]
+
+# Supply chain attack
+[[technology]]
+id = "supply_chain_attack"
+name = "Supply chain attack"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q7644524"
+hn_terms = ["supply chain attack", "supply chain attacks", "supply-chain attack"]
+
+# Zero-day vulnerability
+[[technology]]
+id = "zero_day"
+name = "Zero-day vulnerability"
+category = "security_threat"
+added = 2026-10-25
+wikidata = "Q846726"
+hn_terms = ["zero-day", "zero day", "0day"]
+
+# =============================================================================
+# Hardware
+# =============================================================================
+
+# --- Processor architectures ---
+
+# Apple silicon
+[[technology]]
+id = "apple_silicon"
+name = "Apple silicon"
+category = "processor_architecture"
+added = 2026-10-25
+wikidata = "Q406283"
+stackoverflow_tags = ["apple-silicon", "apple-m1"]
+hn_terms = ["apple silicon"]
+
+# ARM architecture family
+[[technology]]
+id = "arm"
+name = "ARM architecture"
+category = "processor_architecture"
+added = 2026-10-25
+wikidata = "Q16980"
+stackoverflow_tags = ["arm", "arm64"]
+hn_terms = ["arm64", "aarch64", "arm-based"]
+
+# RISC-V
+[[technology]]
+id = "risc_v"
+name = "RISC-V"
+category = "processor_architecture"
+added = 2026-10-25
+wikidata = "Q17637401"
+stackoverflow_tags = ["riscv"]
+github_repos = ["riscv/riscv-isa-manual"]
+hn_terms = ["risc-v", "riscv"]
+
+# X86-64
+[[technology]]
+id = "x86_64"
+name = "x86-64"
+category = "processor_architecture"
+added = 2026-10-25
+wikidata = "Q272629"
+stackoverflow_tags = ["x86-64"]
+hn_terms = ["x86-64", "x86_64", "amd64"]
+
+# --- Accelerators ---
+
+# Neural processing unit
+[[technology]]
+id = "ai_accelerator"
+name = "AI accelerator"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q24895600"
+hn_terms = ["npu", "npus", "ai accelerator"]
+
+# AMD Instinct
+[[technology]]
+id = "amd_instinct"
+name = "AMD Instinct"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q28406632"
+hn_terms = ["amd instinct", "mi300x", "mi300"]
+
+# Field-programmable gate array
+[[technology]]
+id = "fpga"
+name = "Field-programmable gate array"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q190411"
+stackoverflow_tags = ["fpga"]
+hn_terms = ["fpga", "fpgas"]
+
+# Graphics processing unit
+[[technology]]
+id = "gpu"
+name = "Graphics processing unit"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q183484"
+stackoverflow_tags = ["gpu"]
+hn_terms = ["gpu", "gpus"]
+
+# Blackwell (microarchitecture)
+[[technology]]
+id = "nvidia_blackwell"
+name = "Nvidia Blackwell"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q125210777"
+hn_terms = ["blackwell", "gb200", "b200"]
+
+# Hopper (microarchitecture)
+[[technology]]
+id = "nvidia_hopper"
+name = "Nvidia Hopper"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q85767253"
+hn_terms = ["h100", "h200", "gh200"]
+
+# Tensor Processing Unit
+[[technology]]
+id = "tpu"
+name = "Tensor Processing Unit"
+category = "accelerator"
+added = 2026-10-25
+wikidata = "Q25106376"
+stackoverflow_tags = ["tpu"]
+hn_terms = ["tpu", "tpus"]
+
+# --- Memory and storage ---
+
+# Compute Express Link
+[[technology]]
+id = "cxl"
+name = "Compute Express Link"
+category = "memory_storage"
+added = 2026-10-25
+wikidata = "Q85845681"
+hn_terms = ["cxl", "compute express link"]
+
+# DDR5 SDRAM
+[[technology]]
+id = "ddr5"
+name = "DDR5 SDRAM"
+category = "memory_storage"
+added = 2026-10-25
+wikidata = "Q28444653"
+hn_terms = ["ddr5"]
+
+# High Bandwidth Memory
+[[technology]]
+id = "hbm"
+name = "High Bandwidth Memory"
+category = "memory_storage"
+added = 2026-10-25
+wikidata = "Q20723936"
+hn_terms = ["hbm", "high bandwidth memory"]
+
+# Hard disk drive
+[[technology]]
+id = "hdd"
+name = "Hard disk drive"
+category = "memory_storage"
+added = 2026-10-25
+wikidata = "Q4439"
+stackoverflow_tags = ["hard-drive"]
+hn_terms = ["hdd", "hdds", "hard disk"]
+
+# NVM Express
+[[technology]]
+id = "nvme"
+name = "NVM Express"
+category = "memory_storage"
+added = 2026-10-25
+wikidata = "Q17157198"
+stackoverflow_tags = ["nvme"]
+hn_terms = ["nvme"]
+
+# Solid-state drive
+[[technology]]
+id = "ssd"
+name = "Solid-state drive"
+category = "memory_storage"
+added = 2026-10-25
+wikidata = "Q487343"
+stackoverflow_tags = ["solid-state-drive"]
+hn_terms = ["ssd", "ssds", "solid-state drive"]
+
+# --- Semiconductor manufacturing ---
+
+# Chiplet
+[[technology]]
+id = "chiplet"
+name = "Chiplet"
+category = "semiconductor_manufacturing"
+added = 2026-10-25
+wikidata = "Q67060427"
+hn_terms = ["chiplet", "chiplets"]
+
+# EUV lithography
+[[technology]]
+id = "euv_lithography"
+name = "Extreme ultraviolet lithography"
+category = "semiconductor_manufacturing"
+added = 2026-10-25
+wikidata = "Q371965"
+hn_terms = ["euv", "extreme ultraviolet lithography"]
+
+# 2 nm process
+[[technology]]
+id = "process_2nm"
+name = "2 nm process"
+category = "semiconductor_manufacturing"
+added = 2026-10-25
+wikidata = "Q102809572"
+hn_terms = ["2nm", "2-nanometer"]
+
+# 3 nm process
+[[technology]]
+id = "process_3nm"
+name = "3 nm process"
+category = "semiconductor_manufacturing"
+added = 2026-10-25
+wikidata = "Q63207578"
+hn_terms = ["3nm", "3-nanometer"]
+
+# =============================================================================
+# Emerging technologies
+# =============================================================================
+
+# --- Quantum computing ---
+
+# Qiskit
+[[technology]]
+id = "qiskit"
+name = "Qiskit"
+category = "quantum_computing"
+added = 2026-10-25
+wikidata = "Q70490607"
+stackoverflow_tags = ["qiskit"]
+github_repos = ["Qiskit/qiskit"]
+packages = ["pypi:qiskit"]
+hn_terms = ["qiskit"]
+
+# Quantum computing
+[[technology]]
+id = "quantum_computing"
+name = "Quantum computing"
+category = "quantum_computing"
+added = 2026-10-25
+wikidata = "Q17995793"
+stackoverflow_tags = ["quantum-computing"]
+hn_terms = ["quantum computing", "quantum computer", "quantum computers"]
+
+# Quantum error correction
+[[technology]]
+id = "quantum_error_correction"
+name = "Quantum error correction"
+category = "quantum_computing"
+added = 2026-10-25
+wikidata = "Q1536431"
+hn_terms = ["quantum error correction", "logical qubits", "logical qubit"]
+
+# Quantum key distribution
+[[technology]]
+id = "quantum_key_distribution"
+name = "Quantum key distribution"
+category = "quantum_computing"
+added = 2026-10-25
+wikidata = "Q1027298"
+hn_terms = ["quantum key distribution", "qkd"]
+
+# --- Blockchain ---
+
+# Bitcoin
+[[technology]]
+id = "bitcoin"
+name = "Bitcoin"
+category = "blockchain"
+added = 2026-10-25
+wikidata = "Q131723"
+stackoverflow_tags = ["bitcoin"]
+github_repos = ["bitcoin/bitcoin"]
+endoflife = "bitcoin-core"
+hn_terms = ["bitcoin", "bitcoins", "btc"]
+
+# Blockchain
+[[technology]]
+id = "blockchain"
+name = "Blockchain"
+category = "blockchain"
+added = 2026-10-25
+wikidata = "Q20514253"
+stackoverflow_tags = ["blockchain"]
+hn_terms = ["blockchain", "blockchains"]
+
+# Ethereum
+[[technology]]
+id = "ethereum"
+name = "Ethereum"
+category = "blockchain"
+added = 2026-10-25
+wikidata = "Q16783523"
+stackoverflow_tags = ["ethereum"]
+github_repos = ["ethereum/go-ethereum"]
+packages = ["docker:ethereum/client-go"]
+hn_terms = ["ethereum"]
+
+# Non-fungible token
+[[technology]]
+id = "non_fungible_token"
+name = "Non-fungible token"
+category = "blockchain"
+added = 2026-10-25
+wikidata = "Q55648452"
+stackoverflow_tags = ["nft"]
+hn_terms = ["nft", "nfts", "non-fungible token"]
+
+# Stablecoin
+[[technology]]
+id = "stablecoin"
+name = "Stablecoin"
+category = "blockchain"
+added = 2026-10-25
+wikidata = "Q55582088"
+hn_terms = ["stablecoin", "stablecoins"]
+
+# --- Extended reality ---
+
+# Apple Vision Pro
+[[technology]]
+id = "apple_vision_pro"
+name = "Apple Vision Pro"
+category = "extended_reality"
+added = 2026-10-25
+wikidata = "Q117715451"
+stackoverflow_tags = ["visionos"]
+endoflife = "visionos"
+hn_terms = ["vision pro", "visionos"]
+
+# Augmented reality
+[[technology]]
+id = "augmented_reality"
+name = "Augmented reality"
+category = "extended_reality"
+added = 2026-10-25
+wikidata = "Q254183"
+stackoverflow_tags = ["augmented-reality"]
+hn_terms = ["augmented reality", "ar glasses", "ar headset"]
+
+# Metaverse
+[[technology]]
+id = "metaverse"
+name = "Metaverse"
+category = "extended_reality"
+added = 2026-10-25
+wikidata = "Q2632041"
+hn_terms = ["metaverse"]
+
+# Virtual reality
+[[technology]]
+id = "virtual_reality"
+name = "Virtual reality"
+category = "extended_reality"
+added = 2026-10-25
+wikidata = "Q170519"
+stackoverflow_tags = ["virtual-reality"]
+hn_terms = ["virtual reality", "vr"]
+
+# --- Robotics ---
+
+# Humanoid robot
+[[technology]]
+id = "humanoid_robot"
+name = "Humanoid robot"
+category = "robotics"
+added = 2026-10-25
+wikidata = "Q584529"
+hn_terms = ["humanoid robot", "humanoid robots"]
+
+# Robot Operating System
+[[technology]]
+id = "ros"
+name = "Robot Operating System"
+category = "robotics"
+added = 2026-10-25
+wikidata = "Q2160077"
+stackoverflow_tags = ["ros", "ros2"]
+github_repos = ["ros2/ros2"]
+packages = ["docker:library/ros"]
+endoflife = "ros-2"
+hn_terms = ["ros", "ros2", "robot operating system"]
+
+# Self-driving car
+[[technology]]
+id = "self_driving_car"
+name = "Self-driving car"
+category = "robotics"
+added = 2026-10-25
+wikidata = "Q741490"
+hn_terms = ["self-driving", "autonomous vehicles", "robotaxi"]
+
+# Unmanned aerial vehicle
+[[technology]]
+id = "unmanned_aerial_vehicle"
+name = "Unmanned aerial vehicle"
+category = "robotics"
+added = 2026-10-25
+wikidata = "Q484000"
+hn_terms = ["drone", "drones", "uav"]

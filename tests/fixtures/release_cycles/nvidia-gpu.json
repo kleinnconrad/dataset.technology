@@ -1,0 +1,101 @@
+{
+ "schema_version": "1.2.1",
+ "generated_at": "2026-10-25T00:08:48+00:00",
+ "last_modified": "2026-09-24T07:44:41+00:00",
+ "result": {
+  "name": "nvidia-gpu",
+  "aliases": [
+   "nvidia-products",
+   "nvidia-gpus"
+  ],
+  "label": "NVIDIA GPUs",
+  "category": "device",
+  "tags": [
+   "device",
+   "nvidia"
+  ],
+  "versionCommand": null,
+  "identifiers": [],
+  "labels": {
+   "eoas": "Active Support",
+   "discontinued": "Discontinued",
+   "eol": "Security Support",
+   "eoes": null
+  },
+  "links": {
+   "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nvidia.svg",
+   "html": "https://endoflife.date/nvidia-gpu",
+   "releasePolicy": "https://www.nvidia.com/en-us/geforce/graphics-cards/"
+  },
+  "releases": [
+   {
+    "name": "mobile-professional-ada-lovelace",
+    "codename": null,
+    "label": "Mobile Professional Blackwell (GB20x)",
+    "releaseDate": "2025-01-30",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": false,
+    "eoasFrom": null,
+    "isEol": false,
+    "eolFrom": null,
+    "isDiscontinued": false,
+    "discontinuedFrom": null,
+    "isMaintained": true,
+    "latest": null,
+    "custom": null
+   },
+   {
+    "name": "professional-blackwell",
+    "codename": null,
+    "label": "Professional Blackwell (GB20x)",
+    "releaseDate": "2025-01-30",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": false,
+    "eoasFrom": null,
+    "isEol": false,
+    "eolFrom": null,
+    "isDiscontinued": false,
+    "discontinuedFrom": null,
+    "isMaintained": true,
+    "latest": null,
+    "custom": null
+   },
+   {
+    "name": "mobile-consumer-blackwell",
+    "codename": null,
+    "label": "Mobile Consumer Blackwell (GB20x)",
+    "releaseDate": "2025-01-30",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": false,
+    "eoasFrom": null,
+    "isEol": false,
+    "eolFrom": null,
+    "isDiscontinued": false,
+    "discontinuedFrom": null,
+    "isMaintained": true,
+    "latest": null,
+    "custom": null
+   },
+   {
+    "name": "consumer-blackwell",
+    "codename": null,
+    "label": "Consumer Blackwell (GB20x)",
+    "releaseDate": "2025-01-30",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": false,
+    "eoasFrom": null,
+    "isEol": false,
+    "eolFrom": null,
+    "isDiscontinued": false,
+    "discontinuedFrom": null,
+    "isMaintained": true,
+    "latest": null,
+    "custom": null
+   }
+  ]
+ }
+}

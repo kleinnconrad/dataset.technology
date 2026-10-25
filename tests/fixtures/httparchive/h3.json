@@ -1,0 +1,116 @@
+[
+ {
+  "timestamp": "1577836800000",
+  "date": "2020_01_01",
+  "client": "mobile",
+  "percent": 0
+ },
+ {
+  "timestamp": "1577836800000",
+  "date": "2020_01_01",
+  "client": "desktop",
+  "percent": 0
+ },
+ {
+  "timestamp": "1580515200000",
+  "date": "2020_02_01",
+  "client": "mobile",
+  "percent": 0
+ },
+ {
+  "timestamp": "1580515200000",
+  "date": "2020_02_01",
+  "client": "desktop",
+  "percent": 0
+ },
+ {
+  "timestamp": "1588291200000",
+  "date": "2020_05_01",
+  "client": "mobile",
+  "percent": 0
+ },
+ {
+  "timestamp": "1588291200000",
+  "date": "2020_05_01",
+  "client": "desktop",
+  "percent": 0
+ },
+ {
+  "timestamp": "1590969600000",
+  "date": "2020_06_01",
+  "client": "mobile",
+  "percent": 0.74
+ },
+ {
+  "timestamp": "1590969600000",
+  "date": "2020_06_01",
+  "client": "desktop",
+  "percent": 0.12
+ },
+ {
+  "timestamp": "1593561600000",
+  "date": "2020_07_01",
+  "client": "mobile",
+  "percent": 7.26
+ },
+ {
+  "timestamp": "1593561600000",
+  "date": "2020_07_01",
+  "client": "desktop",
+  "percent": 7.15
+ },
+ {
+  "timestamp": "1606780800000",
+  "date": "2020_12_01",
+  "client": "mobile",
+  "percent": 2.78
+ },
+ {
+  "timestamp": "1606780800000",
+  "date": "2020_12_01",
+  "client": "desktop",
+  "percent": 3.25
+ },
+ {
+  "timestamp": "1609459200000",
+  "date": "2021_01_01",
+  "client": "desktop",
+  "percent": 2.55
+ },
+ {
+  "timestamp": "1612137600000",
+  "date": "2021_02_01",
+  "client": "mobile",
+  "percent": 4.4
+ },
+ {
+  "timestamp": "1612137600000",
+  "date": "2021_02_01",
+  "client": "desktop",
+  "percent": 4.47
+ },
+ {
+  "timestamp": "1788220800000",
+  "date": "2026_09_01",
+  "client": "mobile",
+  "percent": 44.87
+ },
+ {
+  "timestamp": "1788220800000",
+  "date": "2026_09_01",
+  "client": "desktop",
+  "percent": 43.05
+ },
+ {
+  "timestamp": "1790812800000",
+  "date": "2026_10_01",
+  "client": "mobile",
+  "percent": 47.59
+ },
+ {
+  "timestamp": "1790812800000",
+  "date": "2026_10_01",
+  "client": "desktop",
+  "percent": 45.94
+ }
+]

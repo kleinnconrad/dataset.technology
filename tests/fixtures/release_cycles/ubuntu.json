@@ -1,0 +1,125 @@
+{
+ "schema_version": "1.2.1",
+ "generated_at": "2026-10-25T00:08:48+00:00",
+ "last_modified": "2026-10-19T09:17:59+00:00",
+ "result": {
+  "name": "ubuntu",
+  "aliases": [
+   "ubuntu-linux"
+  ],
+  "label": "Ubuntu",
+  "category": "os",
+  "tags": [
+   "linux-distribution",
+   "os"
+  ],
+  "versionCommand": "cat /etc/os-release",
+  "identifiers": [
+   {
+    "type": "cpe",
+    "id": "cpe:2.3:o:canonical:ubuntu_linux"
+   },
+   {
+    "type": "cpe",
+    "id": "cpe:/o:canonical:ubuntu_linux"
+   }
+  ],
+  "labels": {
+   "eoas": "Hardware & Maintenance",
+   "discontinued": null,
+   "eol": "Maintenance & Security Support",
+   "eoes": "Expanded Security Maintenance"
+  },
+  "links": {
+   "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ubuntu.svg",
+   "html": "https://endoflife.date/ubuntu",
+   "releasePolicy": "https://ubuntu.com/project/docs/release-team/list-of-releases/"
+  },
+  "releases": [
+   {
+    "name": "26.10",
+    "codename": "Stonking Stingray",
+    "label": "26.10 'Stonking Stingray'",
+    "releaseDate": "2026-10-15",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": false,
+    "eoasFrom": "2027-07-01",
+    "isEol": false,
+    "eolFrom": "2027-07-01",
+    "isEoes": null,
+    "eoesFrom": null,
+    "isMaintained": true,
+    "latest": {
+     "name": "26.10",
+     "date": "2026-10-15",
+     "link": "https://wiki.ubuntu.com/StonkingStingray/ReleaseNotes/"
+    },
+    "custom": null
+   },
+   {
+    "name": "26.04",
+    "codename": "Resolute Raccoon",
+    "label": "26.04 'Resolute Raccoon' (LTS)",
+    "releaseDate": "2026-04-23",
+    "isLts": true,
+    "ltsFrom": null,
+    "isEoas": false,
+    "eoasFrom": "2031-05-29",
+    "isEol": false,
+    "eolFrom": "2031-05-29",
+    "isEoes": false,
+    "eoesFrom": "2036-04-23",
+    "isMaintained": true,
+    "latest": {
+     "name": "26.04.1",
+     "date": "2026-08-27",
+     "link": "https://wiki.ubuntu.com/ResoluteRaccoon/ReleaseNotes/"
+    },
+    "custom": null
+   },
+   {
+    "name": "25.10",
+    "codename": "Questing Quokka",
+    "label": "25.10 'Questing Quokka'",
+    "releaseDate": "2025-10-09",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": true,
+    "eoasFrom": "2026-07-01",
+    "isEol": true,
+    "eolFrom": "2026-07-01",
+    "isEoes": null,
+    "eoesFrom": null,
+    "isMaintained": false,
+    "latest": {
+     "name": "25.10",
+     "date": "2025-10-09",
+     "link": "https://wiki.ubuntu.com/QuestingQuokka/ReleaseNotes/"
+    },
+    "custom": null
+   },
+   {
+    "name": "25.04",
+    "codename": "Plucky Puffin",
+    "label": "25.04 'Plucky Puffin'",
+    "releaseDate": "2025-04-17",
+    "isLts": false,
+    "ltsFrom": null,
+    "isEoas": true,
+    "eoasFrom": "2026-01-17",
+    "isEol": true,
+    "eolFrom": "2026-01-17",
+    "isEoes": null,
+    "eoesFrom": null,
+    "isMaintained": false,
+    "latest": {
+     "name": "25.04",
+     "date": "2025-04-17",
+     "link": "https://wiki.ubuntu.com/PluckyPuffin/ReleaseNotes/"
+    },
+    "custom": null
+   }
+  ]
+ }
+}

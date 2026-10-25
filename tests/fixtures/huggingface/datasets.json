@@ -1,0 +1,91 @@
+[
+ {
+  "_id": "621ffdd236468d709f1835cf",
+  "id": "huggingface/documentation-images",
+  "author": "huggingface",
+  "gated": false,
+  "likes": 242,
+  "trendingScore": 2,
+  "downloads": 4915971,
+  "downloadsAllTime": 67568539,
+  "tags": [
+   "license:cc-by-nc-sa-4.0",
+   "size_categories:n<1K",
+   "format:imagefolder",
+   "modality:image",
+   "library:datasets",
+   "library:mlcroissant",
+   "region:us"
+  ],
+  "createdAt": "2022-03-02T23:29:22.000Z"
+ },
+ {
+  "_id": "621ffdd236468d709f18200d",
+  "id": "Salesforce/wikitext",
+  "author": "Salesforce",
+  "gated": false,
+  "likes": 848,
+  "trendingScore": 3,
+  "downloads": 1998161,
+  "downloadsAllTime": 40324099,
+  "tags": [
+   "task_categories:text-generation",
+   "task_categories:fill-mask",
+   "task_ids:language-modeling",
+   "task_ids:masked-language-modeling",
+   "annotations_creators:no-annotation",
+   "language_creators:crowdsourced",
+   "multilinguality:monolingual",
+   "source_datasets:original",
+   "license:cc-by-sa-3.0",
+   "license:gfdl",
+   "size_categories:1M<n<10M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets"
+  ],
+  "createdAt": "2022-03-02T23:29:22.000Z"
+ },
+ {
+  "_id": "000000000000000000000000",
+  "id": "example-user-d/scraped-dataset",
+  "author": "example-user-d",
+  "gated": false,
+  "likes": 3,
+  "trendingScore": 0,
+  "downloads": 1500000,
+  "downloadsAllTime": 2000000,
+  "tags": [
+   "license:cc-by-4.0",
+   "modality:text"
+  ],
+  "createdAt": "2025-01-01T00:00:00.000Z"
+ },
+ {
+  "_id": "625552d2b339bb03abe3432d",
+  "id": "openai/gsm8k",
+  "author": "openai",
+  "gated": "manual",
+  "likes": 2002,
+  "trendingScore": 7,
+  "downloads": 984481,
+  "downloadsAllTime": 17168298,
+  "tags": [
+   "benchmark:official",
+   "benchmark:eval-yaml",
+   "task_categories:text-generation",
+   "annotations_creators:crowdsourced",
+   "language_creators:crowdsourced",
+   "multilinguality:monolingual",
+   "source_datasets:original",
+   "license:mit",
+   "size_categories:10K<n<100K",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:polars"
+  ],
+  "createdAt": "2022-04-12T10:22:10.000Z"
+ }
+]

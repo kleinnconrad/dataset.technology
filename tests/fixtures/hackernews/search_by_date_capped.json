@@ -1,0 +1,54 @@
+{
+ "exhaustive": {
+  "nbHits": true,
+  "typo": true
+ },
+ "exhaustiveNbHits": true,
+ "exhaustiveTypo": true,
+ "hits": [
+  {
+   "_tags": [
+    "story",
+    "story_50146761"
+   ],
+   "created_at_i": 1792367872,
+   "num_comments": 1,
+   "objectID": "50146761",
+   "points": 1,
+   "title": "On Beyond Omega",
+   "url": "https://mathenchant.wordpress.com/2026/10/18/on-beyond-omega/"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50146715"
+   ],
+   "created_at_i": 1792367431,
+   "num_comments": 3,
+   "objectID": "50146715",
+   "points": 4,
+   "title": "The Deadly 1.5-Mile Corridor That Shows the Fatal Flaw in America's Road Design",
+   "url": "https://www.wsj.com/us-news/the-deadly-1-5-mile-corridor-that-shows-the-fatal-flaw-in-americas-road-design-8f424579"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50146706"
+   ],
+   "created_at_i": 1792367329,
+   "num_comments": 3,
+   "objectID": "50146706",
+   "points": 8,
+   "title": "I Teach at a Business School. It's Time to Shut Them Down",
+   "url": "https://www.nytimes.com/2026/10/18/opinion/business-school-mba-harvard-cornell-cambridge.html"
+  }
+ ],
+ "hitsPerPage": 1000,
+ "nbHits": 7219,
+ "nbPages": 1,
+ "page": 0,
+ "params": "tags=story&numericFilters=created_at_i%3E1791763200%2Ccreated_at_i%3C1792368000&hitsPerPage=2000&advancedSyntax=true&analyticsTags=backend",
+ "processingTimeMS": 4,
+ "query": "",
+ "serverTimeMS": 19
+}

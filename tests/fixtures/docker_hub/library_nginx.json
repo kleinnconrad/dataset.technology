@@ -1,0 +1,51 @@
+{
+ "user": "library",
+ "name": "nginx",
+ "namespace": "library",
+ "repository_type": "image",
+ "status": 1,
+ "status_description": "active",
+ "description": "Official build of Nginx.",
+ "is_private": false,
+ "is_automated": false,
+ "star_count": 21410,
+ "pull_count": 13509187123,
+ "last_updated": "2026-10-24T19:52:24.781981Z",
+ "last_modified": "2026-10-21T22:17:12.294204Z",
+ "date_registered": "2014-06-05T19:14:45Z",
+ "collaborator_count": 0,
+ "affiliation": null,
+ "hub_user": "stackbrew",
+ "has_starred": false,
+ "full_description": "# Quick reference\n\n-\t**Maintained by**:  \n\t[the NGINX Docker Maintainers](https://github.com/nginx/docker-nginx)\n\n-\t**Where to get help**:  \n\t[the Docker Community Slack](https://dockr.ly/comm-slack),",
+ "permissions": {
+  "read": true,
+  "write": false,
+  "admin": false
+ },
+ "media_types": [
+  "application/octet-stream",
+  "application/vnd.docker.container.image.v1+json",
+  "application/vnd.docker.distribution.manifest.list.v2+json",
+  "application/vnd.docker.distribution.manifest.v1+prettyjws",
+  "application/vnd.oci.image.index.v1+json"
+ ],
+ "content_types": [
+  "unrecognized",
+  "image"
+ ],
+ "categories": [
+  {
+   "name": "Web servers",
+   "slug": "web-servers"
+  }
+ ],
+ "immutable_tags_settings": {
+  "enabled": false,
+  "rules": [
+   ".*"
+  ]
+ },
+ "storage_size": 257830776389,
+ "source": null
+}

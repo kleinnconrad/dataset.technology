@@ -1,0 +1,242 @@
+<top500:list xmlns:top500="http://www.top500.org/xml/top500/1.0" authors="Author One, Author Two" date="2025/11/18">
+  <top500:site>
+    <top500:rank>1</top500:rank>
+    <top500:system-id>180307</top500:system-id>
+    <top500:system-name>El Capitan</top500:system-name>
+    <top500:manufacturer>HPE</top500:manufacturer>
+    <top500:computer>HPE Cray EX255a, AMD 4th Gen EPYC 24C 1.8GHz, AMD Instinct MI300A, Slingshot-11, TOSS</top500:computer>
+    <top500:system-address></top500:system-address>
+    <top500:r-max>1809000000.0</top500:r-max>
+    <top500:power>29684.6</top500:power>
+    <top500:r-peak>2821104000.0</top500:r-peak>
+    <top500:n-max>24768000</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>DOE/NNSA/LLNL</top500:installation-site-name>
+      <top500:installation-site-address>http://www.llnl.gov/</top500:installation-site-address>
+      <top500:site-id>49763</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Livermore</top500:town>
+    <top500:state>CA</top500:state>
+    <top500:country>United States</top500:country>
+    <top500:year>2024</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>11340000</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>2</top500:rank>
+    <top500:system-id>180047</top500:system-id>
+    <top500:system-name>Frontier</top500:system-name>
+    <top500:manufacturer>HPE</top500:manufacturer>
+    <top500:computer>HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X, Slingshot-11, HPE Cray OS</top500:computer>
+    <top500:system-address>https://www.olcf.ornl.gov/frontier/</top500:system-address>
+    <top500:r-max>1353000000.0</top500:r-max>
+    <top500:power>24607.0</top500:power>
+    <top500:r-peak>2055716990.0</top500:r-peak>
+    <top500:n-max>24837120</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>DOE/SC/Oak Ridge National Laboratory</top500:installation-site-name>
+      <top500:installation-site-address>http://computing.ornl.gov</top500:installation-site-address>
+      <top500:site-id>48553</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Oak Ridge</top500:town>
+    <top500:state>TN</top500:state>
+    <top500:country>United States</top500:country>
+    <top500:year>2021</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>9066176</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>3</top500:rank>
+    <top500:system-id>180183</top500:system-id>
+    <top500:system-name>Aurora</top500:system-name>
+    <top500:manufacturer>Intel</top500:manufacturer>
+    <top500:computer>HPE Cray EX - Intel Exascale Compute Blade, Xeon CPU Max 9470 52C 2.4GHz, Intel Data Center GPU Max, Slingshot-11</top500:computer>
+    <top500:system-address>http://aurora.alcf.anl.gov</top500:system-address>
+    <top500:r-max>1012000000.0</top500:r-max>
+    <top500:power>38698.4</top500:power>
+    <top500:r-peak>1980006000.0</top500:r-peak>
+    <top500:n-max>28773888</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>DOE/SC/Argonne National Laboratory</top500:installation-site-name>
+      <top500:installation-site-address>http://www.anl.gov/</top500:installation-site-address>
+      <top500:site-id>47347</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Argonne</top500:town>
+    <top500:state>IL</top500:state>
+    <top500:country>United States</top500:country>
+    <top500:year>2023</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>9264128</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>4</top500:rank>
+    <top500:system-id>180357</top500:system-id>
+    <top500:system-name>JUPITER Booster</top500:system-name>
+    <top500:manufacturer>EVIDEN</top500:manufacturer>
+    <top500:computer>BullSequana XH3000, GH Superchip 72C 3GHz, NVIDIA GH200 Superchip, Quad-Rail NVIDIA InfiniBand NDR200, RedHat Enterprise Linux</top500:computer>
+    <top500:system-address>https://jupiter.fz-juelich.de</top500:system-address>
+    <top500:r-max>1000000000.0</top500:r-max>
+    <top500:power>15793.8</top500:power>
+    <top500:r-peak>1226280640.0</top500:r-peak>
+    <top500:n-max>22536192</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>EuroHPC/FZJ</top500:installation-site-name>
+      <top500:installation-site-address>https://jupiter.fz-juelich.de</top500:installation-site-address>
+      <top500:site-id>51016</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Juelich</top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>Germany</top500:country>
+    <top500:year>2025</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>4801344</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>5</top500:rank>
+    <top500:system-id>180236</top500:system-id>
+    <top500:system-name>Eagle</top500:system-name>
+    <top500:manufacturer>Microsoft Azure</top500:manufacturer>
+    <top500:computer>Microsoft NDv5, Xeon Platinum 8480C 48C 2GHz, NVIDIA H100, NVIDIA Infiniband NDR</top500:computer>
+    <top500:system-address></top500:system-address>
+    <top500:r-max>561200000.0</top500:r-max>
+    <top500:power></top500:power>
+    <top500:r-peak>846835200.0</top500:r-peak>
+    <top500:n-max>11796480</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>Microsoft Azure</top500:installation-site-name>
+      <top500:installation-site-address>https://azure.microsoft.com</top500:installation-site-address>
+      <top500:site-id>50981</top500:site-id>
+    </top500:installation-site>
+    <top500:town>None</top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>United States</top500:country>
+    <top500:year>2023</top500:year>
+    <top500:area-of-installation>Industry</top500:area-of-installation>
+    <top500:number-of-processors>2073600</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>6</top500:rank>
+    <top500:system-id>180315</top500:system-id>
+    <top500:system-name>HPC6</top500:system-name>
+    <top500:manufacturer>HPE</top500:manufacturer>
+    <top500:computer>HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X, Slingshot-11, RHEL 8.9</top500:computer>
+    <top500:system-address></top500:system-address>
+    <top500:r-max>477900000.0</top500:r-max>
+    <top500:power>8460.9</top500:power>
+    <top500:r-peak>606965760.0</top500:r-peak>
+    <top500:n-max>13914880</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>Eni S.p.A.</top500:installation-site-name>
+      <top500:installation-site-address>http://www.eni.com/</top500:installation-site-address>
+      <top500:site-id>50489</top500:site-id>
+    </top500:installation-site>
+    <top500:town></top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>Italy</top500:country>
+    <top500:year>2024</top500:year>
+    <top500:area-of-installation>Industry</top500:area-of-installation>
+    <top500:number-of-processors>3143520</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>7</top500:rank>
+    <top500:system-id>179807</top500:system-id>
+    <top500:system-name>Supercomputer Fugaku</top500:system-name>
+    <top500:manufacturer>Fujitsu</top500:manufacturer>
+    <top500:computer>Supercomputer Fugaku, A64FX 48C 2.2GHz, Tofu interconnect D</top500:computer>
+    <top500:system-address>https://www.r-ccs.riken.jp/en/fugaku/project</top500:system-address>
+    <top500:r-max>442010000.0</top500:r-max>
+    <top500:power>29899.2</top500:power>
+    <top500:r-peak>537212000.0</top500:r-peak>
+    <top500:n-max>21288960</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>RIKEN Center for Computational Science</top500:installation-site-name>
+      <top500:installation-site-address>https://www.r-ccs.riken.jp/en/</top500:installation-site-address>
+      <top500:site-id>50831</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Kobe</top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>Japan</top500:country>
+    <top500:year>2020</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>7630848</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>8</top500:rank>
+    <top500:system-id>180259</top500:system-id>
+    <top500:system-name>Alps</top500:system-name>
+    <top500:manufacturer>HPE</top500:manufacturer>
+    <top500:computer>HPE Cray EX254n, NVIDIA Grace 72C 3.1GHz, NVIDIA GH200 Superchip, Slingshot-11, HPE Cray OS</top500:computer>
+    <top500:system-address></top500:system-address>
+    <top500:r-max>434900000.0</top500:r-max>
+    <top500:power>7124.0</top500:power>
+    <top500:r-peak>574841280.0</top500:r-peak>
+    <top500:n-max>15400960</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>Swiss National Supercomputing Centre (CSCS)</top500:installation-site-name>
+      <top500:installation-site-address></top500:installation-site-address>
+      <top500:site-id>50422</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Lugano</top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>Switzerland</top500:country>
+    <top500:year>2024</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>2121600</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>9</top500:rank>
+    <top500:system-id>180048</top500:system-id>
+    <top500:system-name>LUMI</top500:system-name>
+    <top500:manufacturer>HPE</top500:manufacturer>
+    <top500:computer>HPE Cray EX235a, AMD Optimized 3rd Generation EPYC 64C 2GHz, AMD Instinct MI250X, Slingshot-11</top500:computer>
+    <top500:system-address></top500:system-address>
+    <top500:r-max>379700000.0</top500:r-max>
+    <top500:power>7106.8</top500:power>
+    <top500:r-peak>531505150.0</top500:r-peak>
+    <top500:n-max>13685760</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>EuroHPC/CSC</top500:installation-site-name>
+      <top500:installation-site-address>https://www.lumi-supercomputer.eu/</top500:installation-site-address>
+      <top500:site-id>50908</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Kajaani</top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>Finland</top500:country>
+    <top500:year>2023</top500:year>
+    <top500:area-of-installation>Research</top500:area-of-installation>
+    <top500:number-of-processors>2752704</top500:number-of-processors>
+  </top500:site>
+  <top500:site>
+    <top500:rank>10</top500:rank>
+    <top500:system-id>180128</top500:system-id>
+    <top500:system-name>Leonardo</top500:system-name>
+    <top500:manufacturer>EVIDEN</top500:manufacturer>
+    <top500:computer>BullSequana XH2000, Xeon Platinum 8358 32C 2.6GHz, NVIDIA A100 SXM4 64 GB, Quad-rail NVIDIA HDR100 Infiniband</top500:computer>
+    <top500:system-address></top500:system-address>
+    <top500:r-max>241200000.0</top500:r-max>
+    <top500:power>7493.7</top500:power>
+    <top500:r-peak>306311160.0</top500:r-peak>
+    <top500:n-max>10229760</top500:n-max>
+    <top500:n-half>0</top500:n-half>
+    <top500:installation-site>
+      <top500:installation-site-name>EuroHPC/CINECA</top500:installation-site-name>
+      <top500:installation-site-address>http://www.cineca.it</top500:installation-site-address>
+      <top500:site-id>50944</top500:site-id>
+    </top500:installation-site>
+    <top500:town>Bologna</top500:town>
+    <top500:state>N/A</top500:state>
+    <top500:country>Italy</top500:country>
+    <top500:year>2023</top500:year>
+    <top500:area-of-installation>Academic</top500:area-of-installation>
+    <top500:number-of-processors>1824768</top500:number-of-processors>
+  </top500:site>
+</top500:list>

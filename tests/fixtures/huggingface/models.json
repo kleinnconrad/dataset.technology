@@ -1,0 +1,228 @@
+[
+ {
+  "_id": "621ffdc136468d709f180294",
+  "id": "sentence-transformers/all-MiniLM-L6-v2",
+  "author": "sentence-transformers",
+  "gated": false,
+  "likes": 6013,
+  "trendingScore": 21,
+  "downloads": 191688814,
+  "downloadsAllTime": 4148027675,
+  "safetensors": {
+   "parameters": {
+    "I64": 512,
+    "F32": 22713216
+   },
+   "total": 22713728
+  },
+  "tags": [
+   "sentence-transformers",
+   "pytorch",
+   "tf",
+   "rust",
+   "onnx",
+   "safetensors",
+   "openvino",
+   "bert",
+   "feature-extraction",
+   "sentence-similarity",
+   "transformers",
+   "en",
+   "license:apache-2.0"
+  ],
+  "pipeline_tag": "sentence-similarity",
+  "library_name": "sentence-transformers",
+  "createdAt": "2022-03-02T23:29:05.000Z",
+  "baseModels": {
+   "relation": "quantized",
+   "models": [
+    {
+     "_id": "621ffdc136468d709f17e8f3",
+     "id": "example-user-a/MiniLM-L6-H384-uncased"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "000000000000000000000000",
+  "id": "example-user-b/tiny-random-model",
+  "author": "example-user-b",
+  "gated": false,
+  "likes": 12,
+  "trendingScore": 1,
+  "downloads": 150000000,
+  "downloadsAllTime": 900000000,
+  "tags": [
+   "transformers",
+   "license:mit"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "createdAt": "2024-05-01T10:00:00.000Z"
+ },
+ {
+  "_id": "621ffdc136468d709f17a20e",
+  "id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "author": "cross-encoder",
+  "gated": false,
+  "likes": 432,
+  "trendingScore": 5,
+  "downloads": 71105432,
+  "downloadsAllTime": 661153907,
+  "safetensors": {
+   "parameters": {
+    "I64": 512,
+    "F32": 22713601
+   },
+   "total": 22714113
+  },
+  "tags": [
+   "sentence-transformers",
+   "pytorch",
+   "jax",
+   "onnx",
+   "safetensors",
+   "openvino",
+   "bert",
+   "text-classification",
+   "transformers",
+   "text-ranking",
+   "en",
+   "base_model:cross-encoder/ms-marco-MiniLM-L12-v2",
+   "license:apache-2.0"
+  ],
+  "pipeline_tag": "text-ranking",
+  "library_name": "sentence-transformers",
+  "createdAt": "2022-03-02T23:29:05.000Z",
+  "baseModels": {
+   "relation": "quantized",
+   "models": [
+    {
+     "_id": "621ffdc136468d709f17a20b",
+     "id": "cross-encoder/ms-marco-MiniLM-L12-v2"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "6555d075325783cc791fb794",
+  "id": "pyannote/speaker-diarization-3.1",
+  "author": "pyannote",
+  "gated": "auto",
+  "likes": 4606,
+  "trendingScore": 75,
+  "downloads": 6868690,
+  "downloadsAllTime": 355969523,
+  "tags": [
+   "pyannote-audio",
+   "pyannote",
+   "pyannote-audio-pipeline",
+   "audio",
+   "voice",
+   "speech",
+   "speaker",
+   "speaker-diarization",
+   "speaker-change-detection",
+   "voice-activity-detection",
+   "overlapped-speech-detection",
+   "automatic-speech-recognition",
+   "license:mit"
+  ],
+  "pipeline_tag": "automatic-speech-recognition",
+  "library_name": "pyannote-audio",
+  "createdAt": "2023-11-16T08:19:01.000Z"
+ },
+ {
+  "_id": "680da718233834890aa01f51",
+  "id": "Qwen/Qwen3-0.6B",
+  "author": "Qwen",
+  "gated": false,
+  "likes": 1850,
+  "trendingScore": 15,
+  "downloads": 23833726,
+  "downloadsAllTime": 252272198,
+  "safetensors": {
+   "parameters": {
+    "BF16": 751632384
+   },
+   "total": 751632384
+  },
+  "tags": [
+   "transformers",
+   "safetensors",
+   "qwen3",
+   "text-generation",
+   "conversational",
+   "base_model:Qwen/Qwen3-0.6B-Base",
+   "base_model:finetune:Qwen/Qwen3-0.6B-Base",
+   "license:apache-2.0",
+   "text-generation-inference",
+   "endpoints_compatible",
+   "deploy:sagemaker",
+   "deploy:azure"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "createdAt": "2025-04-27T03:40:08.000Z",
+  "baseModels": {
+   "relation": "finetune",
+   "models": [
+    {
+     "_id": "680da718233834890aa01f50",
+     "id": "Qwen/Qwen3-0.6B-Base"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "000000000000000000000000",
+  "id": "example-user-c/Qwen3-0.6B-GGUF",
+  "author": "example-user-c",
+  "gated": false,
+  "likes": 40,
+  "trendingScore": 3,
+  "downloads": 25000000,
+  "downloadsAllTime": 60000000,
+  "tags": [
+   "gguf",
+   "license:apache-2.0"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "gguf",
+  "createdAt": "2025-05-01T10:00:00.000Z",
+  "baseModels": {
+   "relation": "quantized",
+   "models": [
+    {
+     "_id": "x",
+     "id": "Qwen/Qwen3-0.6B"
+    }
+   ]
+  }
+ },
+ {
+  "_id": "621ffdc136468d709f17b61d",
+  "id": "google/electra-base-discriminator",
+  "author": "google",
+  "gated": false,
+  "likes": 217,
+  "trendingScore": 0,
+  "downloads": 33217650,
+  "downloadsAllTime": 970239403,
+  "tags": [
+   "transformers",
+   "pytorch",
+   "tf",
+   "jax",
+   "rust",
+   "electra",
+   "pretraining",
+   "en",
+   "license:apache-2.0",
+   "endpoints_compatible",
+   "region:us"
+  ],
+  "library_name": "transformers",
+  "createdAt": "2022-03-02T23:29:05.000Z"
+ }
+]

@@ -1,0 +1,15 @@
+{
+ "exhaustive": {
+  "nbHits": true
+ },
+ "exhaustiveNbHits": true,
+ "hits": [],
+ "hitsPerPage": 0,
+ "nbHits": 7,
+ "nbPages": 0,
+ "page": 0,
+ "params": "query=kubernetes&tags=story&numericFilters=created_at_i%3E1791763200%2Ccreated_at_i%3C1792368000&typoTolerance=false&hitsPerPage=0&advancedSyntax=true&analyticsTags=backend",
+ "processingTimeMS": 1,
+ "query": "kubernetes",
+ "serverTimeMS": 2
+}

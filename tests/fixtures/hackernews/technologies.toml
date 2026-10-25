@@ -1,0 +1,74 @@
+# Registry fixture for the Hacker News tests: terms with symbols (c++, c#, f#, .net), phrases and dots.
+
+[[technology]]
+id = "c"
+name = "C"
+category = "programming_language"
+added = 2026-10-01
+hn_terms = ["c programming"]
+
+[[technology]]
+id = "cpp"
+name = "C++"
+category = "programming_language"
+added = 2026-10-01
+hn_terms = ["c++"]
+
+[[technology]]
+id = "csharp"
+name = "C#"
+category = "programming_language"
+added = 2026-10-01
+hn_terms = ["c#"]
+
+[[technology]]
+id = "fsharp"
+name = "F#"
+category = "programming_language"
+added = 2026-10-01
+hn_terms = ["f#", "fsharp"]
+
+[[technology]]
+id = "dotnet"
+name = ".NET"
+category = "runtime"
+added = 2026-10-01
+hn_terms = [".net", "dotnet"]
+
+[[technology]]
+id = "large_language_model"
+name = "Large language model"
+category = "ai_concept"
+added = 2026-10-01
+hn_terms = ["llm", "large language model"]
+
+[[technology]]
+id = "nodejs"
+name = "Node.js"
+category = "runtime"
+added = 2026-10-01
+hn_terms = ["node.js"]
+
+[[technology]]
+id = "rust"
+name = "Rust"
+category = "programming_language"
+added = 2026-10-01
+hn_terms = ["rust"]
+
+# An entry without Hacker News terms
+[[technology]]
+id = "polars"
+name = "Polars"
+category = "data_library"
+added = 2026-10-01
+
+# A removed entry: its term is neither matched nor counted
+[[technology]]
+id = "gopher"
+name = "Gopher"
+category = "network_protocol"
+added = 2026-10-01
+removed = 2026-10-15
+removed_reason = "test entry for removed technologies"
+hn_terms = ["gopher"]

@@ -1,0 +1,572 @@
+[
+ {
+  "page": 1,
+  "pages": 1,
+  "per_page": 20000,
+  "total": 35,
+  "sourceid": "2",
+  "lastupdated": "2026-10-08"
+ },
+ [
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2024",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2023",
+   "value": 2.59737836465431,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2022",
+   "value": 2.5711591602204,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2021",
+   "value": 2.5227995854217,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2020",
+   "value": 2.45606936077903,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "1W",
+    "value": "World"
+   },
+   "countryiso3code": "WLD",
+   "date": "2019",
+   "value": 2.26339308318271,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2024",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2023",
+   "value": 3.1539,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2022",
+   "value": 3.07096,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2021",
+   "value": 3.0786,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2020",
+   "value": 3.0897,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "DE",
+    "value": "Germany"
+   },
+   "countryiso3code": "DEU",
+   "date": "2019",
+   "value": 3.11256,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2024",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2023",
+   "value": 4.94352,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2022",
+   "value": 4.84753,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2021",
+   "value": 4.59673,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2020",
+   "value": 4.5214,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "KR",
+    "value": "Korea, Rep."
+   },
+   "countryiso3code": "KOR",
+   "date": "2019",
+   "value": 4.36379,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2024",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2023",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2022",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2021",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2020",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "NG",
+    "value": "Nigeria"
+   },
+   "countryiso3code": "NGA",
+   "date": "2019",
+   "value": 0.28444,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2025",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2024",
+   "value": null,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2023",
+   "value": 3.44716,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2022",
+   "value": 3.48736,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2021",
+   "value": 3.4689,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2020",
+   "value": 3.41788,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  },
+  {
+   "indicator": {
+    "id": "GB.XPD.RSDV.GD.ZS",
+    "value": "Research and development expenditure (% of GDP)"
+   },
+   "country": {
+    "id": "US",
+    "value": "United States"
+   },
+   "countryiso3code": "USA",
+   "date": "2019",
+   "value": 3.14297,
+   "unit": "",
+   "obs_status": "",
+   "decimal": 2
+  }
+ ]
+]

@@ -1,0 +1,42 @@
+{
+ "items": [
+  {
+   "has_synonyms": true,
+   "is_moderator_only": false,
+   "is_required": false,
+   "count": 2204253,
+   "name": "python"
+  },
+  {
+   "has_synonyms": true,
+   "is_moderator_only": false,
+   "is_required": false,
+   "count": 1621624,
+   "name": "c#"
+  },
+  {
+   "has_synonyms": true,
+   "is_moderator_only": false,
+   "is_required": false,
+   "count": 813955,
+   "name": "c++"
+  },
+  {
+   "has_synonyms": true,
+   "is_moderator_only": false,
+   "is_required": false,
+   "count": 74454,
+   "name": "go"
+  },
+  {
+   "has_synonyms": false,
+   "is_moderator_only": false,
+   "is_required": false,
+   "count": 43978,
+   "name": "rust"
+  }
+ ],
+ "has_more": false,
+ "quota_max": 300,
+ "quota_remaining": 295
+}

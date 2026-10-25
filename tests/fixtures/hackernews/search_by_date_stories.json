@@ -1,0 +1,140 @@
+{
+ "exhaustive": {
+  "nbHits": true,
+  "typo": true
+ },
+ "exhaustiveNbHits": true,
+ "exhaustiveTypo": true,
+ "hits": [
+  {
+   "_tags": [
+    "story",
+    "story_50145715",
+    "show_hn"
+   ],
+   "created_at_i": 1792359370,
+   "num_comments": 85,
+   "objectID": "50145715",
+   "points": 157,
+   "title": "Show HN: WhatsApp MCP running free on Cloudflare",
+   "url": "https://github.com/finereli/whatsapp-mcp"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50089577",
+    "ask_hn"
+   ],
+   "created_at_i": 1791992971,
+   "num_comments": 118,
+   "objectID": "50089577",
+   "points": 166,
+   "title": "Tell HN: Remember to migrate away from .name domain"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50140769",
+    "show_hn"
+   ],
+   "created_at_i": 1792328814,
+   "num_comments": 129,
+   "objectID": "50140769",
+   "points": 229,
+   "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake",
+   "url": "https://legendofhyrule.com/"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50146625"
+   ],
+   "created_at_i": 1792366677,
+   "num_comments": 125,
+   "objectID": "50146625",
+   "points": 288,
+   "title": "William Gibson and the trademarking of cyberspace",
+   "url": "https://colo.to/cyberspace.html"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50146624"
+   ],
+   "created_at_i": 1792366674,
+   "num_comments": 255,
+   "objectID": "50146624",
+   "points": 143,
+   "title": "How Quickly Can the DoD Rebuild and Recast the Munitions Industrial Base?",
+   "url": "https://www.csis.org/analysis/how-quickly-can-dod-rebuild-and-recast-munitions-industrial-base"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50145507"
+   ],
+   "created_at_i": 1792357752,
+   "num_comments": 219,
+   "objectID": "50145507",
+   "points": 303,
+   "title": "If you don't run your own LLM proxy, how do you know whats going on?",
+   "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50145337"
+   ],
+   "created_at_i": 1792356494,
+   "num_comments": 239,
+   "objectID": "50145337",
+   "points": 520,
+   "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+   "url": "https://arxiv.org/abs/2610.18861"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50144175"
+   ],
+   "created_at_i": 1792350131,
+   "num_comments": 99,
+   "objectID": "50144175",
+   "points": 108,
+   "title": "Personal software factories are a waste of time",
+   "url": "https://www.peterp.me/articles/personal-software-factories-are-a-waste-of-time/"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_50069499"
+   ],
+   "created_at_i": 1791887220,
+   "num_comments": 446,
+   "objectID": "50069499",
+   "points": 750,
+   "title": "11 year old unsoundness bugs found in Rust borrow checker",
+   "url": "https://github.com/rust-lang/rust/issues/164250"
+  },
+  {
+   "_tags": [
+    "story",
+    "story_49963385"
+   ],
+   "created_at_i": 1791199038,
+   "num_comments": 197,
+   "objectID": "49963385",
+   "points": 247,
+   "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
+   "url": "https://github.com/rui314/mold/releases/tag/v3.0.0"
+  }
+ ],
+ "hitsPerPage": 1000,
+ "nbHits": 327,
+ "nbPages": 1,
+ "page": 0,
+ "params": "tags=story&numericFilters=created_at_i%3E1791763200%2Ccreated_at_i%3C1792368000%2Cpoints%3E%3D100&hitsPerPage=1000&advancedSyntax=true&analyticsTags=backend",
+ "processingTimeMS": 2,
+ "query": "",
+ "serverTimeMS": 9
+}

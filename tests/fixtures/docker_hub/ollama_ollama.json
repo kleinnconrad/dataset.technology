@@ -1,0 +1,53 @@
+{
+ "user": "ollama",
+ "name": "ollama",
+ "namespace": "ollama",
+ "repository_type": "image",
+ "status": 1,
+ "status_description": "active",
+ "description": "The easiest way to get up and running with large language models. ",
+ "is_private": false,
+ "is_automated": false,
+ "star_count": 1618,
+ "pull_count": 191631304,
+ "last_updated": "2026-10-24T17:51:09.802678Z",
+ "last_modified": "2024-10-16T13:48:34.145251Z",
+ "date_registered": "2023-06-29T23:27:34.326426Z",
+ "collaborator_count": 0,
+ "affiliation": null,
+ "hub_user": "ollama",
+ "has_starred": false,
+ "full_description": "<div align=\"center\">\n  <img src=\"https://github.com/jmorganca/ollama/assets/3325447/080f3a72-e2fd-4741-8070-ae79a06f943f\">\n</div>\n\n# Ollama Docker image\n\n[![Discord](https://dcbadge.vercel.app/api/ser",
+ "permissions": {
+  "read": true,
+  "write": false,
+  "admin": false
+ },
+ "media_types": [
+  "application/vnd.docker.container.image.v1+json",
+  "application/vnd.docker.distribution.manifest.list.v2+json",
+  "application/vnd.oci.image.config.v1+json",
+  "application/vnd.oci.image.index.v1+json"
+ ],
+ "content_types": [
+  "image"
+ ],
+ "categories": [
+  {
+   "name": "Machine learning & AI",
+   "slug": "machine-learning-and-ai"
+  },
+  {
+   "name": "Developer tools",
+   "slug": "developer-tools"
+  }
+ ],
+ "immutable_tags_settings": {
+  "enabled": false,
+  "rules": [
+   ".*"
+  ]
+ },
+ "storage_size": 4053338200303,
+ "source": null
+}
