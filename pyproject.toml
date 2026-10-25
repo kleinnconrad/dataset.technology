@@ -3,7 +3,7 @@ name = "tech-dataset"
 version = "0.1.0"
 description = "A long-term dataset of the technology world (AI and ML, software development, IT infrastructure, networking, security, hardware) for trend analysis and prediction"
 requires-python = ">=3.11"
-# Same versions as in political_dataset, so that the shared modules run on a tested set
+# Same versions as in dataset.politics.germany, so that the shared modules run on a tested set
 dependencies = [
     "defusedxml==0.7.1",
     "httpx==0.28.1",
