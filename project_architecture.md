@@ -1,6 +1,6 @@
 # Tech Dataset: Architecture
 
-This document describes the structure of the pipeline: scope and decisions, the design rules for a collection period of 15 to 20 years, the technology registry, the datasets and their variables, the prediction targets they serve, the sources, storage and data volume, the run, failure handling, the measurement log and the implementation status. The pipeline adopts the structure of [political_dataset](https://github.com/kleinnconrad/german_politics_dataset). Usage and configuration are described in the [README](README.md).
+This document describes the structure of the pipeline: scope and decisions, the design rules for a collection period of 15 to 20 years, the technology registry, the datasets and their variables, the prediction targets they serve, the sources, storage and data volume, the run, failure handling, the measurement log and the implementation status. The pipeline adopts the structure of [dataset.politics.germany](https://github.com/kleinnconrad/dataset.politics.germany). Usage and configuration are described in the [README](README.md).
 
 ## Table of Contents
 - [1. Scope and Decisions](#1-scope-and-decisions)
@@ -31,7 +31,7 @@ This document describes the structure of the pipeline: scope and decisions, the 
 - **Horizon:** the data is collected for 15 to 20 years and analyzed as long time series. The design favors stable definitions, durable sources and a moderate data volume over the completeness of single items.
 - **Repository:** public. The data is published under the ODbL 1.0 (see [data/LICENSE.md](data/LICENSE.md)); every record names the license or terms of its source.
 - **Schedule:** one workflow runs the due collectors on Tuesdays and Fridays at 02:07 Europe/Berlin. Collectors of snapshot and change data run weekly or in every run; collectors of series whose sources keep the history run monthly (Section 9). A run takes at most 45 minutes; the history is imported once by a separate `backfill` run.
-- **No language model:** all variables are read deterministically from structured sources. Labels produced by a model, such as topics of Hacker News stories, can be added later as a separate dataset keyed by the item id, as in political_dataset.
+- **No language model:** all variables are read deterministically from structured sources. Labels produced by a model, such as topics of Hacker News stories, can be added later as a separate dataset keyed by the item id, as in dataset.politics.germany.
 - **No paid access:** every source is free. GitHub Actions provides a token for the GitHub API; free keys for the Stack Exchange and NVD APIs are optional and raise the quotas.
 
 ---
@@ -216,7 +216,7 @@ The dataset is designed for questions that need long series of comparable measur
 | TOP500 | XML files | 2 s | copyright TOP500.org; only aggregates are stored | `supercomputer_lists` |
 | HTTP Archive reports | JSON | 1 s | free use, attribution requested | `web_metrics` |
 
-**Fetch rules** ([src/web.py](src/web.py)), the same as in political_dataset:
+**Fetch rules** ([src/web.py](src/web.py)), the same as in dataset.politics.germany:
 - Every request identifies the pipeline with the User-Agent `TechDataset/0.1 (+https://github.com/kleinnconrad/dataset.technology)`. No personal data is sent.
 - Documented APIs and data files offered for programmatic use are called under their terms and rate limits (`respect_robots=False`). Website requests (Hugging Face list pages, the CISA and RFC Editor files) check robots.txt with the longest-match rule of RFC 9309 and honor crawl delays.
 - Text-and-data-mining reservations are respected; bot protection (HTTP 401/403, challenge pages) is never bypassed and no headless browser is used. A refused host gets no further requests in the run, and the collector reports an error, which marks the run as failed and appears in the notification; the next scheduled run tries again.
@@ -249,7 +249,7 @@ data/
 ## 8. Repository Structure
 
 ```text
-tech-dataset/
+dataset.technology/
 ├── .github/
 │   ├── dependabot.yml
 │   └── workflows/
