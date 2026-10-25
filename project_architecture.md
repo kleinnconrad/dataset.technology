@@ -30,7 +30,7 @@ This document describes the structure of the pipeline: scope and decisions, the 
 - **Scope:** the technology world in eight domains: AI and machine learning, software development, data, IT infrastructure (operating systems, cloud, containers, infrastructure as code, observability, CI/CD, web servers, virtualization, data centers), networking, security, hardware, and emerging technologies (quantum computing, blockchain, extended reality, robotics). The scope is global; country breakdowns are stored where a source provides them (World Bank, Eurostat, Indeed Hiring Lab).
 - **Horizon:** the data is collected for 15 to 20 years and analyzed as long time series. The design favors stable definitions, durable sources and a moderate data volume over the completeness of single items.
 - **Repository:** public. The data is published under the ODbL 1.0 (see [data/LICENSE.md](data/LICENSE.md)); every record names the license or terms of its source.
-- **Schedule:** one workflow runs the due collectors on Mondays and Thursdays at 03:17 Europe/Berlin. Collectors of snapshot and change data run weekly or in every run; collectors of series whose sources keep the history run monthly (Section 9). A run takes at most 45 minutes; the history is imported once by a separate `backfill` run.
+- **Schedule:** one workflow runs the due collectors on Tuesdays and Fridays at 02:07 Europe/Berlin. Collectors of snapshot and change data run weekly or in every run; collectors of series whose sources keep the history run monthly (Section 9). A run takes at most 45 minutes; the history is imported once by a separate `backfill` run.
 - **No language model:** all variables are read deterministically from structured sources. Labels produced by a model, such as topics of Hacker News stories, can be added later as a separate dataset keyed by the item id, as in political_dataset.
 - **No paid access:** every source is free. GitHub Actions provides a token for the GitHub API; free keys for the Stack Exchange and NVD APIs are optional and raise the quotas.
 
@@ -255,7 +255,7 @@ tech-dataset/
 │   └── workflows/
 │       ├── ci.yml              # lint, tests, commit messages
 │       ├── notify.yml          # run summary as a commit comment that mentions the owner
-│       └── pipeline.yml        # due collectors, Mondays and Thursdays 03:17 Europe/Berlin; backfill by hand
+│       └── pipeline.yml        # due collectors, Tuesdays and Fridays 02:07 Europe/Berlin; backfill by hand
 ├── config/
 │   └── technologies.toml       # registry of the tracked technologies
 ├── data/                       # datasets, state and data license, committed by the workflow
