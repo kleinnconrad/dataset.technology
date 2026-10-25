@@ -21,7 +21,806 @@ A long-term dataset of the technology world for trend analysis and prediction ov
 
 ## Dataset Overview
 <!-- DATASET_OVERVIEW_START -->
-- No run yet.
+**Last updated:** 2026-10-25 11:40 UTC
+
+| Dataset | Records | Items | Files | Observed | Content |
+|---|---|---|---|---|---|
+| `technologies` | 309 | 309 | 1 | 2026-10-25 to 2026-10-25 | A tracked technology of the registry, recorded when the entry appears or changes. |
+| `wikipedia_pageviews` | 299 | 299 | 1 | 2026-10-25 to 2026-10-25 | Daily views of the English Wikipedia article of a technology. |
+| `release_cycles` | 1,965 | 1,965 | 1 | 2026-10-25 to 2026-10-25 | One release cycle of a product at endoflife.date, recorded when it appears or changes. |
+| `stackoverflow_questions` | 73 | 73 | 1 | 2026-10-25 to 2026-10-25 | Weekly counts of new Stack Overflow questions with a tag of a technology, and the total of the tag. |
+| `github_repositories` | 148 | 148 | 1 | 2026-10-25 to 2026-10-25 | Popularity and activity of a GitHub repository of a technology at the time of observation. |
+| `package_downloads` | 94 | 94 | 1 | 2026-10-25 to 2026-10-25 | Daily downloads of a package of a technology from its registry (npm, PyPI or crates.io). |
+| `docker_image_pulls` | 64 | 64 | 1 | 2026-10-25 to 2026-10-25 | Cumulative pulls and stars of a container image on Docker Hub at the time of observation. |
+| `cve_daily_counts` | 7 | 7 | 1 | 2026-10-25 to 2026-10-25 | Counts of the CVE records that the NVD published on one day, by status, severity, weakness and vendor, as observed after the day ended. |
+| `known_exploited_vulnerabilities` | 1,756 | 1,756 | 1 | 2026-10-25 to 2026-10-25 | A vulnerability in the CISA Known Exploited Vulnerabilities catalog, recorded when it is added or changes. |
+| `rfcs` | 9,848 | 9,848 | 1 | 2026-10-25 to 2026-10-25 | An RFC in the index of the RFC Editor, recorded when it appears or its status or relations change. |
+| `ietf_draft_activity` | 11 | 11 | 1 | 2026-10-25 to 2026-10-25 | Weekly counts of Internet-Draft submissions in the IETF Datatracker, for all drafts or by group type or area. |
+| `world_bank_indicators` | 4,308 | 4,308 | 1 | 2026-10-25 to 2026-10-25 | Values of a World Bank development indicator for one country or aggregate. Revision 0 holds all years; later revisions hold only the years whose values were added or changed. |
+| `eurostat_indicators` | 252 | 252 | 1 | 2026-10-25 to 2026-10-25 | Annual values of a Eurostat indicator on the digital economy and society for one country or the EU, recorded when they appear or change. |
+| `ip_address_delegations` | 401 | 401 | 1 | 2026-10-25 to 2026-10-25 | Internet number resources (IPv4, IPv6, AS numbers) of a regional internet registry per country and status, from the combined statistics of the NRO. |
+| `bgp_routing_table` | 0 | 0 | 0 | none | Daily size of the global BGP routing table for IPv4 or IPv6, as seen from the route collector of bgp.potaroo.net. |
+| `ipv6_adoption` | 0 | 0 | 0 | none | Daily share of users that are IPv6-capable and that prefer IPv6, measured by APNIC Labs, for an economy or the world. |
+| `market_shares` | 0 | 0 | 0 | none | Monthly market shares of operating systems, browsers, search engines, device platforms or AI chatbots measured by StatCounter, for a region. |
+| `supercomputer_lists` | 0 | 0 | 0 | none | Aggregates of one edition of the TOP500 list of supercomputers. |
+| `web_metrics` | 0 | 0 | 0 | none | Monthly metric of the web from the crawls of the HTTP Archive, for desktop or mobile pages. |
+| `job_postings` | 65 | 65 | 1 | 2026-10-25 to 2026-10-25 | Daily index of job postings on Indeed for a country and an occupational category (1 February 2020 = 100). |
+| `ai_job_postings` | 9 | 9 | 1 | 2026-10-25 to 2026-10-25 | Daily share of job postings on Indeed that mention artificial intelligence, for a country. |
+| `llm_prices` | 3,437 | 3,437 | 1 | 2026-10-25 to 2026-10-25 | List prices and limits of one LLM offering (a model at a provider), recorded when it appears or changes. |
+| `ai_models` | 3,630 | 3,630 | 1 | 2026-10-25 to 2026-10-25 | An AI model in the Epoch AI database of AI models, recorded when it appears or changes. |
+| `ml_hardware` | 183 | 183 | 1 | 2026-10-25 to 2026-10-25 | A machine learning accelerator in the Epoch AI hardware database, recorded when it appears or changes. |
+| `ai_capability_scores` | 270 | 270 | 1 | 2026-10-25 to 2026-10-25 | The Epoch Capabilities Index (ECI) score of an AI model, recorded when it appears or changes. |
+| `arxiv_submissions` | 8 | 8 | 1 | 2026-10-25 to 2026-10-25 | Weekly counts of new arXiv submissions in a subject category, including cross-lists. |
+| `hackernews_stories` | 309 | 309 | 1 | 2026-10-25 to 2026-10-25 | A Hacker News story that reached the point threshold, observed at least two days after it was posted. |
+| `hackernews_mentions` | 186 | 186 | 1 | 2026-10-25 to 2026-10-25 | Weekly counts of Hacker News stories and comments that mention a term of a technology. |
+| `huggingface_repos` | 505 | 505 | 1 | 2026-10-25 to 2026-10-25 | Attributes of a model or dataset repository of an organization on the Hugging Face Hub, recorded when it enters the tracked top list or changes. |
+| `huggingface_repo_stats` | 505 | 505 | 1 | 2026-10-25 to 2026-10-25 | Download and like counts of a top model or dataset repository of an organization on the Hugging Face Hub. |
+| `huggingface_hub_totals` | 1 | 1 | 1 | 2026-10-25 to 2026-10-25 | Total numbers of models, datasets and Spaces on the Hugging Face Hub. |
+
+**Runs**
+
+- **Latest run:** 2026-10-25 11:00 UTC (normal)
+  - `arxiv`: partial (arxiv_submissions 8)
+  - `bgp`: partial
+  - `docker_hub`: ok (docker_image_pulls 64)
+  - `epoch_ai`: ok (ai_capability_scores 270, ai_models 3,630, ml_hardware 183)
+  - `eurostat`: ok (eurostat_indicators 252)
+  - `github_repositories`: ok (github_repositories 148)
+  - `hackernews`: ok (hackernews_mentions 186, hackernews_stories 309)
+  - `httparchive`: skipped; run deadline of 40 minutes reached before the collector started
+  - `huggingface`: ok (huggingface_hub_totals 1, huggingface_repo_stats 505, huggingface_repos 505)
+  - `ietf_drafts`: ok (ietf_draft_activity 11)
+  - `ipv6_adoption`: skipped; run deadline of 40 minutes reached before the collector started
+  - `job_postings`: ok (ai_job_postings 9, job_postings 65)
+  - `llm_prices`: ok (llm_prices 3,437)
+  - `nro`: ok (ip_address_delegations 401)
+  - `package_downloads`: partial (package_downloads 94)
+  - `release_cycles`: ok (release_cycles 1,965)
+  - `rfcs`: ok (rfcs 9,848)
+  - `stackoverflow`: partial (stackoverflow_questions 73)
+  - `statcounter`: skipped; run deadline of 40 minutes reached before the collector started
+  - `technologies`: ok (technologies 309)
+  - `top500`: skipped; run deadline of 40 minutes reached before the collector started
+  - `vulnerabilities`: ok (cve_daily_counts 7, known_exploited_vulnerabilities 1,756)
+  - `wikipedia_pageviews`: ok (wikipedia_pageviews 299)
+  - `world_bank`: ok (world_bank_indicators 4,308)
+
+**Technology registry**
+
+- **Active technologies:** 309 in 8 domains
+
+| Domain | Technologies |
+|---|---|
+| ai ml | 58 |
+| data | 31 |
+| emerging tech | 17 |
+| hardware | 21 |
+| it infrastructure | 53 |
+| networking | 32 |
+| security | 17 |
+| software development | 80 |
+
+| Identifier | Technologies with it |
+|---|---|
+| Wikipedia article | 96.8% (299) |
+| Stack Overflow tags | 79.3% (245) |
+| GitHub repositories | 42.1% (130) |
+| Packages or images | 37.9% (117) |
+| endoflife.date product | 30.1% (93) |
+| Hacker News terms | 99.4% (307) |
+
+**Fields** (Filled: records with a value that is not null and not empty)
+
+<details>
+<summary><code>technologies</code>: 23 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (309) | 309 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (309) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (309) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (309) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (309) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (309) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (309) | 1 |
+| `license` | License or terms of the source. | 100.0% (309) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (309) | 1 |
+| `technology_id` | Stable id of the technology; the join key of the technology-related datasets. | 100.0% (309) | 309 |
+| `name` | Display name. | 100.0% (309) | 309 |
+| `domain` | Domain of the category. | 100.0% (309) | 8 |
+| `category` | Category of the technology. | 100.0% (309) | 34 |
+| `added` | Day on which the technology was added to the registry; start of coverage. | 100.0% (309) | 1 |
+| `removed` | Day on which the technology was removed from the registry; end of coverage. | 0.0% (0) | 0 |
+| `removed_reason` | Why the technology was removed. | 0.0% (0) | 0 |
+| `wikidata_qid` | Wikidata id. | 96.8% (299) | 299 |
+| `stackoverflow_tags` | Stack Overflow tags counted for the technology. | 79.3% (245) | 271 |
+| `github_repos` | GitHub repositories tracked for the technology (owner/name). | 42.1% (130) | 148 |
+| `packages` | Packages and container images tracked for the technology (ecosystem:name). | 37.9% (117) | 180 |
+| `endoflife_product` | Product slug at endoflife.date. | 30.1% (93) | 93 |
+| `hn_terms` | Terms counted in Hacker News stories and comments. | 99.4% (307) | 511 |
+| `github_language` | Language name in GitHub search. | 11.3% (35) | 35 |
+
+</details>
+
+<details>
+<summary><code>wikipedia_pageviews</code>: 14 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (299) | 299 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (299) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (299) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (299) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (299) | 76 |
+| `source_id` | Id of the source (API or file). | 100.0% (299) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (299) | 299 |
+| `license` | License or terms of the source. | 100.0% (299) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (299) | 1 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (299) | 299 |
+| `wikipedia_project` | Wikipedia edition, e.g. en.wikipedia. | 100.0% (299) | 1 |
+| `wikipedia_title` | Title of the article at the time of observation. | 100.0% (299) | 299 |
+| `wikidata_qid` | Wikidata id of the technology. | 100.0% (299) | 299 |
+| `daily_views` | Views by people (agent type user) per day (UTC), for the days since the previous run. | 100.0% (299) | 4,134 |
+
+</details>
+
+<details>
+<summary><code>release_cycles</code>: 24 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (1,965) | 1,965 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (1,965) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (1,965) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (1,965) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (1,965) | 48 |
+| `source_id` | Id of the source (API or file). | 100.0% (1,965) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (1,965) | 93 |
+| `license` | License or terms of the source. | 100.0% (1,965) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (1,965) | 2 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (1,965) | 93 |
+| `product` | Product slug at endoflife.date. | 100.0% (1,965) | 93 |
+| `cycle` | Name of the release cycle, e.g. '3.13' or '22.04'. | 100.0% (1,965) | 771 |
+| `codename` | Codename of the cycle. | 9.9% (195) | 165 |
+| `release_date` | Release date of the cycle. | 100.0% (1,965) | 1,493 |
+| `is_lts` | Whether the cycle has long-term support. | 100.0% (1,965) | 2 |
+| `lts_from` | Day from which the cycle has long-term support. | 2.2% (43) | 43 |
+| `active_support_until` | End of active support (bug fixes); null if not stated. | 33.5% (659) | 539 |
+| `eol_date` | End of life (end of security support); null if not stated. | 91.2% (1,793) | 1,349 |
+| `is_eol` | Whether the cycle had reached its end of life at the time of observation. | 100.0% (1,965) | 2 |
+| `extended_support_until` | End of paid extended support; null if not stated. | 5.2% (103) | 94 |
+| `is_maintained` | Whether the cycle was maintained at the time of observation. | 100.0% (1,965) | 2 |
+| `latest_version` | Latest release of the cycle at the time of observation. | 85.6% (1,683) | 1,515 |
+| `latest_release_date` | Release date of the latest release. | 82.1% (1,614) | 1,118 |
+| `is_listed` | False in the record written when the cycle disappeared from the product page. | 100.0% (1,965) | 1 |
+
+</details>
+
+<details>
+<summary><code>stackoverflow_questions</code>: 13 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (73) | 73 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (73) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (73) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (73) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (73) | 72 |
+| `source_id` | Id of the source (API or file). | 100.0% (73) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (73) | 73 |
+| `license` | License or terms of the source. | 100.0% (73) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (73) | 1 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (73) | 62 |
+| `tag` | Stack Overflow tag. | 100.0% (73) | 73 |
+| `weekly_questions` | Questions created per week (key: Monday of the ISO week, UTC) as counted at the time of observation, for the weeks since the previous run. Deleted questions are not counted. | 100.0% (73) | 4 |
+| `total_questions` | Number of questions with the tag at the time of observation. | 100.0% (73) | 70 |
+
+</details>
+
+<details>
+<summary><code>github_repositories</code>: 29 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (148) | 148 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (148) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (148) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (148) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (148) | 148 |
+| `source_id` | Id of the source (API or file). | 100.0% (148) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (148) | 148 |
+| `license` | License or terms of the source. | 100.0% (148) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (148) | 1 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (148) | 130 |
+| `repo` | Repository as listed in the registry (owner/name). | 100.0% (148) | 148 |
+| `repo_id` | Numeric repository id at GitHub; stays the same when the repository is renamed or transferred. | 100.0% (148) | 148 |
+| `full_name` | Current owner/name of the repository at GitHub. | 100.0% (148) | 148 |
+| `stars` | Number of stars. | 100.0% (148) | 148 |
+| `forks` | Number of forks. | 100.0% (148) | 146 |
+| `open_issues` | Number of open issues and pull requests. | 100.0% (148) | 143 |
+| `watchers` | Number of users watching the repository (subscribers). | 100.0% (148) | 141 |
+| `size_kb` | Size of the repository in kilobytes as reported by GitHub. | 100.0% (148) | 148 |
+| `primary_language` | Main language of the repository. | 98.6% (146) | 30 |
+| `repo_license` | SPDX id of the license of the repository; NOASSERTION if GitHub cannot determine it. | 93.9% (139) | 11 |
+| `topics` | Topics of the repository. | 81.8% (121) | 525 |
+| `created_at` | Creation time of the repository (UTC). | 100.0% (148) | 147 |
+| `pushed_at` | Time of the latest push (UTC). | 100.0% (148) | 148 |
+| `archived` | Whether the repository is archived (read-only). | 100.0% (148) | 1 |
+| `contributors` | Number of contributors including anonymous ones; null if GitHub does not list them, e.g. for very large repositories. | 99.3% (147) | 144 |
+| `commits_last_4_weeks` | Commits to the default branch in the 4 weeks before the day of observation, without merge commits. | 100.0% (148) | 117 |
+| `commits_last_52_weeks` | Commits to the default branch in the 52 weeks before the day of observation, without merge commits. | 100.0% (148) | 138 |
+| `latest_release_tag` | Tag of the latest release that is neither a draft nor a prerelease; null if the repository publishes no releases on GitHub. | 83.1% (123) | 119 |
+| `latest_release_at` | Publication time of the latest release (UTC). | 83.1% (123) | 123 |
+
+</details>
+
+<details>
+<summary><code>package_downloads</code>: 13 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (94) | 94 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (94) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (94) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (94) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (94) | 70 |
+| `source_id` | Id of the source (API or file). | 100.0% (94) | 3 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (94) | 94 |
+| `license` | License or terms of the source. | 100.0% (94) | 3 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (94) | 1 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (94) | 73 |
+| `ecosystem` | Package registry. | 100.0% (94) | 3 |
+| `package` | Package name. | 100.0% (94) | 88 |
+| `daily_downloads` | Downloads per day (UTC), for the days since the previous run and days that were not available before. PyPI downloads exclude mirrors. | 100.0% (94) | 366 |
+
+</details>
+
+<details>
+<summary><code>docker_image_pulls</code>: 14 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (64) | 64 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (64) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (64) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (64) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (64) | 64 |
+| `source_id` | Id of the source (API or file). | 100.0% (64) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (64) | 64 |
+| `license` | License or terms of the source. | 100.0% (64) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (64) | 1 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (64) | 62 |
+| `image` | Image as namespace/repository, e.g. library/postgres. | 100.0% (64) | 64 |
+| `pull_count` | Pulls since the image was created. | 100.0% (64) | 64 |
+| `star_count` | Number of stars. | 100.0% (64) | 63 |
+| `last_updated` | Time of the latest push to the image (UTC). | 100.0% (64) | 64 |
+
+</details>
+
+<details>
+<summary><code>cve_daily_counts</code>: 21 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (7) | 7 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (7) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (7) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (7) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (7) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (7) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (7) | 7 |
+| `license` | License or terms of the source. | 100.0% (7) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (7) | 1 |
+| `published_date` | Day (UTC) on which the NVD published the CVE records. | 100.0% (7) | 7 |
+| `cves` | Number of CVE records published that day, including rejected ones; rejected records count only in cves, rejected and by_status. | 100.0% (7) | 7 |
+| `rejected` | Records with the status Rejected. | 100.0% (7) | 5 |
+| `by_status` | Records per NVD analysis status at the time of observation, e.g. Received, Awaiting Analysis, Deferred, Analyzed. | 100.0% (7) | 7 |
+| `by_cvss_v3_severity` | Records per CVSS v3.x base severity (CRITICAL, HIGH, MEDIUM, LOW, NONE), from the NVD's own score where present, else from the score of another source. | 100.0% (7) | 4 |
+| `by_cvss_v4_severity` | Records per CVSS v4.0 base severity, chosen in the same way. | 100.0% (7) | 4 |
+| `unscored` | Records without a CVSS v3.x or v4.0 score at the time of observation. | 100.0% (7) | 7 |
+| `nvd_scored` | Records with a CVSS score from the NVD itself (source nvd@nist.gov). | 100.0% (7) | 4 |
+| `by_cwe` | Records per weakness (CWE id, e.g. CWE-79); a record with several weaknesses counts for each. | 100.0% (7) | 268 |
+| `by_vendor` | Records per vendor of the affected products, from the CPE configurations of the NVD, or from the free-text CNA data if there are none (including placeholders such as unknown); vendor names in lower case. | 100.0% (7) | 661 |
+| `with_exploit_reference` | Records with a reference tagged Exploit. | 100.0% (7) | 3 |
+| `kev_listed` | Records already in the CISA Known Exploited Vulnerabilities catalog at the time of observation. | 100.0% (7) | 2 |
+
+</details>
+
+<details>
+<summary><code>known_exploited_vulnerabilities</code>: 22 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (1,756) | 1,756 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (1,756) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (1,756) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (1,756) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (1,756) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (1,756) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (1,756) | 1 |
+| `license` | License or terms of the source. | 100.0% (1,756) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (1,756) | 2 |
+| `cve_id` | CVE id. | 100.0% (1,756) | 1,756 |
+| `vendor_project` | Vendor or project as written by CISA. | 100.0% (1,756) | 291 |
+| `product` | Product as written by CISA. | 100.0% (1,756) | 701 |
+| `vulnerability_name` | Short name of the vulnerability given by CISA. | 100.0% (1,756) | 1,406 |
+| `date_added` | Day on which CISA added the vulnerability to the catalog. | 100.0% (1,756) | 489 |
+| `due_date` | Remediation deadline for US federal agencies. | 100.0% (1,756) | 513 |
+| `known_ransomware_use` | True if CISA knows of use in ransomware campaigns; false if this is unknown. | 100.0% (1,756) | 2 |
+| `cwe_ids` | Weaknesses (CWE ids) named by CISA. | 90.0% (1,581) | 190 |
+| `cve_published_at` | Publication time of the CVE record in the NVD (UTC). | 100.0% (1,756) | 1,502 |
+| `cvss_base_score` | CVSS base score at the first observation of the entry (v3.x, else v4.0), from the NVD's own score where present; later revisions repeat it. | 100.0% (1,756) | 52 |
+| `cvss_version` | CVSS version of the score. | 100.0% (1,756) | 3 |
+| `cvss_source` | nvd if the score is the NVD's own, other for scores of the CNA or other sources. | 100.0% (1,756) | 2 |
+| `is_listed` | False in the record written when the vulnerability disappeared from the catalog. | 100.0% (1,756) | 1 |
+
+</details>
+
+<details>
+<summary><code>rfcs</code>: 29 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (9,848) | 9,848 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (9,848) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (9,848) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (9,848) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (9,848) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (9,848) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (9,848) | 9,848 |
+| `license` | License or terms of the source. | 100.0% (9,848) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (9,848) | 1 |
+| `rfc_number` | Number of the RFC. | 100.0% (9,848) | 9,848 |
+| `title` | Title of the RFC. | 100.0% (9,848) | 9,210 |
+| `publication_year` | Year of publication. | 100.0% (9,848) | 59 |
+| `publication_month` | Month of publication (1 to 12). | 100.0% (9,848) | 12 |
+| `page_count` | Number of pages. | 100.0% (9,848) | 207 |
+| `author_count` | Number of authors. Author names are not stored. | 100.0% (9,848) | 17 |
+| `current_status` | Current status, e.g. PROPOSED STANDARD, INFORMATIONAL, HISTORIC. | 100.0% (9,848) | 8 |
+| `publication_status` | Status at publication. | 100.0% (9,848) | 8 |
+| `stream` | Stream: IETF, IRTF, IAB, INDEPENDENT, Editorial or Legacy. | 100.0% (9,848) | 6 |
+| `area` | IETF area of the working group (the current area of the group, not necessarily the area at publication). | 64.3% (6,331) | 16 |
+| `working_group` | Acronym of the working group; null for documents without a working group. | 64.4% (6,345) | 531 |
+| `keywords` | Keywords of the RFC. | 75.5% (7,439) | 12,254 |
+| `obsoletes` | Documents that this RFC obsoletes, e.g. RFC2616. | 12.8% (1,265) | 1,384 |
+| `obsoleted_by` | Documents that obsolete this RFC. | 14.1% (1,384) | 1,265 |
+| `updates` | Documents that this RFC updates. | 13.1% (1,293) | 1,242 |
+| `updated_by` | Documents that update this RFC. | 12.6% (1,242) | 1,293 |
+| `is_also` | Series memberships, e.g. BCP14 or STD7. | 4.6% (449) | 367 |
+| `draft` | Name of the Internet-Draft the RFC was published from. | 85.1% (8,381) | 8,378 |
+| `has_errata` | Whether errata are reported for the RFC. | 100.0% (9,848) | 2 |
+| `doi` | DOI of the RFC. | 100.0% (9,848) | 9,848 |
+
+</details>
+
+<details>
+<summary><code>ietf_draft_activity</code>: 12 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (11) | 11 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (11) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (11) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (11) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (11) | 11 |
+| `source_id` | Id of the source (API or file). | 100.0% (11) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (11) | 11 |
+| `license` | License or terms of the source. | 100.0% (11) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (11) | 1 |
+| `scope` | all, group_type:<type> (wg, individ, rg) or area:<acronym> (the working groups of an IETF area, e.g. area:sec). | 100.0% (11) | 11 |
+| `weekly_new_drafts` | First versions (revision 00) submitted per week (key: Monday of the ISO week, UTC), for the weeks since the previous run. | 100.0% (11) | 8 |
+| `weekly_revisions` | Draft versions of any revision submitted per week (key: Monday of the ISO week, UTC). | 100.0% (11) | 8 |
+
+</details>
+
+<details>
+<summary><code>world_bank_indicators</code>: 17 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (4,308) | 4,308 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (4,308) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (4,308) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (4,308) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (4,308) | 19 |
+| `source_id` | Id of the source (API or file). | 100.0% (4,308) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (4,308) | 4,308 |
+| `license` | License or terms of the source. | 100.0% (4,308) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (4,308) | 1 |
+| `indicator_id` | Indicator code, e.g. IT.NET.USER.ZS. | 100.0% (4,308) | 19 |
+| `indicator_name` | Name of the indicator. | 100.0% (4,308) | 19 |
+| `country_code` | ISO 3166-1 alpha-3 code of the country, or the World Bank code of the aggregate. | 100.0% (4,308) | 264 |
+| `country_name` | Name of the country or aggregate. | 100.0% (4,308) | 264 |
+| `is_aggregate` | True for regions, income groups and other aggregates. | 100.0% (4,308) | 2 |
+| `values` | Value per year; in revisions after the first only the added or changed years. | 100.0% (4,308) | 66 |
+| `removed_years` | Years whose value was removed since the previous revision. | 0.0% (0) | 0 |
+| `source_last_updated` | Last update of the indicator at the World Bank. | 100.0% (4,308) | 1 |
+
+</details>
+
+<details>
+<summary><code>eurostat_indicators</code>: 16 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (252) | 252 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (252) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (252) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (252) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (252) | 6 |
+| `source_id` | Id of the source (API or file). | 100.0% (252) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (252) | 252 |
+| `license` | License or terms of the source. | 100.0% (252) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (252) | 1 |
+| `dataset_code` | Eurostat dataset, e.g. isoc_eb_ai. | 100.0% (252) | 6 |
+| `indicator` | Id of the series within the dataset, e.g. E_AI_TANY. | 100.0% (252) | 7 |
+| `indicator_label` | Label of the series. | 100.0% (252) | 8 |
+| `unit` | Unit, e.g. PC_ENT (percentage of enterprises). | 100.0% (252) | 5 |
+| `geo` | Country code used by Eurostat (EL for Greece) or EU27_2020. | 100.0% (252) | 28 |
+| `values` | Value per year. | 100.0% (252) | 24 |
+| `source_updated` | Last data update of the dataset at Eurostat. | 100.0% (252) | 5 |
+
+</details>
+
+<details>
+<summary><code>ip_address_delegations</code>: 19 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (401) | 401 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (401) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (401) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (401) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (401) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (401) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (401) | 1 |
+| `license` | License or terms of the source. | 100.0% (401) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (401) | 1 |
+| `registry` | Regional internet registry: afrinic, apnic, arin, lacnic or ripencc (iana for IANA records). | 100.0% (401) | 6 |
+| `country` | ISO 3166-1 alpha-2 code of the country in which the resource holders are legally based, or a registry code such as EU or AP; ZZ for resources that are not delegated and for the few delegated ranges without a country. | 100.0% (401) | 243 |
+| `status` | assigned (allocated or assigned to holders), available (free pool of the registry) or reserved. | 100.0% (401) | 3 |
+| `ipv4_addresses` | Number of IPv4 addresses. | 100.0% (401) | 281 |
+| `ipv4_ranges` | Number of IPv4 ranges. | 100.0% (401) | 174 |
+| `ipv6_slash32_equivalents` | IPv6 address space in units of /32 prefixes. | 100.0% (401) | 260 |
+| `ipv6_prefixes` | Number of IPv6 prefixes. | 100.0% (401) | 140 |
+| `asns` | Number of AS numbers. | 100.0% (401) | 164 |
+| `asn_ranges` | Number of AS number ranges. | 100.0% (401) | 159 |
+| `file_date` | Date of the statistics file. | 100.0% (401) | 1 |
+
+</details>
+
+<details>
+<summary><code>job_postings</code>: 13 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (65) | 65 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (65) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (65) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (65) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (65) | 10 |
+| `source_id` | Id of the source (API or file). | 100.0% (65) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (65) | 17 |
+| `license` | License or terms of the source. | 100.0% (65) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (65) | 1 |
+| `country` | ISO 3166-1 alpha-2 code of the country, or EA for the euro area. | 100.0% (65) | 11 |
+| `category` | Occupational category, e.g. Software Development, or total postings and new postings for all categories. | 100.0% (65) | 10 |
+| `seasonally_adjusted` | Whether the index is seasonally adjusted. | 100.0% (65) | 1 |
+| `daily_index` | Index value per day, for the days since the previous run. Values are stored as first published; later revisions are not tracked. | 100.0% (65) | 2,450 |
+
+</details>
+
+<details>
+<summary><code>ai_job_postings</code>: 11 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (9) | 9 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (9) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (9) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (9) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (9) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (9) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (9) | 1 |
+| `license` | License or terms of the source. | 100.0% (9) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (9) | 1 |
+| `country` | ISO 3166-1 alpha-2 code of the country. | 100.0% (9) | 9 |
+| `daily_share_pct` | Share of postings that mention AI or generative AI terms in percent (7-day trailing average), for the days since the previous run. | 100.0% (9) | 2,830 |
+
+</details>
+
+<details>
+<summary><code>llm_prices</code>: 27 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (3,437) | 3,437 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (3,437) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (3,437) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (3,437) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (3,437) | 2 |
+| `source_id` | Id of the source (API or file). | 100.0% (3,437) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (3,437) | 1 |
+| `license` | License or terms of the source. | 100.0% (3,437) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (3,437) | 1 |
+| `model_key` | Key of the offering in the LiteLLM price list, e.g. 'gpt-4o' or 'bedrock/anthropic.claude-3-5-sonnet-20240620-v1:0'. | 100.0% (3,437) | 3,437 |
+| `provider` | Provider or platform that sells the offering, e.g. openai, anthropic, azure, bedrock, vertex_ai. | 100.0% (3,437) | 106 |
+| `mode` | Kind of offering: chat, completion, responses or embedding. | 100.0% (3,437) | 4 |
+| `input_price_usd_per_mtok` | Price of one million input tokens in USD. | 94.7% (3,255) | 307 |
+| `output_price_usd_per_mtok` | Price of one million output tokens in USD. | 94.8% (3,257) | 366 |
+| `cached_input_price_usd_per_mtok` | Price of one million cached input tokens (cache read) in USD. | 43.8% (1,504) | 198 |
+| `batch_input_price_usd_per_mtok` | Price of one million input tokens in batch processing in USD. | 13.1% (450) | 71 |
+| `batch_output_price_usd_per_mtok` | Price of one million output tokens in batch processing in USD. | 12.7% (438) | 83 |
+| `max_input_tokens` | Maximum number of input tokens (context window). | 93.8% (3,224) | 105 |
+| `max_output_tokens` | Maximum number of output tokens per request. | 82.8% (2,845) | 77 |
+| `supports_function_calling` | Whether the offering supports function (tool) calling. | 71.6% (2,461) | 2 |
+| `supports_vision` | Whether the offering accepts image input. | 49.2% (1,692) | 2 |
+| `supports_reasoning` | Whether the offering supports a reasoning mode. | 47.2% (1,623) | 2 |
+| `supports_prompt_caching` | Whether the offering supports prompt caching. | 35.3% (1,212) | 2 |
+| `supports_web_search` | Whether the offering supports built-in web search. | 11.4% (392) | 2 |
+| `deprecation_date` | Announced deprecation date of the offering. | 20.4% (701) | 134 |
+| `pricing_page` | URL of the provider's pricing page that the price list cites. | 68.3% (2,346) | 295 |
+| `is_listed` | False in the record written when the offering disappeared from the price list. | 100.0% (3,437) | 1 |
+
+</details>
+
+<details>
+<summary><code>ai_models</code>: 37 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (3,630) | 3,630 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (3,630) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (3,630) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (3,630) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (3,630) | 2 |
+| `source_id` | Id of the source (API or file). | 100.0% (3,630) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (3,630) | 1 |
+| `license` | License or terms of the source. | 100.0% (3,630) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (3,630) | 2 |
+| `model_name` | Name of the model at Epoch AI. | 100.0% (3,630) | 3,630 |
+| `organization` | Developing organization or organizations, as written by Epoch AI. | 97.9% (3,555) | 1,318 |
+| `organization_categories` | Categories of the developers, e.g. Industry or Academia. | 97.3% (3,531) | 4 |
+| `countries` | Countries of the developing organizations. | 97.6% (3,543) | 50 |
+| `publication_date` | Publication or release date of the model. | 99.7% (3,618) | 1,773 |
+| `domains` | Domains of the model, e.g. Language, Vision, Multimodal. | 98.0% (3,557) | 22 |
+| `tasks` | Tasks of the model. | 97.2% (3,527) | 243 |
+| `notability_criteria` | Criteria for which Epoch AI counts the model as notable; empty for models that are not notable. | 30.4% (1,105) | 6 |
+| `frontier_model` | True if Epoch AI counts the model as a frontier model; null otherwise (the source has no false value). | 3.8% (138) | 1 |
+| `parameters` | Number of parameters. | 64.6% (2,344) | 967 |
+| `training_compute_flop` | Training compute in FLOP. | 38.8% (1,410) | 1,267 |
+| `training_dataset_size` | Size of the training dataset (tokens or data points). | 39.4% (1,430) | 829 |
+| `training_time_hours` | Training time in hours. | 15.3% (556) | 236 |
+| `training_hardware` | Hardware used for training. | 32.8% (1,191) | 112 |
+| `hardware_quantity` | Number of hardware units used for training. | 23.5% (853) | 81 |
+| `training_compute_cost_usd_2023` | Estimated cost of the training compute in 2023 USD. | 6.2% (225) | 222 |
+| `training_power_draw_watts` | Estimated power draw of the training hardware in watts. | 21.3% (775) | 673 |
+| `finetune_compute_flop` | Compute of the fine-tuning in FLOP. | 7.2% (260) | 248 |
+| `post_training_compute_flop` | Compute of the post-training in FLOP. | 0.1% (3) | 3 |
+| `compute_estimation_method` | How the training compute was determined, e.g. Reported. | 39.8% (1,444) | 38 |
+| `confidence` | Confidence of Epoch AI in the estimates. | 94.6% (3,434) | 4 |
+| `model_accessibility` | Access to the model, e.g. API access or Open weights (unrestricted). | 76.7% (2,786) | 7 |
+| `open_weights` | Whether the model weights are published. | 76.7% (2,783) | 2 |
+| `training_code_accessibility` | Access to the training code. | 66.5% (2,414) | 4 |
+| `base_model` | Model that this model was fine-tuned from. | 19.1% (694) | 352 |
+| `hugging_face_developer_id` | Organization id of the developer on the Hugging Face Hub. | 16.6% (601) | 159 |
+| `epoch_last_modified` | Last modification of the entry at Epoch AI (UTC). | 100.0% (3,630) | 496 |
+| `is_listed` | False in the record written when the model disappeared from the database. | 100.0% (3,630) | 1 |
+
+</details>
+
+<details>
+<summary><code>ml_hardware</code>: 35 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (183) | 183 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (183) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (183) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (183) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (183) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (183) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (183) | 1 |
+| `license` | License or terms of the source. | 100.0% (183) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (183) | 2 |
+| `hardware_name` | Name of the hardware at Epoch AI. | 100.0% (183) | 183 |
+| `manufacturer` | Manufacturer. | 99.5% (182) | 21 |
+| `hardware_type` | Type, e.g. GPU or TPU. | 90.2% (165) | 11 |
+| `release_date` | Release date. | 90.2% (165) | 116 |
+| `release_price_usd` | Price at release in USD. | 32.8% (60) | 46 |
+| `fp64_flops` | Double precision performance in FLOP/s. | 52.5% (96) | 75 |
+| `fp32_flops` | Single precision performance in FLOP/s. | 69.4% (127) | 96 |
+| `tf32_flops` | TensorFloat-32 performance in FLOP/s. | 19.7% (36) | 26 |
+| `fp16_flops` | Half precision performance in FLOP/s. | 62.8% (115) | 80 |
+| `tensor_fp16_bf16_flops` | Tensor core FP16/BF16 performance in FLOP/s. | 38.8% (71) | 51 |
+| `fp8_flops` | FP8 performance in FLOP/s. | 16.4% (30) | 27 |
+| `fp4_flops` | FP4 performance in FLOP/s. | 11.5% (21) | 21 |
+| `int8_ops` | INT8 performance in OP/s. | 41.5% (76) | 51 |
+| `int4_ops` | INT4 performance in OP/s. | 4.4% (8) | 7 |
+| `memory_bytes` | Memory capacity in bytes. | 80.9% (148) | 36 |
+| `memory_bandwidth_bytes_per_s` | Memory bandwidth in bytes per second. | 90.7% (166) | 110 |
+| `intranode_bandwidth_bytes_per_s` | Bandwidth between accelerators of a node in bytes per second. | 20.2% (37) | 18 |
+| `internode_bandwidth_bits_per_s` | Bandwidth between nodes in bits per second. | 11.5% (21) | 7 |
+| `tdp_watts` | Thermal design power in watts. | 83.6% (153) | 59 |
+| `foundry` | Chip manufacturer (foundry), e.g. TSMC. | 61.2% (112) | 5 |
+| `process_size_nm` | Process size in nanometers. | 72.7% (133) | 13 |
+| `transistors_millions` | Number of transistors in millions. | 47.0% (86) | 31 |
+| `die_size_mm2` | Die size in square millimeters. | 54.1% (99) | 40 |
+| `ml_models` | Models in the Epoch AI database trained on this hardware. | 44.3% (81) | 1,163 |
+| `epoch_last_modified` | Last modification of the entry at Epoch AI (UTC). | 100.0% (183) | 95 |
+| `is_listed` | False in the record written when the hardware disappeared from the database. | 100.0% (183) | 1 |
+
+</details>
+
+<details>
+<summary><code>ai_capability_scores</code>: 20 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (270) | 270 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (270) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (270) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (270) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (270) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (270) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (270) | 1 |
+| `license` | License or terms of the source. | 100.0% (270) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (270) | 1 |
+| `model_name` | Name of the model at Epoch AI. | 100.0% (270) | 270 |
+| `display_name` | Display name of the model. | 100.0% (270) | 270 |
+| `eci` | Epoch Capabilities Index score. | 100.0% (270) | 262 |
+| `eci_ci_low` | Lower bound of the confidence interval of the score. | 99.3% (268) | 268 |
+| `eci_ci_high` | Upper bound of the confidence interval of the score. | 99.3% (268) | 263 |
+| `model_date` | Release date of the model as used by Epoch AI. | 100.0% (270) | 194 |
+| `organization` | Developing organization. | 93.7% (253) | 29 |
+| `country` | Country of the developing organization. | 93.7% (253) | 6 |
+| `model_accessibility` | Access to the model, e.g. API access. | 100.0% (270) | 8 |
+| `accessibility_group` | Open weights or closed weights. | 100.0% (270) | 3 |
+| `is_listed` | False in the record written when the score disappeared from the data. | 100.0% (270) | 1 |
+
+</details>
+
+<details>
+<summary><code>arxiv_submissions</code>: 12 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (8) | 8 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (8) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (8) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (8) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (8) | 8 |
+| `source_id` | Id of the source (API or file). | 100.0% (8) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (8) | 8 |
+| `license` | License or terms of the source. | 100.0% (8) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (8) | 1 |
+| `category` | arXiv category, e.g. cs.LG. | 100.0% (8) | 8 |
+| `category_name` | Name of the category, e.g. Machine Learning. | 100.0% (8) | 8 |
+| `weekly_submissions` | Number of first versions submitted per week (key: Monday of the ISO week, UTC), for the weeks since the previous run. | 100.0% (8) | 8 |
+
+</details>
+
+<details>
+<summary><code>hackernews_stories</code>: 18 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (309) | 309 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (309) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (309) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (309) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (309) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (309) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (309) | 309 |
+| `license` | License or terms of the source. | 100.0% (309) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (309) | 2 |
+| `story_id` | Id of the story at Hacker News. | 100.0% (309) | 309 |
+| `created_at` | Time the story was posted (UTC). | 100.0% (309) | 309 |
+| `title` | Title of the story. | 100.0% (309) | 309 |
+| `url` | Linked URL; null for text posts such as Ask HN. | 98.4% (304) | 304 |
+| `domain` | Host of the linked URL without a leading www. | 98.4% (304) | 241 |
+| `story_type` | Type of the post. | 100.0% (309) | 3 |
+| `points` | Points at the time of observation. | 100.0% (309) | 231 |
+| `comments` | Number of comments at the time of observation. | 100.0% (309) | 214 |
+| `technology_ids` | Technologies whose Hacker News terms occur in the title as whole words. | 26.5% (82) | 41 |
+
+</details>
+
+<details>
+<summary><code>hackernews_mentions</code>: 14 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (186) | 186 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (186) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (186) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (186) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (186) | 186 |
+| `source_id` | Id of the source (API or file). | 100.0% (186) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (186) | 186 |
+| `license` | License or terms of the source. | 100.0% (186) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (186) | 1 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (186) | 117 |
+| `term` | The counted term; matched as a whole word or phrase, without typo tolerance. | 100.0% (186) | 186 |
+| `weekly_stories` | Stories with the term in the title per week (key: Monday of the ISO week, UTC), for the weeks since the previous run. | 100.0% (186) | 4 |
+| `weekly_comments` | Comments that contain the term per week (key: Monday of the ISO week, UTC). | 100.0% (186) | 4 |
+| `approximate_weeks` | Weeks whose counts the search service reported as not exhaustive. | 0.0% (0) | 0 |
+
+</details>
+
+<details>
+<summary><code>huggingface_repos</code>: 20 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (505) | 505 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (505) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (505) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (505) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (505) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (505) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (505) | 505 |
+| `license` | License or terms of the source. | 100.0% (505) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (505) | 1 |
+| `repo_type` | Type of the repository. | 100.0% (505) | 2 |
+| `repo_id` | Repository id (organization/name). | 100.0% (505) | 505 |
+| `organization` | Organization that owns the repository. | 100.0% (505) | 185 |
+| `created_at` | Creation time of the repository (UTC). | 100.0% (505) | 436 |
+| `pipeline_tag` | Task of a model, e.g. text-generation; null for datasets. | 70.5% (356) | 31 |
+| `library_name` | Library of a model, e.g. transformers; null for datasets. | 72.9% (368) | 30 |
+| `repo_license` | License tag of the repository, e.g. apache-2.0; several tags are separated by commas. | 91.9% (464) | 25 |
+| `base_models` | Base models of a fine-tuned, quantized, adapted or merged model; base models of user accounts are left out. | 28.9% (146) | 96 |
+| `base_model_relation` | Relation to the base models, e.g. finetune or quantized. | 29.7% (150) | 3 |
+| `parameters` | Number of parameters of a model from its safetensors files. | 56.8% (287) | 235 |
+| `gated` | Access gating: false, auto or manual. | 100.0% (505) | 3 |
+
+</details>
+
+<details>
+<summary><code>huggingface_repo_stats</code>: 16 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (505) | 505 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (505) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (505) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (505) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (505) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (505) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (505) | 505 |
+| `license` | License or terms of the source. | 100.0% (505) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (505) | 1 |
+| `repo_type` | Type of the repository. | 100.0% (505) | 2 |
+| `repo_id` | Repository id (organization/name). | 100.0% (505) | 505 |
+| `rank` | Rank by downloads in the last 30 days among all public repositories of the type, including those of users. | 100.0% (505) | 416 |
+| `downloads_30d` | Downloads in the last 30 days. | 100.0% (505) | 505 |
+| `downloads_all_time` | Downloads since the creation of the repository. | 100.0% (505) | 505 |
+| `likes` | Number of likes. | 100.0% (505) | 388 |
+| `trending_score` | Trending score of the Hub; low scores are fractions. | 100.0% (505) | 62 |
+
+</details>
+
+<details>
+<summary><code>huggingface_hub_totals</code>: 14 fields</summary>
+
+| Field | Description | Filled | Distinct values |
+|---|---|---|---|
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (1) | 1 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (1) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (1) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (1) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (1) | 1 |
+| `source_id` | Id of the source (API or file). | 100.0% (1) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (1) | 1 |
+| `license` | License or terms of the source. | 100.0% (1) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (1) | 1 |
+| `models` | Number of public models. | 100.0% (1) | 1 |
+| `datasets` | Number of public datasets. | 100.0% (1) | 1 |
+| `spaces` | Number of public Spaces. | 100.0% (1) | 1 |
+| `user_repos_in_top_models` | Number of repositories of users (not organizations) among the tracked top models. | 100.0% (1) | 1 |
+| `user_repos_in_top_datasets` | Number of repositories of users (not organizations) among the tracked top datasets. | 100.0% (1) | 1 |
+
+</details>
 <!-- DATASET_OVERVIEW_END -->
 
 ## Datasets

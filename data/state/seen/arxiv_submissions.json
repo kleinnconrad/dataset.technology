@@ -1,0 +1,13 @@
+{
+"version": 1,
+"items": {
+"cs.AI": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Artificial Intelligence", "last_seen": "2026-10-25", "revision": 0},
+"cs.CL": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Computation and Language", "last_seen": "2026-10-25", "revision": 0},
+"cs.CR": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Cryptography and Security", "last_seen": "2026-10-25", "revision": 0},
+"cs.CV": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Computer Vision and Pattern Recognition", "last_seen": "2026-10-25", "revision": 0},
+"cs.DC": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Distributed, Parallel, and Cluster Computing", "last_seen": "2026-10-25", "revision": 0},
+"cs.LG": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Machine Learning", "last_seen": "2026-10-25", "revision": 0},
+"cs.NI": {"data": {"last_week": "2026-09-14"}, "first_seen": "2026-10-25", "hash": "Networking and Internet Architecture", "last_seen": "2026-10-25", "revision": 0},
+"cs.RO": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Robotics", "last_seen": "2026-10-25", "revision": 0}
+}
+}

@@ -1,0 +1,16 @@
+{
+"version": 1,
+"items": {
+"all": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "all", "last_seen": "2026-10-25", "revision": 0},
+"area:art": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:art", "last_seen": "2026-10-25", "revision": 0},
+"area:gen": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:gen", "last_seen": "2026-10-25", "revision": 0},
+"area:int": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:int", "last_seen": "2026-10-25", "revision": 0},
+"area:ops": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:ops", "last_seen": "2026-10-25", "revision": 0},
+"area:rtg": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:rtg", "last_seen": "2026-10-25", "revision": 0},
+"area:sec": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:sec", "last_seen": "2026-10-25", "revision": 0},
+"area:wit": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "area:wit", "last_seen": "2026-10-25", "revision": 0},
+"group_type:individ": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "group_type:individ", "last_seen": "2026-10-25", "revision": 0},
+"group_type:rg": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "group_type:rg", "last_seen": "2026-10-25", "revision": 0},
+"group_type:wg": {"data": {"first_week": "2026-08-24", "last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "group_type:wg", "last_seen": "2026-10-25", "revision": 0}
+}
+}
