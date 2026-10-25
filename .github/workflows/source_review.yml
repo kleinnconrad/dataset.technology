@@ -1,0 +1,102 @@
+name: Registry Review
+run-name: Registry review (${{ (github.event_name == 'workflow_dispatch' && inputs.search == false) && 'without search' || 'with search' }})
+
+on:
+  schedule:
+    # First day of every month, 07:17 Berlin time; GitHub delays schedules at the full hour
+    - cron: '17 7 1 * *'
+      timezone: 'Europe/Berlin'
+  workflow_dispatch:
+    inputs:
+      search:
+        description: 'Search for new technologies with Gemini and Google Search'
+        type: boolean
+        default: true
+
+concurrency:
+  group: registry-review
+  cancel-in-progress: false
+
+jobs:
+  review-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      # Starts the CI workflow on the review branch
+      actions: write
+    env:
+      SEARCH: ${{ (github.event_name == 'workflow_dispatch' && inputs.search == false) && 'off' || 'on' }}
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v7
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
+
+    - name: Set up Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: '3.11'
+
+    - name: Install Dependencies
+      run: uv sync --frozen
+
+    - name: Review Registry
+      id: review
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        STACKEXCHANGE_KEY: ${{ secrets.STACKEXCHANGE_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        args=(--report "$RUNNER_TEMP/registry_review.md")
+        if [ "$SEARCH" = "off" ]; then
+          args+=(--no-search)
+        fi
+        uv run python src/source_review.py "${args[@]}"
+        cat "$RUNNER_TEMP/registry_review.md" >> "$GITHUB_STEP_SUMMARY"
+
+    # One review pull request at a time: the branch is rebuilt from the base branch every month
+    - name: Open or Update Pull Request
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BASE: ${{ github.ref_name }}
+        OWNER: ${{ github.repository_owner }}
+      run: |
+        if git diff --quiet -- config/technologies.toml; then
+          echo "The review proposes no changes of the registry."
+          exit 0
+        fi
+        month=$(date -u +%Y-%m)
+        branch="registry-review"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git switch -C "$branch"
+        git add config/technologies.toml
+        git commit -m "chore(registry): registry review $month"
+        git push --force origin "$branch"
+        { echo "@$OWNER"; echo; cat "$RUNNER_TEMP/registry_review.md"; } > "$RUNNER_TEMP/pr_body.md"
+        number=$(gh pr list --head "$branch" --base "$BASE" --state open --json number --jq '.[0].number // empty')
+        if [ -n "$number" ]; then
+          gh pr edit "$number" --title "Registry review $month" --body-file "$RUNNER_TEMP/pr_body.md"
+        else
+          gh pr create --base "$BASE" --head "$branch" --title "Registry review $month" \
+            --body-file "$RUNNER_TEMP/pr_body.md"
+        fi
+        # Pull requests opened with the GITHUB_TOKEN start no workflows; the checks are started here
+        gh workflow run ci.yml --ref "$branch"
+
+    # Findings that need a decision by hand (missing identifiers, failing collectors) without changes of the
+    # registry are posted as an issue, so that GitHub notifies the owner
+    - name: Open Issue for Findings
+      if: steps.review.outputs.changed == 'false' && steps.review.outputs.findings != '0'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OWNER: ${{ github.repository_owner }}
+      run: |
+        month=$(date -u +%Y-%m)
+        { echo "@$OWNER"; echo; cat "$RUNNER_TEMP/registry_review.md"; } > "$RUNNER_TEMP/issue_body.md"
+        gh issue create --title "Registry review $month: findings" --body-file "$RUNNER_TEMP/issue_body.md"

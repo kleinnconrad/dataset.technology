@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 # Same versions as in dataset.politics.germany, so that the shared modules run on a tested set
 dependencies = [
     "defusedxml==0.7.1",
+    "google-genai==2.31.0",
     "httpx==0.28.1",
     "pydantic==2.14.1",
     "python-dotenv==1.2.4",

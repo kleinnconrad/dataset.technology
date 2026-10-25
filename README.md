@@ -2490,7 +2490,14 @@ prices = duckdb.sql("select * from read_json('data/llm_prices/**/*.json', hive_p
 |---|---|---|
 | `pipeline.yml` | Tuesdays and Fridays, 02:07 Europe/Berlin | Runs the due collectors (timeout 45 minutes), updates the overview and commits `data/` and `README.md` |
 | `notify.yml` | After each `normal` or `backfill` run of `pipeline.yml` | Posts a summary of the run (status and records per collector, remaining API quotas) as a commit comment that mentions the repository owner |
+| `source_review.yml` | First day of every month, 07:17 Europe/Berlin | Checks the registry identifiers and the collector health, proposes new technologies, and opens a pull request with the changes of `config/technologies.toml` (or an issue with findings that need a decision by hand) |
 | `ci.yml` | Pull requests, pushes to `main` | Lint, tests and commit message checks |
+
+**Registry review.** `source_review.yml` (code in [src/source_review.py](src/source_review.py)) keeps the registry current; its changes take effect when the pull request from the branch `registry-review` is merged.
+- **Identifiers:** every identifier of the active technologies is checked against its source. Renames are fixed automatically (moved GitHub repositories, endoflife.date aliases, merged Wikidata items). Identifiers that no longer exist (deleted or merged Stack Overflow tags, removed packages, repositories or products) and archived repositories are listed for a decision by hand; entries are never removed automatically.
+- **Collector health:** collectors that failed in two or more consecutive runs or whose last complete run is overdue are listed.
+- **Additions:** Gemini with Google Search (`GEMINI_API_KEY`) proposes up to three missing technologies per domain. A proposal is admitted only if its English Wikipedia article resolves to a Wikidata item that is not yet in the registry; its other identifiers are kept only if they exist and belong to no other entry. At most five technologies are added per review. A manual run can turn the search off.
+- **Notification:** a pull request or issue mentions the repository owner. The next review rebuilds the branch, so merge or close the pull request before the first day of the next month. Review the `hn_terms` of added technologies for ambiguity before merging.
 
 **Manual runs.** The workflows can be started by hand: open the **Actions** tab, select **Tech Dataset Pipeline** (or **CI**), click **Run workflow**, and choose the branch and the inputs. The button appears once the workflow file is on the default branch. The modes of `pipeline.yml`:
 - `normal`: same as the scheduled run; commits the data.
@@ -2507,6 +2514,8 @@ The input `collectors` restricts a manual run to a comma-separated list of colle
 | `GITHUB_TOKEN` | none | Token for the GitHub REST API; the workflow passes its own token (1,000 requests per hour). Without a token the limit is 60 requests per hour. |
 | `STACKEXCHANGE_KEY` | none | Stack Exchange API key (optional): 10,000 instead of 300 requests per day, independent of other users of the runner's IP address |
 | `NVD_API_KEY` | none | NVD API key (optional): 50 instead of 5 requests per 30 seconds |
+| `GEMINI_API_KEY` | none | Gemini API key for the search of new technologies in the registry review (optional; without it the review only checks the registry) |
+| `GEMINI_MODEL` | `gemini-2.5-flash` | Model of the registry review |
 | `RUN_DEADLINE_MINUTES` | 40 | Minutes after the start after which the collectors start no new work (225 in `backfill` runs) |
 | `COLLECTORS` | all due | Comma-separated list of collectors to run; listed collectors run even if they are not due |
 
@@ -2546,8 +2555,9 @@ uv run pytest
 ## Setup
 
 1. Under **Settings > Actions > General > Workflow permissions**, choose read and write permissions, so that the workflows can push data and post the run summary.
-2. Optional: add the repository secrets `STACKEXCHANGE_KEY` (register an application at https://stackapps.org/apps/oauth/register) and `NVD_API_KEY` (request at https://nvd.nist.gov/developers/request-an-api-key) under **Settings > Secrets and variables > Actions**. Without them the collectors use the lower quotas: the Stack Exchange quota without key is shared with other users of the runner's IP address, so the collector may stop early and continue in the next run.
-3. Start `pipeline.yml` once by hand in the mode `backfill` before the first scheduled run. It imports the history that the sources provide (e.g. pageviews since July 2015, the BGP table since 1988, all RFCs, the Epoch AI databases, the World Bank indicators since 1960, the TOP500 lists since 1993). Collectors that do not finish within the deadline continue in the following runs.
+2. Under the same settings page, allow GitHub Actions to create and approve pull requests, so that the registry review can open its pull request.
+3. Optional: add the repository secrets `GEMINI_API_KEY` (registry review), `STACKEXCHANGE_KEY` (register an application at https://stackapps.org/apps/oauth/register) and `NVD_API_KEY` (request at https://nvd.nist.gov/developers/request-an-api-key) under **Settings > Secrets and variables > Actions**. Without them the collectors use the lower quotas: the Stack Exchange quota without key is shared with other users of the runner's IP address, so the collector may stop early and continue in the next run.
+4. Start `pipeline.yml` once by hand in the mode `backfill` before the first scheduled run. It imports the history that the sources provide (e.g. pageviews since July 2015, the BGP table since 1988, all RFCs, the Epoch AI databases, the World Bank indicators since 1960, the TOP500 lists since 1993). Collectors that do not finish within the deadline continue in the following runs.
 
 ## License
 
