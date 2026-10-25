@@ -1,0 +1,14 @@
+{
+"version": 1,
+"items": {
+"AU": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"CA": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"DE": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"FR": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"GB": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"IE": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"IT": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"NL": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0},
+"US": {"data": {"last_day": "2026-09-30"}, "first_seen": "2026-10-25", "hash": "AI_posting.csv", "last_seen": "2026-10-25", "revision": 0}
+}
+}
