@@ -31,7 +31,7 @@ This document describes the structure of the pipeline: scope and decisions, the 
 - **Horizon:** the data is collected for 15 to 20 years and analyzed as long time series. The design favors stable definitions, durable sources and a moderate data volume over the completeness of single items.
 - **Repository:** public. The data is published under the ODbL 1.0 (see [data/LICENSE.md](data/LICENSE.md)); every record names the license or terms of its source.
 - **Schedule:** one workflow runs the due collectors on Tuesdays and Fridays at 02:07 Europe/Berlin. Collectors of snapshot and change data run weekly or in every run; collectors of series whose sources keep the history run monthly (Section 9). A run takes at most 45 minutes; the history is imported once by a separate `backfill` run.
-- **No language model:** all variables are read deterministically from structured sources. Labels produced by a model, such as topics of Hacker News stories, can be added later as a separate dataset keyed by the item id, as in political_dataset.
+- **No language model in the data:** all variables are read deterministically from structured sources; Gemini is used only to propose new registry entries in the monthly review, which a person approves by merging. Labels produced by a model, such as topics of Hacker News stories, can be added later as a separate dataset keyed by the item id, as in political_dataset.
 - **No paid access:** every source is free. GitHub Actions provides a token for the GitHub API; free keys for the Stack Exchange and NVD APIs are optional and raise the quotas.
 
 ---
@@ -74,6 +74,7 @@ Rules:
 - Every identifier is verified against the live source before it is committed (CLAUDE.md, section 9). The verification of the initial entries on 2026-10-25 also recorded known limitations: terms that start with a dot (`.net`) are matched in titles but not counted with the full-text search, which also finds host names for them; some languages have no reference repository (C, SQL) or are hosted outside GitHub (Zig, R, Haskell).
 - The collector `technologies` writes every new or changed entry to the dataset `technologies`, the slowly changing dimension of the registry. The coverage of a technology starts with `added` and ends with `removed`.
 - New technologies are added when they appear, for example new model families. Ids are never renamed; an entry that is replaced by another keeps its id and gets `removed`.
+- **Monthly registry review** (`source_review.yml`, [src/source_review.py](src/source_review.py)): checks every identifier against its source, fixes renames, lists missing identifiers and unhealthy collectors, and adds up to five technologies proposed by Gemini with Google Search after verifying their identifiers. The changes arrive as a pull request; findings without changes as an issue.
 
 ---
 
@@ -255,7 +256,8 @@ tech-dataset/
 │   └── workflows/
 │       ├── ci.yml              # lint, tests, commit messages
 │       ├── notify.yml          # run summary as a commit comment that mentions the owner
-│       └── pipeline.yml        # due collectors, Tuesdays and Fridays 02:07 Europe/Berlin; backfill by hand
+│       ├── pipeline.yml        # due collectors, Tuesdays and Fridays 02:07 Europe/Berlin; backfill by hand
+│       └── source_review.yml   # monthly registry review as a pull request
 ├── config/
 │   └── technologies.toml       # registry of the tracked technologies
 ├── data/                       # datasets, state and data license, committed by the workflow
@@ -268,6 +270,7 @@ tech-dataset/
 │   ├── registry.py             # technology registry
 │   ├── storage.py, state.py
 │   ├── generate_dataset_overview.py
+│   ├── source_review.py        # monthly review of config/technologies.toml
 │   └── collectors/             # one module per source family
 ├── scripts/
 │   └── run_summary.py          # run summary for notify.yml
@@ -357,7 +360,7 @@ Changes of sources, endpoints, filters, counting rules and baskets, and known br
 | Routed versus delegated resources per country (resources.potaroo.net); NRO statistics before October 2021 | planned |
 | Counts of internet exchange points, facilities and networks per country (PeeringDB), after permission of PeeringDB | planned |
 | GitHub language statistics (repositories created per language and month, search API) | planned |
-| Registry review: a monthly workflow that proposes new technologies (new model families, rising repositories and packages) as a pull request | planned |
+| Monthly registry review: identifier checks, collector health, new technologies proposed by Gemini with Google Search, as a pull request (`source_review.yml`) | implemented |
 | Labels of Hacker News stories (topic, event type) with a language model, as a separate dataset | planned |
 | Per-CVE records in a separate data repository; EPSS score distributions (no license stated by FIRST) | planned |
 | Advisories per package ecosystem (GitHub Advisory Database, OSV) | planned |
