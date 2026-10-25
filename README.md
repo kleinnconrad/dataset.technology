@@ -1,7 +1,7 @@
 # Tech Dataset
 [![CI](https://github.com/kleinnconrad/dataset.technology/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kleinnconrad/dataset.technology/actions/workflows/ci.yml)
 
-A long-term dataset of the technology world for trend analysis and prediction over 15 to 20 years. It covers AI and machine learning, software development, data, IT infrastructure, networking, security, hardware and emerging technologies. A pipeline in GitHub Actions runs twice a week (Mondays and Thursdays) for at most 45 minutes. It collects attention, developer activity, adoption, prices, capabilities, vulnerabilities, standards, internet infrastructure and labor market data from public APIs and open data files, and stores everything as partitioned JSON files in this repository.
+A long-term dataset of the technology world for trend analysis and prediction over 15 to 20 years. It covers AI and machine learning, software development, data, IT infrastructure, networking, security, hardware and emerging technologies. A pipeline in GitHub Actions runs twice a week (Tuesdays and Fridays) for at most 45 minutes. It collects attention, developer activity, adoption, prices, capabilities, vulnerabilities, standards, internet infrastructure and labor market data from public APIs and open data files, and stores everything as partitioned JSON files in this repository.
 
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
@@ -1652,7 +1652,7 @@ sequenceDiagram
     participant Ref as Reference data
     participant Store as storage.py / state.py
 
-    Action->>Run: Pipeline run (Mondays and Thursdays, 03:17 Europe/Berlin)
+    Action->>Run: Pipeline run (Tuesdays and Fridays, 02:07 Europe/Berlin)
     Run->>Store: Registry entries (technologies)
     Run->>Snap: GitHub, Docker Hub, Hugging Face, LLM prices
     Run->>Change: NVD and CISA KEV, Hacker News, Epoch AI, endoflife.date, RFC Editor
@@ -1689,7 +1689,7 @@ prices = duckdb.sql("select * from read_json('data/llm_prices/**/*.json', hive_p
 
 | Workflow | Schedule | Purpose |
 |---|---|---|
-| `pipeline.yml` | Mondays and Thursdays, 03:17 Europe/Berlin | Runs the due collectors (timeout 45 minutes), updates the overview and commits `data/` and `README.md` |
+| `pipeline.yml` | Tuesdays and Fridays, 02:07 Europe/Berlin | Runs the due collectors (timeout 45 minutes), updates the overview and commits `data/` and `README.md` |
 | `notify.yml` | After each `normal` or `backfill` run of `pipeline.yml` | Posts a summary of the run (status and records per collector, remaining API quotas) as a commit comment that mentions the repository owner |
 | `ci.yml` | Pull requests, pushes to `main` | Lint, tests and commit message checks |
 
