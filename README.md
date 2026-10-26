@@ -4,6 +4,7 @@
 A long-term dataset of the technology world for trend analysis and prediction over 15 to 20 years. It covers AI and machine learning, software development, data, IT infrastructure, networking, security, hardware and emerging technologies. A pipeline in GitHub Actions runs twice a week (Tuesdays and Fridays) for at most 45 minutes. It collects attention, developer activity, adoption, prices, capabilities, vulnerabilities, standards, internet infrastructure and labor market data from public APIs and open data files, and stores everything as partitioned JSON files in this repository.
 
 ## Table of Contents
+- [Variable Overview](#variable-overview)
 - [Dataset Overview](#dataset-overview)
 - [Datasets](#datasets)
 - [Technology Registry](#technology-registry)
@@ -18,6 +19,255 @@ A long-term dataset of the technology world for trend analysis and prediction ov
 - [Continuous Integration](#continuous-integration)
 - [Setup](#setup)
 - [License](#license)
+
+## Variable Overview
+
+The table lists the variables that carry content and the dataset (table) that stores them. The datasets `wikipedia_pageviews`, `hackernews_mentions`, `stackoverflow_questions`, `github_repositories`, `package_downloads`, `docker_image_pulls` and `release_cycles` hold values of a technology of the [registry](#technology-registry), linked by `technology_id`. Maps are shown with one or two entries of one record. Not listed are the fields that every record has, ids that link the datasets, the identifiers of the technologies and items at the sources (Wikidata ids, Stack Overflow tags, repositories, packages, images, Hacker News terms, product slugs, story ids, DOIs), codes of the providers, URLs, coverage dates, quality flags and the bookkeeping of revisions and listings; all fields are in the [Data Model](#data-model).
+
+| Variable | Table | Description | Example |
+|---|---|---|---|
+| `name` | `technologies` | Name of the technology | `Kubernetes` |
+| `domain` | `technologies` | Domain of the category, e.g. `ai_ml` or `security` | `it_infrastructure` |
+| `category` | `technologies` | Category of the technology within its domain | `container_platform` |
+| `daily_views` | `wikipedia_pageviews` | Views by people per day of the English Wikipedia article of a technology | `{"2026-10-23": 1148, "2026-10-24": 719}` |
+| `created_at` | `hackernews_stories` | Time the story was posted (UTC) | `2026-10-20T13:18:07Z` |
+| `title` | `hackernews_stories` | Title of the story | `Tsrs: A Port of TypeScript to Rust` |
+| `domain` | `hackernews_stories` | Host of the linked URL | `blog.cloudflare.com` |
+| `story_type` | `hackernews_stories` | Type of the post: story, ask_hn, show_hn or launch_hn | `story` |
+| `points` | `hackernews_stories` | Points at observation, at least two days after posting | `432` |
+| `comments` | `hackernews_stories` | Number of comments at observation | `213` |
+| `technology_ids` | `hackernews_stories` | Technologies of the registry named in the title | `["rust", "typescript"]` |
+| `weekly_stories` | `hackernews_mentions` | Stories per week with a term of a technology in the title | `{"2026-10-05": 83, "2026-10-12": 78}` |
+| `weekly_comments` | `hackernews_mentions` | Comments per week that contain a term of a technology | `{"2026-10-05": 113, "2026-10-12": 165}` |
+| `weekly_questions` | `stackoverflow_questions` | New questions per week with a tag of a technology | `{"2026-10-05": 1, "2026-10-12": 0}` |
+| `total_questions` | `stackoverflow_questions` | Questions with the tag at observation | `23809` |
+| `stars` | `github_repositories` | Stars of a repository of a technology | `128620` |
+| `forks` | `github_repositories` | Number of forks | `46766` |
+| `open_issues` | `github_repositories` | Open issues and pull requests | `3223` |
+| `watchers` | `github_repositories` | Users watching the repository | `3243` |
+| `size_kb` | `github_repositories` | Size of the repository in KB | `1537306` |
+| `primary_language` | `github_repositories` | Main language of the repository | `Go` |
+| `repo_license` | `github_repositories` | License of the repository (SPDX id) | `Apache-2.0` |
+| `topics` | `github_repositories` | Topics of the repository | `["cncf", "containers", "go", "kubernetes"]` |
+| `created_at` | `github_repositories` | Creation time of the repository (UTC) | `2014-06-06T22:56:04Z` |
+| `pushed_at` | `github_repositories` | Time of the latest push (UTC) | `2026-10-24T15:00:02Z` |
+| `archived` | `github_repositories` | Repository is archived (read-only) | `false` |
+| `contributors` | `github_repositories` | Contributors including anonymous ones | `5968` |
+| `commits_last_4_weeks` | `github_repositories` | Commits to the default branch in the last 4 weeks | `834` |
+| `commits_last_52_weeks` | `github_repositories` | Commits to the default branch in the last 52 weeks | `8765` |
+| `latest_release_tag` | `github_repositories` | Tag of the latest release | `v1.37.1` |
+| `latest_release_at` | `github_repositories` | Publication time of the latest release (UTC) | `2026-09-23T19:13:17Z` |
+| `ecosystem` | `package_downloads` | Package registry: npm, pypi or crates | `pypi` |
+| `daily_downloads` | `package_downloads` | Downloads per day of a package of a technology | `{"2026-10-22": 2070007, "2026-10-23": 2720014}` |
+| `pull_count` | `docker_image_pulls` | Pulls of a container image of a technology since its creation | `12031349706` |
+| `star_count` | `docker_image_pulls` | Stars of the image | `15039` |
+| `last_updated` | `docker_image_pulls` | Time of the latest push to the image (UTC) | `2026-10-23T07:08:42.186040Z` |
+| `cycle` | `release_cycles` | Release cycle of a product, e.g. 3.13 or 22.04 | `24.04` |
+| `codename` | `release_cycles` | Codename of the cycle | `Noble Numbat` |
+| `release_date` | `release_cycles` | Release date of the cycle | `2024-04-25` |
+| `is_lts` | `release_cycles` | Cycle has long-term support | `true` |
+| `lts_from` | `release_cycles` | Start of long-term support | `2024-10-29` |
+| `active_support_until` | `release_cycles` | End of active support (bug fixes) | `2029-05-31` |
+| `eol_date` | `release_cycles` | End of life (end of security support) | `2029-05-31` |
+| `is_eol` | `release_cycles` | End of life reached at observation | `false` |
+| `extended_support_until` | `release_cycles` | End of paid extended support | `2034-04-25` |
+| `is_maintained` | `release_cycles` | Cycle maintained at observation | `true` |
+| `latest_version` | `release_cycles` | Latest release of the cycle at observation | `24.04.5` |
+| `latest_release_date` | `release_cycles` | Release date of the latest release | `2026-09-10` |
+| `model_key` | `llm_prices` | Offering (a model at a provider) in the LiteLLM price list | `azure/gpt-5.5` |
+| `provider` | `llm_prices` | Provider or platform that sells the offering | `azure` |
+| `mode` | `llm_prices` | Kind of offering: chat, completion, responses or embedding | `chat` |
+| `input_price_usd_per_mtok` | `llm_prices` | USD per million input tokens | `5.0` |
+| `output_price_usd_per_mtok` | `llm_prices` | USD per million output tokens | `30.0` |
+| `cached_input_price_usd_per_mtok` | `llm_prices` | USD per million cached input tokens (cache read) | `0.5` |
+| `batch_input_price_usd_per_mtok` | `llm_prices` | USD per million input tokens in batch processing | `2.5` |
+| `batch_output_price_usd_per_mtok` | `llm_prices` | USD per million output tokens in batch processing | `15.0` |
+| `max_input_tokens` | `llm_prices` | Maximum input tokens (context window) | `922000` |
+| `max_output_tokens` | `llm_prices` | Maximum output tokens per request | `128000` |
+| `supports_function_calling` | `llm_prices` | Supports function (tool) calling | `true` |
+| `supports_vision` | `llm_prices` | Accepts image input | `true` |
+| `supports_reasoning` | `llm_prices` | Supports a reasoning mode | `true` |
+| `supports_prompt_caching` | `llm_prices` | Supports prompt caching | `true` |
+| `supports_web_search` | `llm_prices` | Supports built-in web search | `true` |
+| `deprecation_date` | `llm_prices` | Announced deprecation date of the offering | `2027-10-26` |
+| `model_name` | `ai_models` | Name of the AI model at Epoch AI | `Llama 3.1-405B` |
+| `organization` | `ai_models` | Developing organizations as written by Epoch AI | `Meta AI` |
+| `organization_categories` | `ai_models` | Categories of the developers, e.g. Industry or Academia | `["Industry"]` |
+| `countries` | `ai_models` | Countries of the developing organizations | `["United States of America"]` |
+| `publication_date` | `ai_models` | Publication or release date | `2024-07-23` |
+| `domains` | `ai_models` | Domains of the model, e.g. Language or Vision | `["Language"]` |
+| `tasks` | `ai_models` | Tasks of the model | `["Language modeling/generation", "Question answering"]` |
+| `notability_criteria` | `ai_models` | Criteria for which Epoch AI counts the model as notable | `["SOTA improvement", "Training cost"]` |
+| `frontier_model` | `ai_models` | Frontier model according to Epoch AI; null otherwise | `true` |
+| `parameters` | `ai_models` | Number of parameters | `405000000000.0` |
+| `training_compute_flop` | `ai_models` | Training compute in FLOP | `3.8e+25` |
+| `training_dataset_size` | `ai_models` | Size of the training data (tokens or data points) | `15600000000000.0` |
+| `training_time_hours` | `ai_models` | Training time in hours | `2142.0` |
+| `training_hardware` | `ai_models` | Hardware used for training | `["NVIDIA H100 SXM5 80GB"]` |
+| `hardware_quantity` | `ai_models` | Number of hardware units used for training | `16384.0` |
+| `training_compute_cost_usd_2023` | `ai_models` | Estimated cost of the training compute in 2023 USD | `52885433.95402246` |
+| `training_power_draw_watts` | `ai_models` | Estimated power draw of the training hardware in watts | `22622532.159299146` |
+| `finetune_compute_flop` | `ai_models` | Fine-tuning compute in FLOP | `7.04e+21` |
+| `post_training_compute_flop` | `ai_models` | Post-training compute in FLOP | `9.4e+22` |
+| `compute_estimation_method` | `ai_models` | How the training compute was determined | `Reported,Operation counting` |
+| `confidence` | `ai_models` | Confidence of Epoch AI in the estimates | `Confident` |
+| `model_accessibility` | `ai_models` | Access to the model, e.g. API access or open weights | `Open weights (restricted use)` |
+| `open_weights` | `ai_models` | Model weights are published | `true` |
+| `training_code_accessibility` | `ai_models` | Access to the training code | `Open (restricted use)` |
+| `base_model` | `ai_models` | Model that this model was fine-tuned from | `EXAONE 3.5 32B` |
+| `hardware_name` | `ml_hardware` | Name of the accelerator at Epoch AI | `NVIDIA H100 SXM5 80GB` |
+| `manufacturer` | `ml_hardware` | Manufacturer | `NVIDIA` |
+| `hardware_type` | `ml_hardware` | Type, e.g. GPU or TPU | `GPU` |
+| `release_date` | `ml_hardware` | Release date | `2022-09-20` |
+| `release_price_usd` | `ml_hardware` | Price at release in USD | `33600.0` |
+| `fp64_flops` | `ml_hardware` | Double precision (FP64) performance in FLOP/s | `33450000000000.0` |
+| `fp32_flops` | `ml_hardware` | Single precision (FP32) performance in FLOP/s | `66910000000000.0` |
+| `tf32_flops` | `ml_hardware` | TensorFloat-32 performance in FLOP/s | `494700000000000.0` |
+| `fp16_flops` | `ml_hardware` | Half precision (FP16) performance in FLOP/s | `133800000000000.0` |
+| `tensor_fp16_bf16_flops` | `ml_hardware` | Tensor core FP16/BF16 performance in FLOP/s | `989500000000000.0` |
+| `fp8_flops` | `ml_hardware` | FP8 performance in FLOP/s | `1979000000000000.0` |
+| `fp4_flops` | `ml_hardware` | FP4 performance in FLOP/s | `1.5e+16` |
+| `int8_ops` | `ml_hardware` | INT8 performance in OP/s | `1979000000000000.0` |
+| `int4_ops` | `ml_hardware` | INT4 performance in OP/s | `1.5e+16` |
+| `memory_bytes` | `ml_hardware` | Memory capacity in bytes | `80000000000.0` |
+| `memory_bandwidth_bytes_per_s` | `ml_hardware` | Memory bandwidth in bytes per second | `3350000000000.0` |
+| `intranode_bandwidth_bytes_per_s` | `ml_hardware` | Bandwidth between the accelerators of a node in bytes per second | `900000000000.0` |
+| `internode_bandwidth_bits_per_s` | `ml_hardware` | Bandwidth between nodes in bits per second | `400000000000.0` |
+| `tdp_watts` | `ml_hardware` | Thermal design power in watts | `700.0` |
+| `foundry` | `ml_hardware` | Chip manufacturer (foundry) | `TSMC` |
+| `process_size_nm` | `ml_hardware` | Process size in nanometers | `5.0` |
+| `transistors_millions` | `ml_hardware` | Number of transistors in millions | `80000.0` |
+| `die_size_mm2` | `ml_hardware` | Die size in square millimeters | `814.0` |
+| `ml_models` | `ml_hardware` | Models in the Epoch AI database trained on the hardware | `["GPT-5.5", "Inkling", "Inkling-Small"]` |
+| `display_name` | `ai_capability_scores` | Display name of the model | `Llama 3.1-405B` |
+| `eci` | `ai_capability_scores` | Epoch Capabilities Index score | `128.77` |
+| `eci_ci_low` | `ai_capability_scores` | Lower bound of the confidence interval of the score | `124.44` |
+| `eci_ci_high` | `ai_capability_scores` | Upper bound of the confidence interval of the score | `130.61` |
+| `model_date` | `ai_capability_scores` | Release date of the model as used by Epoch AI | `2024-07-23` |
+| `organization` | `ai_capability_scores` | Developing organization | `Meta AI` |
+| `country` | `ai_capability_scores` | Country of the developing organization | `United States of America` |
+| `model_accessibility` | `ai_capability_scores` | Access to the model, e.g. API access or open weights | `Open weights (restricted use)` |
+| `accessibility_group` | `ai_capability_scores` | Open weights, closed weights or other | `Open weights` |
+| `repo_type` | `huggingface_repos` | Type of the repository: model or dataset | `model` |
+| `repo_id` | `huggingface_repos` | Repository on the Hugging Face Hub (organization/name) | `Qwen/Qwen3-4B` |
+| `organization` | `huggingface_repos` | Organization that owns the repository | `Qwen` |
+| `created_at` | `huggingface_repos` | Creation time of the repository (UTC) | `2025-04-27T03:41:29Z` |
+| `pipeline_tag` | `huggingface_repos` | Task of a model | `text-generation` |
+| `library_name` | `huggingface_repos` | Library of a model | `transformers` |
+| `repo_license` | `huggingface_repos` | License tag of the repository | `apache-2.0` |
+| `base_models` | `huggingface_repos` | Base models of a fine-tuned, quantized, adapted or merged model | `["Qwen/Qwen3-4B-Base"]` |
+| `base_model_relation` | `huggingface_repos` | Relation to the base models, e.g. finetune or quantized | `finetune` |
+| `parameters` | `huggingface_repos` | Parameters of a model from its safetensors files | `4022468096` |
+| `gated` | `huggingface_repos` | Access gating: false, auto or manual | `false` |
+| `rank` | `huggingface_repo_stats` | Rank by 30-day downloads among all public repositories of the type | `22` |
+| `downloads_30d` | `huggingface_repo_stats` | Downloads in the last 30 days | `11268043` |
+| `downloads_all_time` | `huggingface_repo_stats` | Downloads since the creation of the repository | `92966698` |
+| `likes` | `huggingface_repo_stats` | Number of likes | `771` |
+| `trending_score` | `huggingface_repo_stats` | Trending score of the Hub | `4.0` |
+| `models` | `huggingface_hub_totals` | Public models on the Hub | `3185648` |
+| `datasets` | `huggingface_hub_totals` | Public datasets on the Hub | `1105148` |
+| `spaces` | `huggingface_hub_totals` | Public Spaces on the Hub | `1509059` |
+| `user_repos_in_top_models` | `huggingface_hub_totals` | Repositories of users (not organizations) among the tracked top models | `106` |
+| `user_repos_in_top_datasets` | `huggingface_hub_totals` | Repositories of users (not organizations) among the tracked top datasets | `89` |
+| `category_name` | `arxiv_submissions` | Subject category of arXiv | `Machine Learning` |
+| `weekly_submissions` | `arxiv_submissions` | New submissions per week, including cross-lists | `{"2026-09-28": 2345, "2026-10-05": 1785}` |
+| `published_date` | `cve_daily_counts` | Day on which the NVD published the CVE records | `2026-10-22` |
+| `cves` | `cve_daily_counts` | CVE records published that day, including rejected ones | `494` |
+| `rejected` | `cve_daily_counts` | Records with the status Rejected | `2` |
+| `by_status` | `cve_daily_counts` | Records per NVD analysis status | `{"Awaiting Analysis": 170, "Deferred": 201}` |
+| `by_cvss_v3_severity` | `cve_daily_counts` | Records per CVSS v3.x base severity | `{"CRITICAL": 57, "HIGH": 141}` |
+| `by_cvss_v4_severity` | `cve_daily_counts` | Records per CVSS v4.0 base severity | `{"CRITICAL": 21, "HIGH": 90}` |
+| `unscored` | `cve_daily_counts` | Records without a CVSS v3.x or v4.0 score | `15` |
+| `nvd_scored` | `cve_daily_counts` | Records with a CVSS score from the NVD itself | `0` |
+| `by_cwe` | `cve_daily_counts` | Records per weakness (CWE id) | `{"CWE-79": 44, "CWE-862": 38}` |
+| `by_vendor` | `cve_daily_counts` | Records per vendor of the affected products | `{"drupal": 72, "mongodb": 13}` |
+| `with_exploit_reference` | `cve_daily_counts` | Records with a reference tagged Exploit | `0` |
+| `kev_listed` | `cve_daily_counts` | Records already in the CISA Known Exploited Vulnerabilities catalog | `1` |
+| `cve_id` | `known_exploited_vulnerabilities` | CVE id of the vulnerability | `CVE-2021-44228` |
+| `vendor_project` | `known_exploited_vulnerabilities` | Vendor or project as written by CISA | `Apache` |
+| `product` | `known_exploited_vulnerabilities` | Product as written by CISA | `Log4j2` |
+| `vulnerability_name` | `known_exploited_vulnerabilities` | Short name of the vulnerability given by CISA | `Apache Log4j2 Remote Code Execution Vulnerability` |
+| `date_added` | `known_exploited_vulnerabilities` | Day on which CISA added the vulnerability to the catalog | `2021-12-10` |
+| `due_date` | `known_exploited_vulnerabilities` | Remediation deadline for US federal agencies | `2021-12-24` |
+| `known_ransomware_use` | `known_exploited_vulnerabilities` | Known use in ransomware campaigns; false if unknown | `true` |
+| `cwe_ids` | `known_exploited_vulnerabilities` | Weaknesses (CWE ids) named by CISA | `["CWE-20", "CWE-400", "CWE-502"]` |
+| `cve_published_at` | `known_exploited_vulnerabilities` | Publication time of the CVE record in the NVD (UTC) | `2021-12-10T10:15:09Z` |
+| `cvss_base_score` | `known_exploited_vulnerabilities` | CVSS base score (v3.x, else v4.0) at the first observation | `10.0` |
+| `cvss_version` | `known_exploited_vulnerabilities` | CVSS version of the score | `3.1` |
+| `cvss_source` | `known_exploited_vulnerabilities` | Source of the score: nvd or other | `nvd` |
+| `rfc_number` | `rfcs` | Number of the RFC | `8446` |
+| `title` | `rfcs` | Title of the RFC | `The Transport Layer Security (TLS) Protocol Version 1.3` |
+| `publication_year` | `rfcs` | Year of publication | `2018` |
+| `publication_month` | `rfcs` | Month of publication (1 to 12) | `8` |
+| `page_count` | `rfcs` | Number of pages | `160` |
+| `author_count` | `rfcs` | Number of authors (names are not stored) | `1` |
+| `current_status` | `rfcs` | Current status, e.g. PROPOSED STANDARD or HISTORIC | `PROPOSED STANDARD` |
+| `publication_status` | `rfcs` | Status at publication | `PROPOSED STANDARD` |
+| `stream` | `rfcs` | Stream: IETF, IRTF, IAB, INDEPENDENT, Editorial or Legacy | `IETF` |
+| `area` | `rfcs` | Current IETF area of the working group | `sec` |
+| `working_group` | `rfcs` | Acronym of the working group | `tls` |
+| `keywords` | `rfcs` | Keywords of the RFC | `["FTP"]` |
+| `obsoletes` | `rfcs` | Documents that this RFC obsoletes | `["RFC5077", "RFC5246", "RFC6961"]` |
+| `obsoleted_by` | `rfcs` | Documents that obsolete this RFC | `["RFC9846"]` |
+| `updates` | `rfcs` | Documents that this RFC updates | `["RFC5705", "RFC6066"]` |
+| `updated_by` | `rfcs` | Documents that update this RFC | `["RFC8996"]` |
+| `is_also` | `rfcs` | Series memberships, e.g. BCP14 or STD7 | `["STD97"]` |
+| `draft` | `rfcs` | Internet-Draft from which the RFC was published | `draft-ietf-tls-tls13-28` |
+| `has_errata` | `rfcs` | Errata are reported for the RFC | `true` |
+| `scope` | `ietf_draft_activity` | Drafts counted: all, by group type or by IETF area | `group_type:wg` |
+| `weekly_new_drafts` | `ietf_draft_activity` | First versions (revision 00) submitted per week | `{"2026-10-05": 4, "2026-10-12": 4}` |
+| `weekly_revisions` | `ietf_draft_activity` | Draft versions of any revision submitted per week | `{"2026-10-05": 69, "2026-10-12": 116}` |
+| `registry` | `ip_address_delegations` | Regional internet registry | `ripencc` |
+| `country` | `ip_address_delegations` | Country of the resource holders (ISO 3166-1 alpha-2); ZZ if not delegated | `DE` |
+| `status` | `ip_address_delegations` | Status of the resources: assigned, available or reserved | `assigned` |
+| `ipv4_addresses` | `ip_address_delegations` | Number of IPv4 addresses | `126279808` |
+| `ipv4_ranges` | `ip_address_delegations` | Number of IPv4 ranges | `10815` |
+| `ipv6_slash32_equivalents` | `ip_address_delegations` | IPv6 address space in units of /32 prefixes | `24386.0128326416` |
+| `ipv6_prefixes` | `ip_address_delegations` | Number of IPv6 prefixes | `3106` |
+| `asns` | `ip_address_delegations` | Number of AS numbers | `3252` |
+| `asn_ranges` | `ip_address_delegations` | Number of AS number ranges | `3252` |
+| `ip_version` | `bgp_routing_table` | IP version of the routing table: 4 or 6 | `6` |
+| `daily_prefixes` | `bgp_routing_table` | Announced prefixes in the global routing table per day | `{"2026-10-23": 259660, "2026-10-24": 259597}` |
+| `daily_ases` | `bgp_routing_table` | Origin autonomous systems per day | `{"2026-10-23": 37861, "2026-10-24": 37864}` |
+| `economy` | `ipv6_adoption` | Economy (ISO 3166-1 alpha-2), or XA for the world | `DE` |
+| `daily_capable_pct` | `ipv6_adoption` | Share of users that can use IPv6, in percent per day | `{"2026-10-21": 73.6498, "2026-10-22": 73.5147}` |
+| `daily_preferred_pct` | `ipv6_adoption` | Share of users that prefer IPv6 to IPv4, in percent per day | `{"2026-10-21": 70.8261, "2026-10-22": 70.7613}` |
+| `daily_samples` | `ipv6_adoption` | Number of measurements per day | `{"2026-10-21": 470976, "2026-10-22": 462743}` |
+| `statistic` | `market_shares` | Measured market: os, desktop_os, mobile_os, browser, search_engine, platform or ai_chatbot | `ai_chatbot` |
+| `region` | `market_shares` | ww for worldwide, or a country (ISO 3166-1 alpha-2) | `ww` |
+| `monthly_shares` | `market_shares` | Share in percent per category per month | `{"2026-08-01": {"ChatGPT": 79.4, "Google Gemini": 10.93}}` |
+| `list_edition` | `supercomputer_lists` | Edition of the TOP500 list (June or November) | `2026-06-01` |
+| `systems` | `supercomputer_lists` | Number of systems in the list | `500` |
+| `total_rmax_tflops` | `supercomputer_lists` | Sum of the LINPACK performance (Rmax) of all systems in TFlop/s | `18732742.1618` |
+| `rank1_rmax_tflops` | `supercomputer_lists` | Rmax of the first system in TFlop/s | `2198400.0` |
+| `rank500_rmax_tflops` | `supercomputer_lists` | Rmax of the last system (entry level) in TFlop/s | `2661.46` |
+| `rank1_system` | `supercomputer_lists` | Name of the first system | `LineShine` |
+| `rank1_country` | `supercomputer_lists` | Country of the first system | `China` |
+| `total_cores` | `supercomputer_lists` | Sum of the cores of all systems | `152702044` |
+| `total_power_kw` | `supercomputer_lists` | Sum of the power of the systems that report it, in kW | `415879.8` |
+| `systems_with_power` | `supercomputer_lists` | Number of systems that report their power | `200` |
+| `systems_by_country` | `supercomputer_lists` | Number of systems per country | `{"United States": 161, "Germany": 41}` |
+| `rmax_by_country_tflops` | `supercomputer_lists` | Sum of Rmax per country in TFlop/s | `{"United States": 7031438.87, "Germany": 1402709.48}` |
+| `systems_by_manufacturer` | `supercomputer_lists` | Number of systems per manufacturer | `{"Lenovo": 130, "HPE": 119}` |
+| `systems_with_accelerator` | `supercomputer_lists` | Systems with accelerators; null if the list does not state them | `null` |
+| `metric` | `web_metrics` | Metric of the HTTP Archive reports, e.g. HTTPS share or page weight | `pctHttps` |
+| `client` | `web_metrics` | Crawled page variant: desktop or mobile | `mobile` |
+| `unit` | `web_metrics` | Unit of the values, e.g. percent or KB | `percent` |
+| `monthly_values` | `web_metrics` | Value per crawl (key: crawl date) | `{"2026-09-01": 99.33, "2026-10-01": 99.41}` |
+| `country` | `job_postings` | Country (ISO 3166-1 alpha-2), or EA for the euro area | `DE` |
+| `category` | `job_postings` | Occupational category, or total or new postings | `Software Development` |
+| `seasonally_adjusted` | `job_postings` | Index is seasonally adjusted | `true` |
+| `daily_index` | `job_postings` | Index of job postings on Indeed per day (1 February 2020 = 100) | `{"2026-10-15": 47.42, "2026-10-16": 47.69}` |
+| `country` | `ai_job_postings` | Country (ISO 3166-1 alpha-2) | `DE` |
+| `daily_share_pct` | `ai_job_postings` | Share of postings that mention AI, in percent per day (7-day average) | `{"2026-09-29": 5.73688552750117, "2026-09-30": 5.74163012331981}` |
+| `indicator_name` | `world_bank_indicators` | Name of the World Bank indicator | `Individuals using the Internet (% of population)` |
+| `country_name` | `world_bank_indicators` | Country or aggregate | `Germany` |
+| `is_aggregate` | `world_bank_indicators` | Region, income group or other aggregate | `false` |
+| `values` | `world_bank_indicators` | Value per year; later revisions hold only the changed years | `{"2023": 92.4763763, "2024": 93.49999579}` |
+| `indicator_label` | `eurostat_indicators` | Label of the Eurostat indicator | `Enterprises using paid cloud computing services used over the internet` |
+| `unit` | `eurostat_indicators` | Unit, e.g. PC_ENT (percentage of enterprises) | `PC_ENT` |
+| `geo` | `eurostat_indicators` | Country (Eurostat code, EL for Greece) or EU27_2020 | `DE` |
+| `values` | `eurostat_indicators` | Value per year | `{"2023": 47.0, "2025": 53.91}` |
 
 ## Dataset Overview
 <!-- DATASET_OVERVIEW_START -->

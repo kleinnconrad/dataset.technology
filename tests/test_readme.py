@@ -1,8 +1,9 @@
-"""Checks that the data model diagrams and the example records of the README match the schema.
+"""Checks that the data model diagrams, the example records and the variable overview of the README match the schema.
 
-The entity relationship diagrams list every field of every dataset, and the
-README shows one example record per dataset. These tests fail when a field
-is added, renamed or removed in ``schema.py`` without updating the README.
+The entity relationship diagrams list every field of every dataset, the
+README shows one example record per dataset, and the variable overview names
+fields of the datasets. These tests fail when a field is added, renamed or
+removed in ``schema.py`` without updating the README.
 """
 import json
 import re
@@ -89,3 +90,28 @@ def test_example_record_validates_against_its_model(dataset: str) -> None:
     examples = example_records(_readme())
     assert len(examples.get(dataset, [])) == 1, f"README needs exactly one example of {dataset}"
     DATASET_MODELS[dataset].model_validate(examples[dataset][0])
+
+
+def variable_overview_rows(text: str) -> list[tuple[str, str]]:
+    """Returns the variable and the dataset of every row of the variable overview of the README.
+
+    Args:
+        text: The README.
+
+    Returns:
+        list[tuple[str, str]]: Text of the variable cell and dataset name, in table order.
+    """
+    section = text.split("## Variable Overview", 1)[1].split("\n## ", 1)[0]
+    return re.findall(r"^\| (.+?) \| `(\w+)` \|", section, flags=re.MULTILINE)
+
+
+def test_variable_overview_names_content_fields_of_the_datasets() -> None:
+    rows = variable_overview_rows(_readme())
+    assert rows
+    assert len(set(rows)) == len(rows), "variable overview lists a field twice"
+    for variable, dataset in rows:
+        name = variable.strip("`")
+        assert variable == f"`{name}`", variable
+        assert dataset in DATASET_MODELS, dataset
+        assert name in DATASET_MODELS[dataset].model_fields, (variable, dataset)
+        assert name not in RecordBase.model_fields, (variable, dataset)
