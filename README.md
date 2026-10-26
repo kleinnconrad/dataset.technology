@@ -2560,6 +2560,4 @@ uv run pytest
 4. Start `pipeline.yml` once by hand in the mode `backfill` before the first scheduled run. It imports the history that the sources provide (e.g. pageviews since July 2015, the BGP table since 1988, all RFCs, the Epoch AI databases, the World Bank indicators since 1960, the TOP500 lists since 1993). Collectors that do not finish within the deadline continue in the following runs.
 
 ## License
-
-- **Code:** MIT License, see [LICENSE](LICENSE).
 - **Data** (`data/`): Open Database License (ODbL) 1.0, individual contents under the Database Contents License (DbCL) 1.0 unless the field `license` of a record names other terms, see [data/LICENSE.md](data/LICENSE.md). The sources and their attribution are listed there.
