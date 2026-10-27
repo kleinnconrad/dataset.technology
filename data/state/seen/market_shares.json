@@ -1,0 +1,26 @@
+{
+"version": 1,
+"items": {
+"ai_chatbot:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "0a4c62350f4c927d", "last_seen": "2026-10-27", "revision": 0},
+"ai_chatbot:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "21ae1928de946dc1", "last_seen": "2026-10-27", "revision": 0},
+"ai_chatbot:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "0400c3eb672d78fd", "last_seen": "2026-10-27", "revision": 0},
+"browser:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "9ffba1b36d623087", "last_seen": "2026-10-27", "revision": 0},
+"browser:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "71207baaa30d9dcd", "last_seen": "2026-10-27", "revision": 0},
+"browser:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "87e0c3d46410e813", "last_seen": "2026-10-27", "revision": 0},
+"desktop_os:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "53cb006f62a6d8e8", "last_seen": "2026-10-27", "revision": 0},
+"desktop_os:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "84f3d6565e0cfe49", "last_seen": "2026-10-27", "revision": 0},
+"desktop_os:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "a0b2ff90e046b19a", "last_seen": "2026-10-27", "revision": 0},
+"mobile_os:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "94cc963b3ee734a0", "last_seen": "2026-10-27", "revision": 0},
+"mobile_os:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "5b7ce659195123dc", "last_seen": "2026-10-27", "revision": 0},
+"mobile_os:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "b53006c08f257944", "last_seen": "2026-10-27", "revision": 0},
+"os:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "3bb4c27573da213c", "last_seen": "2026-10-27", "revision": 0},
+"os:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "0635735b5ff657a8", "last_seen": "2026-10-27", "revision": 0},
+"os:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "929cb79e81525e4d", "last_seen": "2026-10-27", "revision": 0},
+"platform:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "4180ca4cd7ecd9b5", "last_seen": "2026-10-27", "revision": 0},
+"platform:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "77fb51d9c217a63e", "last_seen": "2026-10-27", "revision": 0},
+"platform:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "e126dfebf3acbd74", "last_seen": "2026-10-27", "revision": 0},
+"search_engine:DE": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "a377debabf142d81", "last_seen": "2026-10-27", "revision": 0},
+"search_engine:US": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "93b348381af3089f", "last_seen": "2026-10-27", "revision": 0},
+"search_engine:ww": {"data": {"last_period": "2026-08"}, "first_seen": "2026-10-27", "hash": "dc2f5bc79ac7390f", "last_seen": "2026-10-27", "revision": 0}
+}
+}

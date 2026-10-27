@@ -1,13 +1,25 @@
 {
 "version": 1,
 "items": {
-"cs.AI": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Artificial Intelligence", "last_seen": "2026-10-25", "revision": 0},
-"cs.CL": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Computation and Language", "last_seen": "2026-10-25", "revision": 0},
-"cs.CR": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Cryptography and Security", "last_seen": "2026-10-25", "revision": 0},
-"cs.CV": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Computer Vision and Pattern Recognition", "last_seen": "2026-10-25", "revision": 0},
-"cs.DC": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Distributed, Parallel, and Cluster Computing", "last_seen": "2026-10-25", "revision": 0},
-"cs.LG": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Machine Learning", "last_seen": "2026-10-25", "revision": 0},
-"cs.NI": {"data": {"last_week": "2026-09-14"}, "first_seen": "2026-10-25", "hash": "Networking and Internet Architecture", "last_seen": "2026-10-25", "revision": 0},
-"cs.RO": {"data": {"last_week": "2026-10-05"}, "first_seen": "2026-10-25", "hash": "Robotics", "last_seen": "2026-10-25", "revision": 0}
+"cs.AI": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Artificial Intelligence", "last_seen": "2026-10-27", "revision": 0},
+"cs.AR": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Hardware Architecture", "last_seen": "2026-10-27", "revision": 0},
+"cs.CL": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Computation and Language", "last_seen": "2026-10-27", "revision": 0},
+"cs.CR": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Cryptography and Security", "last_seen": "2026-10-27", "revision": 0},
+"cs.CV": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Computer Vision and Pattern Recognition", "last_seen": "2026-10-27", "revision": 0},
+"cs.DB": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Databases", "last_seen": "2026-10-27", "revision": 0},
+"cs.DC": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Distributed, Parallel, and Cluster Computing", "last_seen": "2026-10-27", "revision": 0},
+"cs.ET": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Emerging Technologies", "last_seen": "2026-10-27", "revision": 0},
+"cs.HC": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Human-Computer Interaction", "last_seen": "2026-10-27", "revision": 0},
+"cs.IR": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Information Retrieval", "last_seen": "2026-10-27", "revision": 0},
+"cs.LG": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Machine Learning", "last_seen": "2026-10-27", "revision": 0},
+"cs.MA": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Multiagent Systems", "last_seen": "2026-10-27", "revision": 0},
+"cs.NI": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Networking and Internet Architecture", "last_seen": "2026-10-27", "revision": 0},
+"cs.PL": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Programming Languages", "last_seen": "2026-10-27", "revision": 0},
+"cs.RO": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-25", "hash": "Robotics", "last_seen": "2026-10-27", "revision": 0},
+"cs.SE": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Software Engineering", "last_seen": "2026-10-27", "revision": 0},
+"eess.SP": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Signal Processing", "last_seen": "2026-10-27", "revision": 0},
+"eess.SY": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Systems and Control", "last_seen": "2026-10-27", "revision": 0},
+"quant-ph": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Quantum Physics", "last_seen": "2026-10-27", "revision": 0},
+"stat.ML": {"data": {"last_week": "2026-10-12"}, "first_seen": "2026-10-27", "hash": "Machine Learning (Statistics)", "last_seen": "2026-10-27", "revision": 0}
 }
 }

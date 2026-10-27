@@ -1,0 +1,15 @@
+{
+"version": 1,
+"items": {
+"bytesJs_p50:desktop": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "16c1214e7a867ffd", "last_seen": "2026-10-27", "revision": 0},
+"bytesJs_p50:mobile": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "232ca4e510b6fda5", "last_seen": "2026-10-27", "revision": 0},
+"bytesTotal_p50:desktop": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "f51e32996e6a2606", "last_seen": "2026-10-27", "revision": 0},
+"bytesTotal_p50:mobile": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "1235cf6e6fa33aae", "last_seen": "2026-10-27", "revision": 0},
+"h2:desktop": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "255eca82d6a36b49", "last_seen": "2026-10-27", "revision": 0},
+"h2:mobile": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "1cf2313be81ffdd7", "last_seen": "2026-10-27", "revision": 0},
+"h3:desktop": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "162d6ba01e5ca26c", "last_seen": "2026-10-27", "revision": 0},
+"h3:mobile": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "2928adc4f4fe00c0", "last_seen": "2026-10-27", "revision": 0},
+"pctHttps:desktop": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "4b678726411237bf", "last_seen": "2026-10-27", "revision": 0},
+"pctHttps:mobile": {"data": {"last_period": "2026-10-01"}, "first_seen": "2026-10-27", "hash": "1091619785b846c2", "last_seen": "2026-10-27", "revision": 0}
+}
+}

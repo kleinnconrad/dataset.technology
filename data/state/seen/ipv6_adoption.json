@@ -1,0 +1,17 @@
+{
+"version": 1,
+"items": {
+"BR": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/BR.json", "last_seen": "2026-10-27", "revision": 0},
+"CN": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/CN.json", "last_seen": "2026-10-27", "revision": 0},
+"DE": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/DE.json", "last_seen": "2026-10-27", "revision": 0},
+"FR": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/FR.json", "last_seen": "2026-10-27", "revision": 0},
+"GB": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/GB.json", "last_seen": "2026-10-27", "revision": 0},
+"ID": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/ID.json", "last_seen": "2026-10-27", "revision": 0},
+"IN": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/IN.json", "last_seen": "2026-10-27", "revision": 0},
+"JP": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/JP.json", "last_seen": "2026-10-27", "revision": 0},
+"KR": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/KR.json", "last_seen": "2026-10-27", "revision": 0},
+"NG": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/NG.json", "last_seen": "2026-10-27", "revision": 0},
+"US": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6economy/US.json", "last_seen": "2026-10-27", "revision": 0},
+"XA": {"data": {"last_day": "2026-10-24"}, "first_seen": "2026-10-27", "hash": "https://data1.labs.apnic.net/v6stats/v6region/XA.json", "last_seen": "2026-10-27", "revision": 0}
+}
+}
