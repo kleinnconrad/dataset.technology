@@ -639,6 +639,18 @@ wikidata = "Q124333951"
 packages = ["pypi:perplexityai"]
 hn_terms = ["perplexity"]
 
+# Synthetic data
+[[technology]]
+id = "synthetic_data_generation"
+name = "Synthetic Data Generation"
+category = "ai_application"
+added = 2026-11-01
+wikidata = "Q7662746"
+stackoverflow_tags = ["data-generation"]
+github_repos = ["sdv-dev/SDV"]
+packages = ["pypi:sdv"]
+hn_terms = ["synthetic data", "synthetic data generation"]
+
 # =============================================================================
 # Software development
 # =============================================================================
@@ -3425,6 +3437,28 @@ added = 2026-10-25
 wikidata = "Q55582088"
 hn_terms = ["stablecoin", "stablecoins"]
 
+# Decentralized finance
+[[technology]]
+id = "decentralized_finance"
+name = "Decentralized Finance"
+category = "blockchain"
+added = 2026-11-01
+wikidata = "Q4159573"
+github_repos = ["simpleaswater/defi-resources"]
+hn_terms = ["defi", "decentralized finance"]
+
+# Zero-knowledge proof
+[[technology]]
+id = "zero_knowledge_proof"
+name = "Zero-Knowledge Proof"
+category = "blockchain"
+added = 2026-11-01
+wikidata = "Q191943"
+stackoverflow_tags = ["zkp"]
+github_repos = ["iden3/circom"]
+packages = ["npm:snarkjs"]
+hn_terms = ["zero knowledge proof", "zkp", "zk-snark", "zk-stark"]
+
 # --- Extended reality ---
 
 # Apple Vision Pro
@@ -3508,3 +3542,13 @@ category = "robotics"
 added = 2026-10-25
 wikidata = "Q484000"
 hn_terms = ["drone", "drones", "uav"]
+
+# Collaborative robot
+[[technology]]
+id = "collaborative_robot"
+name = "Collaborative Robot"
+category = "robotics"
+added = 2026-11-01
+wikidata = "Q5138951"
+github_repos = ["UniversalRobots/Universal_Robots_ROS_Driver"]
+hn_terms = ["cobot", "collaborative robot"]
