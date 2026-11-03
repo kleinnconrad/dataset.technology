@@ -47,6 +47,7 @@
 "clickhouse": {"data": {}, "first_seen": "2026-10-25", "hash": "5b957ec3ac120481", "last_seen": "2026-10-25", "revision": 0},
 "clojure": {"data": {}, "first_seen": "2026-10-25", "hash": "9c2a6f941041999c", "last_seen": "2026-10-25", "revision": 0},
 "cobol": {"data": {}, "first_seen": "2026-10-25", "hash": "bc13553a5bc1ad8f", "last_seen": "2026-10-25", "revision": 0},
+"collaborative_robot": {"data": {}, "first_seen": "2026-11-03", "hash": "b22679ff87b721b8", "last_seen": "2026-11-03", "revision": 0},
 "computer_vision": {"data": {}, "first_seen": "2026-10-25", "hash": "3459f04c89baf84f", "last_seen": "2026-10-25", "revision": 0},
 "confidential_computing": {"data": {}, "first_seen": "2026-10-25", "hash": "3a7c2c8a3b0bf12b", "last_seen": "2026-10-25", "revision": 0},
 "containerd": {"data": {}, "first_seen": "2026-10-25", "hash": "f555e3102110ef24", "last_seen": "2026-10-25", "revision": 0},
@@ -65,6 +66,7 @@
 "dbt": {"data": {}, "first_seen": "2026-10-25", "hash": "b2f86e2d7a190e17", "last_seen": "2026-10-25", "revision": 0},
 "ddr5": {"data": {}, "first_seen": "2026-10-25", "hash": "22d70673a86920e3", "last_seen": "2026-10-25", "revision": 0},
 "debian": {"data": {}, "first_seen": "2026-10-25", "hash": "66c286dffbbec240", "last_seen": "2026-10-25", "revision": 0},
+"decentralized_finance": {"data": {}, "first_seen": "2026-11-03", "hash": "b3d66aca783df125", "last_seen": "2026-11-03", "revision": 0},
 "deep_learning": {"data": {}, "first_seen": "2026-10-25", "hash": "f70524d2398dfe1e", "last_seen": "2026-10-25", "revision": 0},
 "deepfake": {"data": {}, "first_seen": "2026-10-25", "hash": "80e101c1a6ff8adf", "last_seen": "2026-10-25", "revision": 0},
 "deepseek": {"data": {}, "first_seen": "2026-10-25", "hash": "70fe530ab266a13d", "last_seen": "2026-10-25", "revision": 0},
@@ -280,6 +282,7 @@
 "supply_chain_attack": {"data": {}, "first_seen": "2026-10-25", "hash": "1b3e8dd0efb83445", "last_seen": "2026-10-25", "revision": 0},
 "svelte": {"data": {}, "first_seen": "2026-10-25", "hash": "3a2cda6a1b9ff65c", "last_seen": "2026-10-25", "revision": 0},
 "swift": {"data": {}, "first_seen": "2026-10-25", "hash": "e968cd0813dc0db6", "last_seen": "2026-10-25", "revision": 0},
+"synthetic_data_generation": {"data": {}, "first_seen": "2026-11-03", "hash": "5b7092398e5aec66", "last_seen": "2026-11-03", "revision": 0},
 "tailwind_css": {"data": {}, "first_seen": "2026-10-25", "hash": "997aea455a50a225", "last_seen": "2026-10-25", "revision": 0},
 "tensorflow": {"data": {}, "first_seen": "2026-10-25", "hash": "ecf3b794fe60d408", "last_seen": "2026-10-25", "revision": 0},
 "terraform": {"data": {}, "first_seen": "2026-10-25", "hash": "1ffee4fb24ca97e8", "last_seen": "2026-10-25", "revision": 0},
@@ -308,6 +311,7 @@
 "x86_64": {"data": {}, "first_seen": "2026-10-25", "hash": "918eac64b873f5e4", "last_seen": "2026-10-25", "revision": 0},
 "xgboost": {"data": {}, "first_seen": "2026-10-25", "hash": "cd02f9fd2aae7100", "last_seen": "2026-10-25", "revision": 0},
 "zero_day": {"data": {}, "first_seen": "2026-10-25", "hash": "191118950507016a", "last_seen": "2026-10-25", "revision": 0},
+"zero_knowledge_proof": {"data": {}, "first_seen": "2026-11-03", "hash": "05aeaf208b3e09a1", "last_seen": "2026-11-03", "revision": 0},
 "zero_trust": {"data": {}, "first_seen": "2026-10-25", "hash": "570cefe0def1c4a7", "last_seen": "2026-10-25", "revision": 0},
 "zig": {"data": {}, "first_seen": "2026-10-25", "hash": "fb16e9e0968ba9da", "last_seen": "2026-10-25", "revision": 0}
 }

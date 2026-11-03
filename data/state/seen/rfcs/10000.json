@@ -36,12 +36,18 @@
 "10040": {"data": {}, "first_seen": "2026-10-25", "hash": "4cf9ea9e9d781808", "last_seen": "2026-10-25", "revision": 0},
 "10041": {"data": {}, "first_seen": "2026-10-25", "hash": "49d149fc3ec1dd82", "last_seen": "2026-10-25", "revision": 0},
 "10042": {"data": {}, "first_seen": "2026-10-25", "hash": "0d28221cb5626d23", "last_seen": "2026-10-25", "revision": 0},
-"10049": {"data": {}, "first_seen": "2026-10-25", "hash": "fe6222d65faeefc8", "last_seen": "2026-10-25", "revision": 0},
+"10049": {"data": {}, "first_seen": "2026-10-25", "hash": "2680a6de529bafcf", "last_seen": "2026-11-03", "revision": 1},
 "10050": {"data": {}, "first_seen": "2026-10-25", "hash": "a36653ce42326cfa", "last_seen": "2026-10-25", "revision": 0},
+"10051": {"data": {}, "first_seen": "2026-11-03", "hash": "24329b2b70557f4d", "last_seen": "2026-11-03", "revision": 0},
 "10052": {"data": {}, "first_seen": "2026-10-25", "hash": "9ad8c12b277dc090", "last_seen": "2026-10-25", "revision": 0},
 "10053": {"data": {}, "first_seen": "2026-10-25", "hash": "b1f1480abc7e99f6", "last_seen": "2026-10-25", "revision": 0},
 "10054": {"data": {}, "first_seen": "2026-10-25", "hash": "637d954a53c16990", "last_seen": "2026-10-25", "revision": 0},
 "10055": {"data": {}, "first_seen": "2026-10-25", "hash": "ae4c4946e4cf6330", "last_seen": "2026-10-25", "revision": 0},
-"10065": {"data": {}, "first_seen": "2026-10-25", "hash": "8b8d8fdeb21a079a", "last_seen": "2026-10-25", "revision": 0}
+"10065": {"data": {}, "first_seen": "2026-10-25", "hash": "8b8d8fdeb21a079a", "last_seen": "2026-10-25", "revision": 0},
+"10066": {"data": {}, "first_seen": "2026-11-03", "hash": "12b510f0434e61d3", "last_seen": "2026-11-03", "revision": 0},
+"10067": {"data": {}, "first_seen": "2026-11-03", "hash": "ad85cab147d9e621", "last_seen": "2026-11-03", "revision": 0},
+"10075": {"data": {}, "first_seen": "2026-11-03", "hash": "1e54f1fbcd451d20", "last_seen": "2026-11-03", "revision": 0},
+"10078": {"data": {}, "first_seen": "2026-11-03", "hash": "e5fb5c19474b94ff", "last_seen": "2026-11-03", "revision": 0},
+"10080": {"data": {}, "first_seen": "2026-11-03", "hash": "3a021ab5ffd2874b", "last_seen": "2026-11-03", "revision": 0}
 }
 }
