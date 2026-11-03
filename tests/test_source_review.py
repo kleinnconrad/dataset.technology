@@ -1,13 +1,16 @@
 """Tests of the monthly review of the technology registry."""
 from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Optional
+from types import SimpleNamespace
+from typing import Any, Optional
+
+from google.genai import types
 
 from conftest import REGISTRY_FIXTURE
 from registry import load_registry
 from settings import Settings
 from source_review import (ENDOFLIFE_URL, GITHUB_REPO_URL, WIKIDATA_API_URL, IdentifierChecker, ReviewResult,
-                           build_report, check_collector_health, check_identifiers, insert_entry, main,
+                           SearchModel, build_report, check_collector_health, check_identifiers, insert_entry, main,
                            parse_candidates, propose_additions, replace_in_entry)
 from state import CollectorStates
 
@@ -187,3 +190,17 @@ def test_main_without_search_writes_the_report_and_keeps_an_unchanged_registry(t
     assert main(["--report", str(report), "--registry", str(registry), "--state-dir", str(tmp_path), "--no-search"]) == 0
     assert "## Registry review" in report.read_text(encoding="utf-8")
     assert registry.read_text(encoding="utf-8") == REGISTRY_FIXTURE.read_text(encoding="utf-8")
+
+
+def test_search_model_sets_a_thinking_level_and_no_temperature() -> None:
+    configs: list[Any] = []
+
+    def generate(**kwargs: Any) -> SimpleNamespace:
+        configs.append(kwargs["config"])
+        return SimpleNamespace(text="[]")
+
+    client = SimpleNamespace(models=SimpleNamespace(generate_content=generate))
+    assert SearchModel("key", "model", client=client, sleep=lambda seconds: None).ask("prompt") == "[]"
+
+    assert configs[0].thinking_config.thinking_level == types.ThinkingLevel.MEDIUM
+    assert configs[0].temperature is None

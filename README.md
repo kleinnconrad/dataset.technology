@@ -2847,7 +2847,7 @@ The input `collectors` restricts a manual run to a comma-separated list of colle
 | `STACKEXCHANGE_KEY` | none | Stack Exchange API key (optional): 10,000 instead of 300 requests per day, independent of other users of the runner's IP address |
 | `NVD_API_KEY` | none | NVD API key (optional): 50 instead of 5 requests per 30 seconds |
 | `GEMINI_API_KEY` | none | Gemini API key for the search of new technologies in the registry review (optional; without it the review only checks the registry) |
-| `GEMINI_MODEL` | `gemini-2.5-flash` | Model of the registry review |
+| `GEMINI_MODEL` | `gemini-3.5-flash-lite` | Model of the registry review. A Gemini 3 or later model: the requests set a thinking level, which Gemini 2.5 models reject |
 | `RUN_DEADLINE_MINUTES` | 40 | Minutes after the start after which the collectors start no new work (225 in `backfill` runs) |
 | `COLLECTORS` | all due | Comma-separated list of collectors to run; listed collectors run even if they are not due |
 

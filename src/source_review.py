@@ -51,7 +51,11 @@ from web import BlockedError, FetchError, NotFoundError, RateLimitError, WebClie
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
+DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite"
+# Google recommends MEDIUM or higher for requests with tools; MINIMAL, the default of gemini-3.5-flash-lite, can end
+# the searches early. Gemini 3 and later models ignore custom temperatures, and Gemini 2.5 models reject a thinking
+# level. At most eight requests per month; the thinking tokens cost a few cents.
+SEARCH_THINKING_LEVEL = "MEDIUM"
 MAX_ADDITIONS = 5
 CANDIDATES_PER_DOMAIN = 3
 MAX_SEARCH_CALLS = 8
@@ -687,7 +691,8 @@ class SearchModel:
             self._sleep(MIN_SEARCH_INTERVAL_S)
         self.calls += 1
         config = types.GenerateContentConfig(
-            tools=[types.Tool(google_search=types.GoogleSearch())], temperature=0.2,
+            tools=[types.Tool(google_search=types.GoogleSearch())],
+            thinking_config=types.ThinkingConfig(thinking_level=types.ThinkingLevel(SEARCH_THINKING_LEVEL)),
             automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True))
         try:
             response = self._client.models.generate_content(model=self._model, contents=prompt, config=config)
