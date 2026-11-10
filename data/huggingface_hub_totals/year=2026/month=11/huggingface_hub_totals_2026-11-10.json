@@ -1,0 +1,3 @@
+[
+{"record_id":"hf-totals:2026-11-10","revision":0,"dataset":"huggingface_hub_totals","schema_version":"1.0","observed_at":"2026-11-10T08:28:21Z","source_id":"huggingface_hub","source_url":"https://huggingface.co","license":"Hugging Face Hub metadata (Hugging Face terms of service)","backfilled":false,"models":3226816,"datasets":1123140,"spaces":1524026,"user_repos_in_top_models":114,"user_repos_in_top_datasets":93}
+]
