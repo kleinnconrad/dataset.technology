@@ -271,7 +271,7 @@ The table lists the variables that carry content and the dataset (table) that st
 
 ## Dataset Overview
 <!-- DATASET_OVERVIEW_START -->
-**Last updated:** 2026-11-24 13:11 UTC
+**Last updated:** 2026-11-24 13:16 UTC
 
 | Dataset | Records | Items | Files | Observed | Content |
 |---|---|---|---|---|---|
@@ -309,7 +309,7 @@ The table lists the variables that carry content and the dataset (table) that st
 
 **Runs**
 
-- **Latest run:** 2026-11-24 13:10 UTC (normal)
+- **Latest run:** 2026-11-24 13:16 UTC (normal)
   - `arxiv`: not_due
   - `bgp`: not_due
   - `docker_hub`: not_due
@@ -324,7 +324,7 @@ The table lists the variables that carry content and the dataset (table) that st
   - `job_postings`: not_due
   - `llm_prices`: ok
   - `nro`: not_due
-  - `package_downloads`: partial (package_downloads 2)
+  - `package_downloads`: partial
   - `release_cycles`: not_due
   - `rfcs`: not_due
   - `stackoverflow`: not_due
