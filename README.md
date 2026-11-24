@@ -2795,7 +2795,7 @@ sequenceDiagram
 
 Collectors whose values are lost when a run is missed run first; series collectors fetch all periods since their last stored period and can catch up later. Collectors with `min_days_between_runs` run only when their last complete run is old enough: 6 days for weekly collectors, 27 days for monthly ones.
 
-**Run deadline.** The collectors start no new work 40 minutes after the start of the run (`RUN_DEADLINE_MINUTES`), so that the workflow commits the data before its timeout of 45 minutes. A collector that stops at the deadline or at an exhausted quota has the status `partial` and continues in the next run; a collector that has not started by then is skipped.
+**Run deadline.** The collectors start no new work 40 minutes after the start of the run (`RUN_DEADLINE_MINUTES`), so that the workflow commits the data before its timeout of 45 minutes. A collector that stops at the deadline or at an exhausted quota has the status `partial` and continues in the next run. A collector that has not started by then is deferred to the next run (status `deferred`) if it runs at an interval and its last complete run is less than its interval plus 7 days old; otherwise it is skipped, which marks the run as failed.
 
 Each collector runs in isolation: a failure is logged in `data/state/collectors.json` and the run log, the other collectors continue, and the data already written is kept. The run then ends with exit code 1, so that the workflow fails visibly.
 

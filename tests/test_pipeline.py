@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta, timezone
 
 from collectors.base import Collector, CollectorResult, CollectorSkipped, RunContext
 from conftest import RUN_STARTED, read_dataset
-from pipeline import COLLECTOR_ORDER, HOST_INTERVALS, build_collectors, run_pipeline
+from pipeline import COLLECTOR_ORDER, HOST_INTERVALS, RunSummary, build_collectors, run_pipeline
 from schema import DATASET_MODELS, PageviewRecord
 from settings import Settings
 from state import CollectorEntry, CollectorStates, SeenStore
@@ -171,6 +171,39 @@ def test_collectors_after_the_run_deadline_are_skipped(tmp_path, fake_web) -> No
     assert "run deadline" in (summary.collectors["writer"].error or "")
     assert summary.failed == ["writer"]
     assert not (settings.output_dir / "wikipedia_pageviews").exists()
+
+
+def test_collector_with_an_interval_is_deferred_at_the_run_deadline_until_it_is_overdue(tmp_path, fake_web) -> None:
+    settings = settings_for(tmp_path)
+
+    def run(days: int) -> RunSummary:
+        now = [RUN_STARTED + timedelta(days=days)]
+        return run_pipeline(settings, [SlowCollector(now), WeeklyCollector()], web=fake_web.client(),
+                            clock=lambda: now[0])
+
+    first = run_pipeline(settings, [WeeklyCollector()], web=fake_web.client(), clock=lambda: RUN_STARTED)
+    deferred = run(7)
+    still_deferred = run(12)
+    overdue = run(13)
+
+    assert first.collectors["weekly"].status == "ok"
+    assert deferred.collectors["weekly"].status == "deferred" and deferred.failed == []
+    assert "run deadline" in (deferred.collectors["weekly"].error or "")
+    assert still_deferred.collectors["weekly"].status == "deferred"
+    assert overdue.collectors["weekly"].status == "skipped" and overdue.failed == ["weekly"]
+    entry = CollectorStates.load(settings.state_dir).entry("weekly", RUN_STARTED.date())
+    assert entry.consecutive_failures == 1 and entry.last_complete is not None
+    log = [json.loads(line) for line in (settings.state_dir / "run_log.jsonl").read_text().splitlines()]
+    assert log[1]["collectors"]["weekly"]["status"] == "deferred"
+
+
+def test_collector_that_never_completed_is_skipped_at_the_run_deadline(tmp_path, fake_web) -> None:
+    now = [RUN_STARTED]
+
+    summary = run_pipeline(settings_for(tmp_path), [SlowCollector(now), WeeklyCollector()], web=fake_web.client(),
+                           clock=lambda: now[0])
+
+    assert summary.collectors["weekly"].status == "skipped" and summary.failed == ["weekly"]
 
 
 def test_build_collectors_follows_the_order() -> None:
