@@ -173,6 +173,36 @@ def test_collectors_after_the_run_deadline_are_skipped(tmp_path, fake_web) -> No
     assert not (settings.output_dir / "wikipedia_pageviews").exists()
 
 
+class WeeklyErrorCollector(WritingCollector):
+    """Runs at most once a week and reports an error after writing, while ``fail`` is set."""
+    name = "weekly_error"
+    min_days_between_runs = 6
+    fail = True
+
+    def collect(self, ctx: RunContext, entry: CollectorEntry) -> CollectorResult:
+        result = super().collect(ctx, entry)
+        return CollectorResult(cursor=result.cursor, counters=result.counters,
+                               error="all requested series failed" if type(self).fail else None)
+
+
+def test_run_that_ends_with_an_error_is_not_complete_and_runs_again_in_the_next_run(tmp_path, fake_web) -> None:
+    settings = settings_for(tmp_path)
+
+    def run(days: int) -> str:
+        summary = run_pipeline(settings, [WeeklyErrorCollector()], web=fake_web.client(),
+                               clock=lambda: RUN_STARTED + timedelta(days=days))
+        return summary.collectors["weekly_error"].status
+
+    WeeklyErrorCollector.fail = True
+    statuses = [run(0), run(3)]
+    WeeklyErrorCollector.fail = False
+    statuses += [run(4), run(7)]
+
+    assert statuses == ["failed", "failed", "ok", "not_due"]
+    entry = CollectorStates.load(settings.state_dir).entry("weekly_error", RUN_STARTED.date())
+    assert entry.last_complete == RUN_STARTED + timedelta(days=4) and entry.consecutive_failures == 0
+
+
 def test_collector_with_an_interval_is_deferred_at_the_run_deadline_until_it_is_overdue(tmp_path, fake_web) -> None:
     settings = settings_for(tmp_path)
 

@@ -286,7 +286,9 @@ def _run_collector(ctx: RunContext, states: CollectorStates, collector: Collecto
         written = {name: count - before[name] for name, count in ctx.written.items() if count - before[name]}
         return CollectorOutcome(status="failed", records=written, error=f"{e.__class__.__name__}: {e}")
     written = {name: count - before[name] for name, count in ctx.written.items() if count - before[name]}
-    states.record_success(collector.name, started, result.cursor, complete=result.complete)
+    # A run that ends with an error is not complete, so that a collector with an interval runs again in the
+    # next run instead of waiting for its interval
+    states.record_success(collector.name, started, result.cursor, complete=result.complete and not result.error)
     if result.error:
         states.record_failure(collector.name, started, result.error)
         logger.error("Collector %s finished with an error: %s", collector.name, result.error)

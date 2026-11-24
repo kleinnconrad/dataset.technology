@@ -313,7 +313,7 @@ class CollectorEntry(BaseModel):
         last_run (Optional[datetime]): Start of the latest run.
         last_success (Optional[datetime]): Start of the latest successful run.
         last_complete (Optional[datetime]): Start of the latest successful run that
-            did not stop at the run deadline.
+            did not stop at the run deadline and did not end with an error.
         consecutive_failures (int): Failed runs since the last success.
         last_error (Optional[str]): Error of the latest failed run.
         cursor (dict): Collector-specific progress, e.g. the last fetched modification time.
@@ -398,7 +398,7 @@ class CollectorStates:
             name: Name of the collector.
             started: Start of the run.
             cursor: New cursor; None keeps the previous one.
-            complete: False if the collector stopped at the run deadline.
+            complete: False if the collector stopped at the run deadline or ended with an error.
         """
         changes: dict[str, Any] = {"last_run": started, "last_success": started, "consecutive_failures": 0,
                                    "last_error": None}
