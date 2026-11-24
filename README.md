@@ -271,7 +271,7 @@ The table lists the variables that carry content and the dataset (table) that st
 
 ## Dataset Overview
 <!-- DATASET_OVERVIEW_START -->
-**Last updated:** 2026-11-24 13:16 UTC
+**Last updated:** 2026-11-24 13:30 UTC
 
 | Dataset | Records | Items | Files | Observed | Content |
 |---|---|---|---|---|---|
@@ -280,7 +280,7 @@ The table lists the variables that carry content and the dataset (table) that st
 | `release_cycles` | 2,352 | 2,033 | 5 | 2026-10-25 to 2026-11-24 | One release cycle of a product at endoflife.date, recorded when it appears or changes. |
 | `stackoverflow_questions` | 548 | 548 | 5 | 2026-10-25 to 2026-11-06 | Weekly counts of new Stack Overflow questions with a tag of a technology, and the total of the tag. |
 | `github_repositories` | 755 | 755 | 5 | 2026-10-25 to 2026-11-24 | Popularity and activity of a GitHub repository of a technology at the time of observation. |
-| `package_downloads` | 934 | 934 | 10 | 2026-10-25 to 2026-11-24 | Daily downloads of a package of a technology from its registry (npm, PyPI or crates.io). |
+| `package_downloads` | 955 | 955 | 10 | 2026-10-25 to 2026-11-24 | Daily downloads of a package of a technology from its registry (npm, PyPI or crates.io). |
 | `docker_image_pulls` | 320 | 320 | 5 | 2026-10-25 to 2026-11-24 | Cumulative pulls and stars of a container image on Docker Hub at the time of observation. |
 | `cve_daily_counts` | 37 | 37 | 9 | 2026-10-25 to 2026-11-24 | Counts of the CVE records that the NVD published on one day, by status, severity, weakness and vendor, as observed after the day ended. |
 | `known_exploited_vulnerabilities` | 1,793 | 1,792 | 10 | 2026-10-25 to 2026-11-24 | A vulnerability in the CISA Known Exploited Vulnerabilities catalog, recorded when it is added or changes. |
@@ -309,7 +309,7 @@ The table lists the variables that carry content and the dataset (table) that st
 
 **Runs**
 
-- **Latest run:** 2026-11-24 13:16 UTC (normal)
+- **Latest run:** 2026-11-24 13:29 UTC (normal)
   - `arxiv`: not_due
   - `bgp`: not_due
   - `docker_hub`: not_due
@@ -324,7 +324,7 @@ The table lists the variables that carry content and the dataset (table) that st
   - `job_postings`: not_due
   - `llm_prices`: ok
   - `nro`: not_due
-  - `package_downloads`: partial
+  - `package_downloads`: partial (package_downloads 21)
   - `release_cycles`: not_due
   - `rfcs`: not_due
   - `stackoverflow`: not_due
@@ -509,19 +509,19 @@ The table lists the variables that carry content and the dataset (table) that st
 
 | Field | Description | Filled | Distinct values |
 |---|---|---|---|
-| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (934) | 934 |
-| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (934) | 1 |
-| `dataset` | Name of the dataset. | 100.0% (934) | 1 |
-| `schema_version` | Version of the record schema. | 100.0% (934) | 1 |
-| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (934) | 717 |
-| `source_id` | Id of the source (API or file). | 100.0% (934) | 3 |
-| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (934) | 289 |
-| `license` | License or terms of the source. | 100.0% (934) | 3 |
-| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (934) | 2 |
-| `technology_id` | Id of the technology in the registry. | 100.0% (934) | 74 |
-| `ecosystem` | Package registry. | 100.0% (934) | 3 |
-| `package` | Package name. | 100.0% (934) | 89 |
-| `daily_downloads` | Downloads per day (UTC), for the days since the previous run and days that were not available before. PyPI downloads exclude mirrors. | 100.0% (934) | 396 |
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (955) | 955 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (955) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (955) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (955) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (955) | 718 |
+| `source_id` | Id of the source (API or file). | 100.0% (955) | 3 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (955) | 310 |
+| `license` | License or terms of the source. | 100.0% (955) | 3 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (955) | 2 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (955) | 78 |
+| `ecosystem` | Package registry. | 100.0% (955) | 3 |
+| `package` | Package name. | 100.0% (955) | 106 |
+| `daily_downloads` | Downloads per day (UTC), for the days since the previous run and days that were not available before. PyPI downloads exclude mirrors. | 100.0% (955) | 396 |
 
 </details>
 
