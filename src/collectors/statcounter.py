@@ -9,10 +9,13 @@ Fetch strategy: seven statistics (operating systems of all devices, of desktops 
 browsers, search engines, device platforms, AI chatbots) for three regions (worldwide, Germany, United
 States), one request per statistic and region, 21 requests per run. The CSV download is a website
 request: robots.txt (gs.statcounter.com has none) and text-and-data-mining reservations are checked.
-A CSV has one row per month ("YYYY-MM") and one column per category, with shares in percent. The
-columns are the top categories of the requested period, so they vary with the range (about 20 for a
-range of 18 years, fewer for one month); the category names are stored as given ("OS X" and "macOS"
-are separate columns). Empty cells are skipped. Months before the start of a statistic are rows of
+A CSV for a range of months has one row per month ("YYYY-MM") and one column per category, with
+shares in percent. A CSV for a single month has another layout: one row per category with the share
+of that month, under the header "<statistic>", "Market Share Perc. (<Mon YYYY>)" (seen on 2026-11-24,
+when the first monthly run requested one month). Both layouts give the same shares. The categories are
+the top categories of the requested period, so they vary with the range (about 20 for a range of 18
+years, fewer for one month); the category names are stored as given ("OS X" and "macOS" are separate
+columns). Empty cells are skipped. Months before the start of a statistic are rows of
 zeros at the end of the CSV (July to December 2008 for most statistics, March 2025 for AI chatbots in
 the United States); a month without any positive share is not stored.
 
@@ -29,6 +32,7 @@ import csv
 import io
 import logging
 import math
+import re
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from typing import Any, Optional
@@ -53,6 +57,8 @@ AI_CHATBOT_START = date(2025, 3, 1)
 REVISION_DAYS = 45
 # The CSV is generated on request; the CSV of an 18-year range took 16 s on 2026-10-25
 CSV_TIMEOUT_S = 60.0
+# Header of the second column of a CSV for a single month, e.g. "Market Share Perc. (Sept 2026)"
+_SINGLE_MONTH_HEADER = re.compile(r"Market Share Perc\.\s*\(([A-Za-z]+)\.?\s+(\d{4})\)")
 # device_hidden value and display name of all devices
 ALL_DEVICES = ("desktop+mobile+tablet+console", "Desktop & Mobile & Tablet & Console")
 
@@ -160,7 +166,9 @@ def parse_csv(text: str, start: date, end: date) -> dict[date, dict[str, float]]
     """Reads the monthly shares from a StatCounter CSV.
 
     Args:
-        text: The CSV: a header "Date" plus one column per category, and one row per month (YYYY-MM).
+        text: The CSV of a range of months (a header "Date" plus one column per category, and one row
+            per month, YYYY-MM) or of a single month (a header with the statistic and "Market Share
+            Perc. (<Mon YYYY>)", and one row per category).
         start: First month to keep.
         end: Last month to keep.
 
@@ -169,10 +177,13 @@ def parse_csv(text: str, start: date, end: date) -> dict[date, dict[str, float]]
         non-numeric cells are skipped; months without any positive share are left out.
 
     Raises:
-        ValueError: If the text is not a StatCounter CSV, e.g. an HTML page.
+        ValueError: If the text is not a StatCounter CSV, e.g. an HTML page, or if a CSV of a single
+            month names another month than the requested one.
     """
     reader = csv.reader(io.StringIO(text))
     header = next(reader, None)
+    if header and len(header) == 2 and _SINGLE_MONTH_HEADER.search(header[1]):
+        return _parse_single_month(header[1], reader, start, end)
     if not header or header[0].strip() != "Date" or len(header) < 2:
         raise ValueError(f"not a StatCounter CSV (header {header[:3] if header else None!r})")
     categories = [name.strip() for name in header[1:]]
@@ -195,6 +206,38 @@ def parse_csv(text: str, start: date, end: date) -> dict[date, dict[str, float]]
         if any(value > 0 for value in values.values()):
             shares[month] = values
     return shares
+
+
+def _parse_single_month(header: str, rows: Any, start: date, end: date) -> dict[date, dict[str, float]]:
+    """Reads the shares from a StatCounter CSV of a single month.
+
+    Args:
+        header: Header of the share column, e.g. "Market Share Perc. (Sept 2026)".
+        rows: The remaining CSV rows: category and share.
+        start: The requested month.
+        end: The requested month; must equal ``start``.
+
+    Returns:
+        dict: Shares in percent per category for the month, or an empty dict if no share is positive.
+
+    Raises:
+        ValueError: If a range of months was requested or the header names another month.
+    """
+    match = _SINGLE_MONTH_HEADER.search(header)
+    if match is None:
+        raise ValueError(f"not a single-month StatCounter CSV (header {header!r})")
+    if start != end:
+        raise ValueError(f"single-month CSV ({header!r}) for the range {start:%Y-%m} to {end:%Y-%m}")
+    if match.group(1)[:3].lower() != f"{start:%B}"[:3].lower() or int(match.group(2)) != start.year:
+        raise ValueError(f"single-month CSV for {match.group(1)} {match.group(2)}, requested {start:%Y-%m}")
+    values: dict[str, float] = {}
+    for row in rows:
+        if len(row) < 2 or not row[0].strip():
+            continue
+        value = parse_share(row[1])
+        if value is not None:
+            values[row[0].strip()] = value
+    return {start: values} if any(value > 0 for value in values.values()) else {}
 
 
 def parse_share(cell: str) -> Optional[float]:
