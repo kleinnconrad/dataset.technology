@@ -271,7 +271,7 @@ The table lists the variables that carry content and the dataset (table) that st
 
 ## Dataset Overview
 <!-- DATASET_OVERVIEW_START -->
-**Last updated:** 2026-11-24 13:30 UTC
+**Last updated:** 2026-11-24 13:37 UTC
 
 | Dataset | Records | Items | Files | Observed | Content |
 |---|---|---|---|---|---|
@@ -280,7 +280,7 @@ The table lists the variables that carry content and the dataset (table) that st
 | `release_cycles` | 2,352 | 2,033 | 5 | 2026-10-25 to 2026-11-24 | One release cycle of a product at endoflife.date, recorded when it appears or changes. |
 | `stackoverflow_questions` | 548 | 548 | 5 | 2026-10-25 to 2026-11-06 | Weekly counts of new Stack Overflow questions with a tag of a technology, and the total of the tag. |
 | `github_repositories` | 755 | 755 | 5 | 2026-10-25 to 2026-11-24 | Popularity and activity of a GitHub repository of a technology at the time of observation. |
-| `package_downloads` | 955 | 955 | 10 | 2026-10-25 to 2026-11-24 | Daily downloads of a package of a technology from its registry (npm, PyPI or crates.io). |
+| `package_downloads` | 957 | 957 | 10 | 2026-10-25 to 2026-11-24 | Daily downloads of a package of a technology from its registry (npm, PyPI or crates.io). |
 | `docker_image_pulls` | 320 | 320 | 5 | 2026-10-25 to 2026-11-24 | Cumulative pulls and stars of a container image on Docker Hub at the time of observation. |
 | `cve_daily_counts` | 37 | 37 | 9 | 2026-10-25 to 2026-11-24 | Counts of the CVE records that the NVD published on one day, by status, severity, weakness and vendor, as observed after the day ended. |
 | `known_exploited_vulnerabilities` | 1,793 | 1,792 | 10 | 2026-10-25 to 2026-11-24 | A vulnerability in the CISA Known Exploited Vulnerabilities catalog, recorded when it is added or changes. |
@@ -291,7 +291,7 @@ The table lists the variables that carry content and the dataset (table) that st
 | `ip_address_delegations` | 401 | 401 | 1 | 2026-10-25 to 2026-10-25 | Internet number resources (IPv4, IPv6, AS numbers) of a regional internet registry per country and status, from the combined statistics of the NRO. |
 | `bgp_routing_table` | 4 | 4 | 2 | 2026-10-27 to 2026-11-24 | Daily size of the global BGP routing table for IPv4 or IPv6, as seen from the route collector of bgp.potaroo.net. |
 | `ipv6_adoption` | 24 | 24 | 2 | 2026-10-27 to 2026-11-24 | Daily share of users that are IPv6-capable and that prefer IPv6, measured by APNIC Labs, for an economy or the world. |
-| `market_shares` | 21 | 21 | 1 | 2026-10-27 to 2026-10-27 | Monthly market shares of operating systems, browsers, search engines, device platforms or AI chatbots measured by StatCounter, for a region. |
+| `market_shares` | 42 | 42 | 2 | 2026-10-27 to 2026-11-24 | Monthly market shares of operating systems, browsers, search engines, device platforms or AI chatbots measured by StatCounter, for a region. |
 | `supercomputer_lists` | 1 | 1 | 1 | 2026-11-24 to 2026-11-24 | Aggregates of one edition of the TOP500 list of supercomputers. |
 | `web_metrics` | 20 | 20 | 2 | 2026-10-27 to 2026-11-24 | Monthly metric of the web from the crawls of the HTTP Archive, for desktop or mobile pages. |
 | `job_postings` | 325 | 325 | 5 | 2026-10-25 to 2026-11-24 | Daily index of job postings on Indeed for a country and an occupational category (1 February 2020 = 100). |
@@ -309,31 +309,9 @@ The table lists the variables that carry content and the dataset (table) that st
 
 **Runs**
 
-- **Latest run:** 2026-11-24 13:29 UTC (normal)
-  - `arxiv`: not_due
-  - `bgp`: not_due
-  - `docker_hub`: not_due
-  - `epoch_ai`: not_due
-  - `eurostat`: not_due
-  - `github_repositories`: not_due
-  - `hackernews`: ok
-  - `httparchive`: not_due
-  - `huggingface`: not_due
-  - `ietf_drafts`: not_due
-  - `ipv6_adoption`: not_due
-  - `job_postings`: not_due
-  - `llm_prices`: ok
-  - `nro`: not_due
-  - `package_downloads`: partial (package_downloads 21)
-  - `release_cycles`: not_due
-  - `rfcs`: not_due
-  - `stackoverflow`: not_due
-  - `statcounter`: not_due
-  - `technologies`: ok
-  - `top500`: not_due
-  - `vulnerabilities`: ok
-  - `wikipedia_pageviews`: not_due
-  - `world_bank`: not_due
+- **Latest run:** 2026-11-24 13:36 UTC (normal)
+  - `package_downloads`: partial (package_downloads 2)
+  - `statcounter`: ok (market_shares 21)
 
 **Technology registry**
 
@@ -509,19 +487,19 @@ The table lists the variables that carry content and the dataset (table) that st
 
 | Field | Description | Filled | Distinct values |
 |---|---|---|---|
-| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (955) | 955 |
-| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (955) | 1 |
-| `dataset` | Name of the dataset. | 100.0% (955) | 1 |
-| `schema_version` | Version of the record schema. | 100.0% (955) | 1 |
-| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (955) | 718 |
-| `source_id` | Id of the source (API or file). | 100.0% (955) | 3 |
-| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (955) | 310 |
-| `license` | License or terms of the source. | 100.0% (955) | 3 |
-| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (955) | 2 |
-| `technology_id` | Id of the technology in the registry. | 100.0% (955) | 78 |
-| `ecosystem` | Package registry. | 100.0% (955) | 3 |
-| `package` | Package name. | 100.0% (955) | 106 |
-| `daily_downloads` | Downloads per day (UTC), for the days since the previous run and days that were not available before. PyPI downloads exclude mirrors. | 100.0% (955) | 396 |
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (957) | 957 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (957) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (957) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (957) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (957) | 719 |
+| `source_id` | Id of the source (API or file). | 100.0% (957) | 3 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (957) | 312 |
+| `license` | License or terms of the source. | 100.0% (957) | 3 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (957) | 2 |
+| `technology_id` | Id of the technology in the registry. | 100.0% (957) | 79 |
+| `ecosystem` | Package registry. | 100.0% (957) | 3 |
+| `package` | Package name. | 100.0% (957) | 108 |
+| `daily_downloads` | Downloads per day (UTC), for the days since the previous run and days that were not available before. PyPI downloads exclude mirrors. | 100.0% (957) | 396 |
 
 </details>
 
@@ -785,18 +763,18 @@ The table lists the variables that carry content and the dataset (table) that st
 
 | Field | Description | Filled | Distinct values |
 |---|---|---|---|
-| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (21) | 21 |
-| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (21) | 1 |
-| `dataset` | Name of the dataset. | 100.0% (21) | 1 |
-| `schema_version` | Version of the record schema. | 100.0% (21) | 1 |
-| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (21) | 21 |
-| `source_id` | Id of the source (API or file). | 100.0% (21) | 1 |
-| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (21) | 21 |
-| `license` | License or terms of the source. | 100.0% (21) | 1 |
-| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (21) | 1 |
-| `statistic` | Measured statistic: os, desktop_os, mobile_os, browser, search_engine, platform or ai_chatbot. | 100.0% (21) | 7 |
-| `region` | ww for worldwide, or an ISO 3166-1 alpha-2 code. | 100.0% (21) | 3 |
-| `monthly_shares` | Share in percent per category (e.g. Windows, Android, Chrome, Google, ChatGPT) per month (key: first day of the month), for the months since the previous run; the categories are those that StatCounter lists for the period, the rest is Other. | 100.0% (21) | 212 |
+| `record_id` | Stable id of the item. Together with revision it identifies a record. | 100.0% (42) | 42 |
+| `revision` | 0 for the first observation; incremented each time the source changes the item. | 100.0% (42) | 1 |
+| `dataset` | Name of the dataset. | 100.0% (42) | 1 |
+| `schema_version` | Version of the record schema. | 100.0% (42) | 1 |
+| `observed_at` | UTC time at which the pipeline observed this version of the item. Filtering observed_at <= t gives the state of knowledge at time t. | 100.0% (42) | 42 |
+| `source_id` | Id of the source (API or file). | 100.0% (42) | 1 |
+| `source_url` | URL of the item or of the API resource it was read from. | 100.0% (42) | 42 |
+| `license` | License or terms of the source. | 100.0% (42) | 1 |
+| `backfilled` | True if the item is older than the start of collection for its dataset, so that observed_at does not reflect when it became known. | 100.0% (42) | 1 |
+| `statistic` | Measured statistic: os, desktop_os, mobile_os, browser, search_engine, platform or ai_chatbot. | 100.0% (42) | 7 |
+| `region` | ww for worldwide, or an ISO 3166-1 alpha-2 code. | 100.0% (42) | 3 |
+| `monthly_shares` | Share in percent per category (e.g. Windows, Android, Chrome, Google, ChatGPT) per month (key: first day of the month), for the months since the previous run; the categories are those that StatCounter lists for the period, the rest is Other. | 100.0% (42) | 213 |
 
 </details>
 
