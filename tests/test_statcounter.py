@@ -12,6 +12,10 @@ FIXTURE = "statcounter/os_combined_desktop_ww_200901_202609.csv"
 # Live responses of 2026-10-25; StatCounter appends the months without data as rows of zeros at the end
 AI_CHATBOT_FIXTURE = "statcounter/ai_chatbot_US_202503_202608.csv"
 PLATFORM_FIXTURE = "statcounter/comparison_DE_200807_202608.csv"
+# Live responses of 2026-11-24: a request for one month returns one row per category instead of one row per month
+SINGLE_MONTH_FIXTURE = "statcounter/os_combined_desktop_ww_202609_202609.csv"
+OS_WW_ONE_MONTH = "statcounter/os_combined_ww_202609_202609.csv"
+OS_WW_TWO_MONTHS = "statcounter/os_combined_ww_202608_202609.csv"
 # The download link that was checked against the live site on 2026-10-25
 VERIFIED_URL = ("https://gs.statcounter.com/chart.php?device=Desktop&device_hidden=desktop&multi-device=true"
                 "&statType_hidden=os_combined&region_hidden=ww&granularity=monthly&statType=Operating%20System"
@@ -74,6 +78,22 @@ def test_live_csv_with_the_months_before_the_start_of_a_statistic_appended_as_ze
                                         "Perplexity": 7.46, "Claude": 0.73, "Deepseek": 0.34, "Other": 0.0}
 
 
+def test_csv_of_a_single_month_gives_the_same_shares_as_a_csv_of_a_range() -> None:
+    september = date(2026, 9, 1)
+    one_month = parse_csv((FIXTURES_DIR / OS_WW_ONE_MONTH).read_text(encoding="utf-8-sig"), september, september)
+    two_months = parse_csv((FIXTURES_DIR / OS_WW_TWO_MONTHS).read_text(encoding="utf-8-sig"), date(2026, 8, 1),
+                           september)
+
+    assert list(one_month) == [september] and one_month[september] == two_months[september]
+    assert one_month[september]["Android"] == 42.65
+
+
+@pytest.mark.parametrize("start, end", [(date(2026, 8, 1), date(2026, 8, 1)), (date(2026, 8, 1), date(2026, 9, 1))])
+def test_csv_of_a_single_month_for_another_month_or_a_range_is_rejected(start: date, end: date) -> None:
+    with pytest.raises(ValueError):
+        parse_csv((FIXTURES_DIR / OS_WW_ONE_MONTH).read_text(encoding="utf-8-sig"), start, end)
+
+
 def test_a_page_that_is_not_a_csv_is_rejected() -> None:
     with pytest.raises(ValueError):
         parse_csv("<!DOCTYPE html><html><body>Error</body></html>", date(2025, 1, 1), HISTORY_END)
@@ -124,15 +144,17 @@ def test_next_runs_request_only_the_months_after_the_last_stored_month(fake_web,
                                            entry)
     assert chart_requests(fake_web) == [] and early.counters["up_to_date"] == 21
 
+    single_month_url = chart_url(STATISTICS["desktop_os"], "ww", date(2026, 9, 1), date(2026, 9, 1))
+    fake_web.add_fixture(single_month_url, SINGLE_MONTH_FIXTURE)
     later = StatCounterCollector().collect(make_ctx(started=LATER), entry)
 
-    assert chart_url(STATISTICS["desktop_os"], "ww", date(2026, 9, 1), date(2026, 9, 1)) in chart_requests(fake_web)
+    assert single_month_url in chart_requests(fake_web)
     records = desktop_ww(ctx.settings.output_dir)
     assert [r["record_id"] for r in records] == ["statcounter:desktop_os:ww:2009-01:2026-08",
                                                  "statcounter:desktop_os:ww:2026-09:2026-09"]
+    # The CSV of one month lists the categories of that month only
     assert records[1]["monthly_shares"] == {"2026-09-01": {
-        "Windows": 76.41, "OS X": 10.65, "Linux": 4.54, "Chrome OS": 2.31, "iOS": 0.0, "macOS": 6.09, "Android": 0.0,
-        "Playstation": 0.0, "Other": 0.0}}
+        "Windows": 76.41, "OS X": 10.65, "macOS": 6.09, "Linux": 4.54, "Chrome OS": 2.31, "Other": 0.0}}
     assert all(r["revision"] == 0 for r in records)
     assert later.counters["records"] == 21 and later.counters["months"] == 21
 
