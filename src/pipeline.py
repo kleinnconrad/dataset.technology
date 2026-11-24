@@ -10,8 +10,12 @@ the run log, and the other collectors continue. The data that a failing
 collector has already emitted stays written.
 
 The run has a deadline (RUN_DEADLINE_MINUTES): the collectors start no new
-work after it, and a collector that has not started by then is skipped, so
-that the workflow commits the data before its timeout. Collectors with
+work after it, so that the workflow commits the data before its timeout. A
+collector that has not started by then is deferred to the next run if it
+reads data that its source keeps (``min_days_between_runs`` above 0) and is
+not overdue; otherwise it is skipped, which marks the run as failed. A
+collector is overdue when its last complete run is older than its interval
+plus OVERDUE_GRACE_DAYS, or when it has never completed. Collectors with
 ``min_days_between_runs`` run only when that many days have passed since
 their last complete run. A backfill run imports the available history
 without the per-run caps and ignores these intervals.
@@ -50,7 +54,7 @@ from collectors.top500 import Top500Collector
 from collectors.vulnerabilities import VulnerabilitiesCollector
 from collectors.world_bank import WorldBankCollector
 from settings import Settings
-from state import CollectorStates, append_run_log
+from state import CollectorEntry, CollectorStates, append_run_log
 from web import WebClient
 
 logger = logging.getLogger(__name__)
@@ -86,6 +90,9 @@ HOST_INTERVALS: dict[str, float] = {
 }
 # Outcomes that make the run exit with code 1
 FAILED_STATUSES = frozenset({"failed", "skipped"})
+# Days beyond its interval that a collector may be deferred at the run deadline before it counts as overdue: two
+# further runs at the schedule of Tuesdays and Fridays
+OVERDUE_GRACE_DAYS = 7
 
 
 @dataclass
@@ -94,10 +101,12 @@ class CollectorOutcome:
 
     Attributes:
         status (str): ok; partial if the collector stopped at the run deadline or a quota;
-            not_due if it is not due in this run; failed or skipped.
+            not_due if it is not due in this run; deferred if the run deadline was reached
+            before it started and it can wait for the next run; failed or skipped.
         records (dict[str, int]): Records written per dataset.
         counters (dict): Counters reported by the collector.
-        error (Optional[str]): Error message for failed and skipped collectors.
+        error (Optional[str]): Error message for failed and skipped collectors, and the
+            reason for deferred ones.
     """
     status: str
     records: dict[str, int] = field(default_factory=dict)
@@ -226,12 +235,37 @@ def _not_due(ctx: RunContext, states: CollectorStates, collector: Collector) -> 
     return True
 
 
+def _can_wait(ctx: RunContext, collector: Collector, entry: CollectorEntry) -> bool:
+    """Tells whether a collector that the run deadline stopped before it started can wait for the next run.
+
+    Collectors with ``min_days_between_runs`` read data that their sources
+    keep, so a later run loses nothing. A collector whose last complete run is
+    older than its interval plus OVERDUE_GRACE_DAYS, or that has never
+    completed, is overdue and cannot wait.
+
+    Args:
+        ctx: The run context.
+        collector: The collector.
+        entry: Run history of the collector.
+
+    Returns:
+        bool: True if the collector can be deferred to the next run.
+    """
+    if collector.min_days_between_runs <= 0 or entry.last_complete is None:
+        return False
+    days_since_complete = (ctx.today - entry.last_complete.date()).days
+    return days_since_complete < collector.min_days_between_runs + OVERDUE_GRACE_DAYS
+
+
 def _run_collector(ctx: RunContext, states: CollectorStates, collector: Collector, started: datetime) -> CollectorOutcome:
     """Runs one collector and records its outcome in the collector states."""
     entry = states.entry(collector.name, ctx.today)
     before = Counter(ctx.written)
     if ctx.past_deadline():
         message = f"run deadline of {ctx.settings.run_deadline_minutes} minutes reached before the collector started"
+        if _can_wait(ctx, collector, entry):
+            logger.warning("Collector %s deferred to the next run: %s.", collector.name, message)
+            return CollectorOutcome(status="deferred", error=message)
         logger.error("Collector %s skipped: %s", collector.name, message)
         states.record_failure(collector.name, started, f"skipped: {message}")
         return CollectorOutcome(status="skipped", error=message)
