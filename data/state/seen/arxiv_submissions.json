@@ -18,7 +18,7 @@
 "cs.RO": {"data": {"last_week": "2026-11-09"}, "first_seen": "2026-10-25", "hash": "Robotics", "last_seen": "2026-11-24", "revision": 0},
 "cs.SE": {"data": {"last_week": "2026-11-09"}, "first_seen": "2026-10-27", "hash": "Software Engineering", "last_seen": "2026-11-24", "revision": 0},
 "eess.SP": {"data": {"last_week": "2026-11-09"}, "first_seen": "2026-10-27", "hash": "Signal Processing", "last_seen": "2026-11-24", "revision": 0},
-"eess.SY": {"data": {"last_week": "2026-10-19"}, "first_seen": "2026-10-27", "hash": "Systems and Control", "last_seen": "2026-11-24", "revision": 0},
+"eess.SY": {"data": {"last_week": "2026-11-09"}, "first_seen": "2026-10-27", "hash": "Systems and Control", "last_seen": "2026-11-24", "revision": 0},
 "quant-ph": {"data": {"last_week": "2026-11-09"}, "first_seen": "2026-10-27", "hash": "Quantum Physics", "last_seen": "2026-11-24", "revision": 0},
 "stat.ML": {"data": {"last_week": "2026-11-09"}, "first_seen": "2026-10-27", "hash": "Machine Learning (Statistics)", "last_seen": "2026-11-24", "revision": 0}
 }
