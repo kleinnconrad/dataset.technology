@@ -40,7 +40,11 @@ express until 2021-09-30), for parts of their history.
 Schedule: once a month (``min_days_between_runs = 27``); the registries keep
 at least 90 days (crates.io), 180 days (PyPI) and 18 months (npm). At the run deadline the
 collector stops; at a rate limit it stops requesting that registry. The
-remaining packages follow in the next run.
+remaining packages follow in the next run: each registry requests its due
+packages in the order of their first missing day, new packages first, so that
+a rate limit at the same position does not defer the same packages in every
+run (until 2026-11-24 the order of the registry was used, and the npm rate
+limit deferred the second half of the npm packages in every run).
 """
 import logging
 from collections import Counter
@@ -668,10 +672,8 @@ class PackageDownloadsCollector(Collector):
         ctx = run.ctx
         end = ctx.today - timedelta(days=NPM_DELAY_DAYS)
         retry_from = ctx.today - timedelta(days=NPM_GAP_RETRY_DAYS)
-        fetched: list[NpmSeries] = []
-        for position, (technology, package) in enumerate(targets):
-            if run.past_deadline(len(targets) - position):
-                break
+        due: list[tuple[date, Technology, Package, Optional[date], frozenset[date]]] = []
+        for technology, package in targets:
             previous = run.seen.get(package.key)
             last_day = _data_day(previous, "last_day")
             retry_days = frozenset(day for day in _data_days(previous, "gap_days") if day >= retry_from)
@@ -680,11 +682,18 @@ class PackageDownloadsCollector(Collector):
                 start = NPM_HISTORY_START if ctx.backfill else max(NPM_HISTORY_START, new_start)
             else:
                 start = min([last_day + timedelta(days=1), *retry_days])
-            if start > end:
-                continue
+            if start <= end:
+                due.append((start, technology, package, last_day, retry_days))
+        # First missing day first (stable: registry order on equal days), so that a rate limit does not defer
+        # the same packages in every run
+        due.sort(key=lambda item: item[0])
+        fetched: list[NpmSeries] = []
+        for position, (start, technology, package, last_day, retry_days) in enumerate(due):
+            if run.past_deadline(len(due) - position):
+                break
             values, stop = run.fetch(package, lambda: fetch_npm_downloads(ctx, package.name, start, end))
             if stop:
-                run.counters["deferred"] += len(targets) - position - 1
+                run.counters["deferred"] += len(due) - position - 1
                 break
             if values is None:
                 continue
@@ -726,15 +735,16 @@ class PackageDownloadsCollector(Collector):
         ctx = run.ctx
         # Yesterday can still be incomplete at the time of the run (late log batches, update after 01:00 UTC)
         end = ctx.today - timedelta(days=2)
-        for position, (technology, package) in enumerate(targets):
-            if run.past_deadline(len(targets) - position):
+        # First missing day first (new packages first), as for npm
+        due = sorted(((series_start(run.seen.get(package.key), date.min), technology, package)
+                      for technology, package in targets), key=lambda item: item[0])
+        due = [item for item in due if item[0] <= end]
+        for position, (start, technology, package) in enumerate(due):
+            if run.past_deadline(len(due) - position):
                 break
-            start = series_start(run.seen.get(package.key), date.min)
-            if start > end:
-                continue
             values, stop = run.fetch(package, lambda: fetch(ctx, package.name))
             if stop:
-                run.counters["deferred"] += len(targets) - position - 1
+                run.counters["deferred"] += len(due) - position - 1
                 break
             new_days = {day: count for day, count in (values or {}).items() if start <= day <= end}
             if new_days:

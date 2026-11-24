@@ -332,6 +332,35 @@ def test_rate_limit_stops_only_the_registry(fake_web, make_ctx, tmp_path) -> Non
     assert not result.complete and result.error is None
 
 
+def test_packages_deferred_by_a_rate_limit_are_requested_first_in_the_next_run(fake_web, make_ctx, tmp_path) -> None:
+    registry = _registry(tmp_path, NPM_REGISTRY)
+    _serve_first_npm_run(fake_web)
+    # npm allows one request in the first run
+    fake_web.add(npm_range_url("vue", date(2025, 10, 24), date(2026, 10, 23)), {"error": "slow down"}, status=429)
+    first_ctx = make_ctx()
+    entry = CollectorEntry(first_run=first_ctx.today)
+    first = PackageDownloadsCollector(registry).collect(first_ctx, entry)
+    first_packages = [r["package"] for r in read_dataset(first_ctx.settings.output_dir, DATASET)]
+    # In the second run npm allows two requests; the three packages without data come before react
+    start, end = date(2025, 10, 31), date(2026, 10, 30)
+    fake_web.add(npm_range_url("vue", start, end), _npm("vue", start, end, 3_000_000))
+    fake_web.add(npm_range_url("@angular/core", start, end), _npm("@angular/core", start, end, 400_000))
+    fake_web.add(npm_range_url("tiny-test-package", start, end), {"error": "slow down"}, status=429)
+    fake_web.requested.clear()
+
+    second = PackageDownloadsCollector(registry).collect(make_ctx(started=SECOND_RUN), entry)
+
+    assert first.counters["deferred"] == 3 and first_packages == ["react"]
+    # The client retries a rate limit twice before it gives up; the order of the distinct requests counts
+    npm_requests = list(dict.fromkeys(url for url in fake_web.requested if "api.npmjs.org" in url))
+    assert npm_requests == [npm_range_url(package, start, end) for package in
+                            ("vue", "@angular/core", "tiny-test-package")]
+    assert {r["package"] for r in read_dataset(first_ctx.settings.output_dir, DATASET)} == {
+        "react", "vue", "@angular/core"}
+    # tiny-test-package (rate limited) and react (not requested) follow in the next run
+    assert second.counters["deferred"] == 2
+
+
 def test_collector_stops_at_the_run_deadline(fake_web, make_ctx, tmp_path) -> None:
     ctx = make_ctx(run_deadline_minutes=0)
 
